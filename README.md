@@ -1,29 +1,27 @@
-# Astro Starter Kit: Minimal
+# Astro Starter Kit: i18n
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Project Structure
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Inside of the Astro template, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── pages/[...locale]
+│   |    └── index.astro
+│   ├── assets
+│   ├──  components
+│   └── i18n
+│       ├──  ui.ts
+│       └── utils.ts
+│   └── styles
+│       └── global.css
+├── .prettierrc
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+`.prettierrc` is required for formatting in Astro projects when using Prettier.
 
 ## 🧞 Commands
 
@@ -40,4 +38,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into Astro's [Discord server](https://astro.build/chat).
