@@ -1,0 +1,160 @@
+:root {
+  --text-white: white;
+  --text-black: black;
+  --text-gray: gray;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(250, 246, 246);
+  font-family: "papyrus", "sans-serif";
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.regular-font {
+  font-family: "Open Sans", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+p,
+li,
+.normal-font-size {
+  font-size: 1.2rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.text-align-start {
+  text-align: start;
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+.text-black {
+  color: var(--text-black);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.p1 {
+  font-size: 2rem;
+}
+.p2 {
+  font-size: 1.75rem;
+}
+.p3 {
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.col3 {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  column-gap: 2rem;
+}
+
+.col2 {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  column-gap: 5rem;
+}
+
+.text-margin {
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ul.star-list,
+ul.none-list,
+ul.infinity-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+ul.star-list li::before {
+  content: "✦";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1.5em;
+}
+
+ul.infinity-list li::before {
+  content: "∞";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1.5em;
+}
+
+button {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.red-btn {
+  background-color: var(--mooyo-red);
+  color: var(--mooyo-white);
+}
+
+.white-btn {
+  background-color: var(--mooyo-white);
+  color: var(--mooyo-black);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
