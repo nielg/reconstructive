@@ -1,7 +1,12 @@
 :root {
-  --text-white: white;
+  --reconstructive-green: #87a96b;
+  --reconstructive-beige: #f6eed2;
+  --text-white: #ffffff;
+  --text-green: #517139;
   --text-black: black;
-  --text-gray: gray;
+  --text-gray: #6f6b5e;
+  --bg-white: #ffffff;
+  --bg-dark: #424242;
 }
 
 html,
@@ -10,7 +15,7 @@ body {
   width: 100%;
   min-height: 100%;
   background-color: rgb(250, 246, 246);
-  font-family: "papyrus", "sans-serif";
+  font-family: "sans-serif";
   font-style: normal;
   scroll-behavior: smooth;
 }
@@ -58,6 +63,22 @@ li,
 }
 .text-black {
   color: var(--text-black);
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.bg-green {
+  background-color: var(--reconstructive-green);
+}
+
+.bg-beige {
+  background-color: var(--reconstructive-beige);
 }
 
 h1 {
