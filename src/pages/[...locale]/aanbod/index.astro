@@ -14,5 +14,49 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout>
-  <h1>hallo</h1>
+  <section class="bg-green text-white">
+    <div class="text-margin">
+      <h1 class="text-align-center">Beleef vanuit je kern</h1>
+      <p>
+        Er zijn momenten in het leven waarop je voelt dat er meer mogelijk is.
+        Dat je lichaam iets weet wat je hoofd nog niet kan volgen. Dat er onder
+        de dagelijkse patronen een diepere laag wacht om gezien te worden.
+        Reconstructive is een uitnodiging om die laag te ontmoeten.
+      </p>
+      <a href={translatePath("/aanpak")} class="center">
+        <button class="beige-btn big-btn p3">Lees meer over onze aanpak</button
+        ></a
+      >
+      <p class="text-align-center">
+        Ontdek, verdiep of transformeer en beweeg dichter naar je essentie
+      </p>
+    </div>
+  </section>
+  <section class="bg-beige text-gray"></section>
+  <section class="contact bg-green text-white center">
+    <p class="p2">Misschien is het een eerste nieuwsgierigheid.</p>
+    <p class="p2">Misschien een verlangen naar dieper contact met jezelf.</p>
+    <p class="p2">
+      Misschien voel je dat het tijd is om terug te keren naar je essentie.
+    </p>
+    <p class="p1">
+      Welke formule je ook kiest, elke stap brengt je dichter bij wie je
+      werkelijk bent.
+    </p>
+
+    <a href="mailto:info@reconstructive.be">
+      <button class="white-btn big-btn p3"
+        >Contacteer ons voor een vrijblijvende kennismakinggesprek</button
+      >
+    </a>
+  </section>
 </Layout>
+<style>
+  .big-btn {
+    margin: 1rem;
+  }
+
+  .contact p {
+    line-height: 0.5rem;
+  }
+</style>

@@ -8,6 +8,8 @@
   --bg-white: #ffffff;
   --bg-dark: #424242;
   --bg-green: #87a96b;
+  --bg-beige: #f6eed2;
+  --bg-yellow: #f2e6bd;
 }
 
 html,
@@ -89,6 +91,10 @@ li,
 
 .bg-green {
   background-color: var(--reconstructive-green);
+}
+
+.bg-yellow {
+  background-color: var(--bg-yellow);
 }
 
 .bg-beige {
@@ -193,7 +199,18 @@ button {
   color: var(--text-white);
 }
 
+.beige-btn {
+  background-color: var(--bg-beige);
+  color: var(--text-gray);
+}
+
 button:hover {
   opacity: 0.8;
   transform: translateY(0);
+}
+
+.big-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin: 3rem 0 1rem 0;
 }
