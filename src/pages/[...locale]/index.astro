@@ -1,5 +1,134 @@
 ---
+import Layout from "@src/layouts/Layout.astro";
+import {
+  getStaticPaths,
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@src/i18n/utils";
+import AanbodCard from "@components/AanbodCard.astro";
 
+export { getStaticPaths };
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
+<Layout>
+  <section class="intro text-white center">
+    <h1>Reconstructive: beleef vanuit je kern</h1>
+  </section>
+  <section class="bg-green text-white center">
+    <p class="p1">
+      <bold>Carl Jung:</bold> "The privilege of a lifetime is to become who you truly
+      are"
+    </p>
+  </section>
+  <section class="bg-beige text-gray center">
+    <div class="container small-text-margin center">
+      <h2 class="text-green">
+        Doorbreek je patronen en leef meer van je kern!
+      </h2>
+      <p>
+        Reconstructive is een kractige lichaamsgerichte methode waardoor jouw <bold
+          >inuïtie, vrijheid</bold
+        > en <bold>helderheid</bold> meer kunnen stromen.
+      </p>
+      <ol>
+        <li class="bold">Loskomen van oude patronene en denken.</li>
+        <p>
+          Reconstructive helpt je bevrijden van onbewuste patronen, blokkades en
+          vaste ideeën, en opent zo de weg naar nieuwe beweging en
+          mogelijkheden.
+        </p>
+        <li class="bold">Terugkeren naar lichaam en beleven.</li>
+        <p>
+          Het is een methode voorbij het hoofd, waardoor er meer ruimte is voor
+          het lichaam en wat het je te vertellen heeft.
+        </p>
+        <li class="bold">Ruimte voor intuïtie, vrijheid en helderheid.</li>
+        <p>
+          De groep vormt daarbij een spiegelend veld. Wat je bij anderen ziet,
+          raakt iets in jou. Wat jij laat zien, opent iets bij hen. Door ruimte
+          te creëeren komen via het lichaam doorleefde inzichten, die je dichter
+          brengen bij je innerlijke helderheid en je eigen essentie.
+        </p>
+      </ol>
+    </div>
+  </section>
+  <section class="bg-green text-white center">
+    <h2>
+      Ben je bereid om vanuit je kern te leven en om vol ja tegen het leven te
+      kunnen zeggen?
+    </h2>
+  </section>
+  <section class="bg-beige text-gray center">
+    <div class="container center text-margin">
+      <h2 class="text-green">Ons aanbod</h2>
+      <p>
+        Ons aanbod bestaat uit drie formules die elkaar verdiepen: een eerste
+        kennismakingsdag, een tweedaagse verdieping tot een innerlijke zesdaagse
+        tocht.
+      </p>
+      <p>
+        Welke formule je ook kiest, elke stap brengt je dichter bij wie je
+        werkelijk bent.
+      </p>
+      <p>Er is geen verplichte volgorde.</p>
+      <div class="AanbodCardContainer">
+        <AanbodCard
+          title="Voorbij je construct (1 dag)"
+          text="Stap één dag buiten je vertrouwde patronen en ontdek hoeveel ruimte er ontstaat wanneer je je construct loslaat."
+          link="#"
+          alt="Foto van een plein met een bloem in het midden"
+          img=""
+        />
+        <AanbodCard
+          title="Reconstructive (2 dagen)"
+          text="Ervaar de transformerend kracht van Reconstructive en kom dichter bij je intuïtie, je vrijheid en je kern."
+          link="#"
+          alt="Foto van een houte pad door het hoge grass"
+          img=""
+        />
+        <AanbodCard
+          title="Find your gold (6 dagen)"
+          text="Ga op een diepgaande reis door natuur en lichaam, en keer terug naar de essentie van wie jij werkelijk bent"
+          link="#"
+          alt="Foto van een houten pad door een dor veld met bergen in de achtergrond"
+          img=""
+        />
+      </div>
+    </div>
+  </section>
+  <section class="bg-green text-white">
+    <h3>Wie zijn wij?</h3>
+    <p>
+      Carola Castillo (midden) is grondlegster van het gedachtengoed en de
+      methodiek Reconstructive en oprichtster van Reconstructive International
+      Integratie Holistic School: https://reconstructiveschool.com/en/home/ <a
+        href="https://reconstructiveschool.com/en/home/"
+        target="_blank"
+        rel="noopener noreferrer"></a>
+    </p>
+    <p>
+      Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
+      Reconstructive begeleiders.
+    </p>
+    <h3>Contacteer ons voor een vrijblijvend gesprek:</h3>
+    <p>Elke Busschots: [+ 32 475 46 39]</p>
+    <p>Bram Geysen: [+ 32 473 52 34 ]</p>
+    <p>
+      mail: <a href="mailto:info@reconstructive.be">info@reconstructive.be</a>
+    </p>
+  </section>
+</Layout>
 
+<style>
+  .AanbodCardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+</style>

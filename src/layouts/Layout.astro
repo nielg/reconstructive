@@ -1,0 +1,39 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+import Footer from "@components/layout/Footer.astro";
+import Header from "@components/layout/Header.astro";
+import ScrollToTop from "@components/layout/ScrollToTop.astro";
+import LanguagePicker from "@components/layout/LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const pathname = new URL(Astro.url).pathname;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ClientRouter />
+    <title>Astro</title>
+  </head>
+  <body>
+    <LanguagePicker place="header" />
+    <Header pathname={pathname} />
+    <slot />
+    <Footer />
+    <ScrollToTop />
+  </body>
+</html>

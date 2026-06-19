@@ -1,0 +1,20 @@
+---
+import Nav from "./Nav.astro";
+
+interface Props {
+  pathname: string;
+}
+const { pathname } = Astro.props;
+---
+
+<header>
+  <h2 class="text-green center">Reconstructive.be</h2>
+  <Nav pathname={pathname} />
+</header>
+
+<style>
+  h2 {
+    color: var(--reconstructive-green);
+    font-size: 3.5rem;
+  }
+</style>

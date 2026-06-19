@@ -7,6 +7,7 @@
   --text-gray: #6f6b5e;
   --bg-white: #ffffff;
   --bg-dark: #424242;
+  --bg-green: #87a96b;
 }
 
 html,
@@ -22,6 +23,10 @@ body {
 
 .regular-font {
   font-family: "Open Sans", "sans-serif";
+}
+
+section {
+  padding: 2rem;
 }
 
 a {
@@ -63,6 +68,10 @@ li,
 }
 .text-black {
   color: var(--text-black);
+}
+
+.text-green {
+  color: var(--text-green);
 }
 
 .bg-white {
@@ -129,6 +138,12 @@ h4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.small-text-margin {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 .center {
   display: flex;
@@ -164,18 +179,16 @@ button {
   border-radius: 1rem;
   border: none;
   cursor: pointer;
+  transform: translateY(4px);
+  transition: transform 0.2s ease;
 }
 
-.red-btn {
-  background-color: var(--mooyo-red);
-  color: var(--mooyo-white);
+.green-btn {
+  background-color: var(--bg-green);
+  color: var(--text-white);
 }
 
-.white-btn {
-  background-color: var(--mooyo-white);
-  color: var(--mooyo-black);
-}
-
-.btn:hover {
+button:hover {
   opacity: 0.8;
+  transform: translateY(0);
 }

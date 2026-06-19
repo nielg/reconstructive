@@ -1,0 +1,92 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@src/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+
+interface Props {
+  pathname: string;
+}
+const { pathname } = Astro.props;
+
+const isActive = (path: string) => {
+  const normalize = (p: string) => p.replace(/\/+$/, "").replace(/^\/+/, "");
+  return normalize(pathname) === normalize(path);
+};
+---
+
+<nav class="text-black">
+  <a
+    href={translatePath("/")}
+    class={isActive(translatePath("")) ? "active" : ""}>home</a
+  >
+  <a
+    href={translatePath("/aanpak")}
+    class={isActive(translatePath("/aanpak")) ? "active" : ""}
+    >{t("nav.aanpak")}</a
+  >
+  <a
+    href={translatePath("/aanbod")}
+    class={isActive(translatePath("/aanbod")) ? "active" : ""}
+    >{t("nav.aanbod")}</a
+  >
+  <a
+    href={translatePath("/impressies")}
+    class={isActive(translatePath("impressies")) ? " active" : ""}
+    >{t("nav.impressies")}</a
+  >
+  <a
+    href={translatePath("/about")}
+    class={isActive(translatePath("/about")) ? " active" : ""}
+    >{t("nav.about")}</a
+  >
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  a {
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    border-radius: 0.5rem;
+  }
+  a:hover {
+    color: var(--reconstructive-green);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+  }
+
+  .active {
+    color: var(--text-white);
+    background-color: var(--bg-green);
+  }
+
+  .active:hover {
+    color: var(--text-white);
+  }
+
+  /* Responsive */
+
+  @media (max-width: 800px) {
+    nav {
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+    }
+  }
+</style>

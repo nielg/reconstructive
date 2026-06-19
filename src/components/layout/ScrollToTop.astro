@@ -1,0 +1,89 @@
+---
+import arrowUp from "@src/assets/icons/arrowUp.svg?raw";
+---
+
+<button id="scroll-to-top" aria-label="Scroll to top" class="hidden">
+  <Fragment set:html={arrowUp} />
+</button>
+
+<script>
+  function initScrollToTop() {
+    const scrollBtn = document.getElementById("scroll-to-top");
+
+    if (scrollBtn) {
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.remove("hidden");
+        } else {
+          scrollBtn.classList.add("hidden");
+        }
+      };
+
+      window.addEventListener("scroll", toggleVisibility);
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      toggleVisibility();
+    }
+  }
+
+  document.addEventListener("astro:page-load", initScrollToTop);
+</script>
+
+<style>
+  #scroll-to-top {
+    all: unset;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    cursor: pointer;
+    color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease,
+      visibility 0.4s,
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  #scroll-to-top :global(svg) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #scroll-to-top :global(svg path) {
+    stroke: currentColor;
+    transition: stroke 0.2s ease;
+  }
+
+  #scroll-to-top.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+  }
+
+  #scroll-to-top:hover {
+    transform: scale(1.1);
+    background-color: var(--mooyo-text-red);
+    color: white;
+  }
+
+  #scroll-to-top:active {
+    transform: scale(0.9);
+  }
+</style>
