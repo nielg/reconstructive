@@ -1,5 +1,8 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import elkeProfiel from "@assets/imgs/elke-profile.jpg";
+import bramProfiel from "@assets/imgs/bram-profile.png";
 import {
   getStaticPaths,
   getLangFromUrl,
@@ -24,6 +27,117 @@ const translatePath = useTranslatedPath(lang);
       </p>
     </div>
   </section>
-  <section></section>
+  <section class="no-padding">
+    <div class="col2">
+      <div class="img-wrapper">
+        <Image
+          src={elkeProfiel}
+          alt="Profiel foto van Elke Busschots"
+          width={800}
+          height={800}
+          class="img"
+        />
+      </div>
+      <div class="text-wrapper">
+        <div class="text-gray text">
+          <h2 class="text-align-center text-green">Elke</h2>
+          <p>
+            Al meer dan vijftien jaar begeleid ik mensen die verlangen naar meer
+            helderheid, innerlijke stevigheid en een authentieke manier van
+            leven en werken.
+          </p>
+          <p>Mijn kracht ligt in:</p>
+          <ul>
+            <li>Snel tot de kern komen</li>
+            <li>Patronene zichtbaar maken die je zelf niet meer ziet</li>
+            <li>Veiligheid creëren waarin je écht kunt zakken</li>
+            <li>Helderheid brengen in complexe innerlijke processen</li>
+            <li>Je begeleiden naar keuzes die kloppen met jouw essentie</li>
+          </ul>
+          <p>
+            Mijn missie? Mensen en organisaties terugbrengen naar hun kern,
+            zodat ze kunnen leven, werken en leiden vanuit wie ze werkelijk
+            zijn.
+          </p>
+          <a href="www.Cominz.be" class="center">
+            <button class="green-btn big-btn">www.Cominz.be</button>
+          </a>
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <div class="text text-beige margin-left">
+          <h2 class="center text-green">Bram</h2>
+          <p>
+            Ik begeleid mensen vanuit de ervaring en het besef dat echte
+            transformatie pas begint wanneer het hart durft te smelten.
+          </p>
+          <p>
+            Pas wanneer het hart zich opent, wordt de moed wakker die nodig is
+            om te veranderen. Niet de moed van hard vechten of volhouden, maar
+            de stille, innerlijke moed die ontstaat wanneer je jezelf toestaat
+            om te voelen wat echt klopt.
+          </p>
+          <p>
+            In mijn werk nodig ik anderen uit om diezelfde beweging te maken:
+            van hoofd naar hart, van spanning naar ontspanning, van controle
+            naar loslaten. Mijn aanpak is geworteld in bewustzijn, adem,
+            lichaamswerk en de stille hartsintelligentie die in ons allemaal
+            aanwezig is.
+          </p>
+          <p>Mijn aanpak is zacht, eerlijk en praktisch.</p>
+          <a href="www.mooyo.be" class="center">
+            <button class="green-btn big-btn">www.mooyo.be</button>
+          </a>
+        </div>
+      </div>
+      <div class="img-wrapper">
+        <Image
+          src={bramProfiel}
+          alt="Profiel foto van bram geysen"
+          width={500}
+          height={500}
+          class="img"
+        />
+      </div>
+    </div>
+  </section>
 </Layout>
-<style></style>
+
+<style>
+  .col2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+  }
+  .col2 .img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .col2 .text-wrapper {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .col2 .text {
+    padding: 2rem;
+    width: 70%;
+  }
+
+  .col2 .margin-left {
+    margin-left: auto;
+  }
+
+  .col2 .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+</style>
