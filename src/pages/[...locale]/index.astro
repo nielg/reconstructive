@@ -7,6 +7,11 @@ import {
   useTranslatedPath,
 } from "@src/i18n/utils";
 import AanbodCard from "@components/AanbodCard.astro";
+import constructImg from "@assets/imgs/constructImg.jpg";
+import grassPathImg from "@assets/imgs/grass-path.jpg";
+import mountainPathImg from "@assets/imgs/mountain-path.jpg";
+import groupPhotoImg from "@assets/imgs/group-foto.jpg";
+import { Image } from "astro:assets";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -15,8 +20,8 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout>
-  <section class="intro text-white center">
-    <h1>Reconstructive: beleef vanuit je kern</h1>
+  <section class="intro text-white">
+    <h1 class="text-align-center">Reconstructive: beleef vanuit je kern</h1>
   </section>
   <section class="bg-green text-white center">
     <p class="p1">
@@ -81,54 +86,103 @@ const translatePath = useTranslatedPath(lang);
           text="Stap één dag buiten je vertrouwde patronen en ontdek hoeveel ruimte er ontstaat wanneer je je construct loslaat."
           link="#"
           alt="Foto van een plein met een bloem in het midden"
-          img=""
+          img={constructImg}
         />
         <AanbodCard
           title="Reconstructive (2 dagen)"
           text="Ervaar de transformerend kracht van Reconstructive en kom dichter bij je intuïtie, je vrijheid en je kern."
           link="#"
           alt="Foto van een houte pad door het hoge grass"
-          img=""
+          img={grassPathImg}
         />
         <AanbodCard
           title="Find your gold (6 dagen)"
           text="Ga op een diepgaande reis door natuur en lichaam, en keer terug naar de essentie van wie jij werkelijk bent"
           link="#"
           alt="Foto van een houten pad door een dor veld met bergen in de achtergrond"
-          img=""
+          img={mountainPathImg}
         />
       </div>
     </div>
   </section>
-  <section class="bg-green text-white">
-    <h3>Wie zijn wij?</h3>
-    <p>
-      Carola Castillo (midden) is grondlegster van het gedachtengoed en de
-      methodiek Reconstructive en oprichtster van Reconstructive International
-      Integratie Holistic School: https://reconstructiveschool.com/en/home/ <a
-        href="https://reconstructiveschool.com/en/home/"
-        target="_blank"
-        rel="noopener noreferrer"></a>
-    </p>
-    <p>
-      Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
-      Reconstructive begeleiders.
-    </p>
-    <h3>Contacteer ons voor een vrijblijvend gesprek:</h3>
-    <p>Elke Busschots: [+ 32 475 46 39]</p>
-    <p>Bram Geysen: [+ 32 473 52 34 ]</p>
-    <p>
-      mail: <a href="mailto:info@reconstructive.be">info@reconstructive.be</a>
-    </p>
+  <section class="bg-green text-white center">
+    <div class="small-text-margin us">
+      <div class="img-wrapper">
+        <Image
+          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
+          width={500}
+          height={500}
+          src={groupPhotoImg}
+          class="img"
+        />
+      </div>
+      <div>
+        <h3>Wie zijn wij?</h3>
+        <p>
+          Carola Castillo (midden) is grondlegster van het gedachtengoed en de
+          methodiek Reconstructive en oprichtster van Reconstructive
+          International Integratie Holistic School:
+          https://reconstructiveschool.com/en/home/ <a
+            href="https://reconstructiveschool.com/en/home/"
+            target="_blank"
+            rel="noopener noreferrer"></a>
+        </p>
+        <p>
+          Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
+          Reconstructive begeleiders.
+        </p>
+        <h3>Contacteer ons voor een vrijblijvend gesprek:</h3>
+        <p>Elke Busschots: [+ 32 475 46 39]</p>
+        <p>Bram Geysen: [+ 32 473 52 34 ]</p>
+        <p>
+          mail: <a href="mailto:info@reconstructive.be"
+            >info@reconstructive.be</a
+          >
+        </p>
+      </div>
+    </div>
   </section>
 </Layout>
 
 <style>
+  .intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-image: url("/src/assets/imgs/meer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 500px;
+  }
   .AanbodCardContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     gap: 2rem;
+    margin: 3rem;
+  }
+
+  .us {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+  }
+
+  .us .img-wrapper {
+    overflow: hidden;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 100%;
+    margin: auto;
+    margin-right: 0;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
   }
 </style>

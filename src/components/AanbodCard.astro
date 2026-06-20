@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 interface Props {
   title: string;
   text: string;
-  img: string;
+  img: ImageMetadata;
   alt: string;
   link: string;
 }
@@ -12,14 +12,14 @@ interface Props {
 const { title, text, img, alt, link } = Astro.props;
 ---
 
-<div class="container text-gray">
-  <!-- <Image alt={alt} src={img} width={200} height={200} /> -->
-  <h3 class="text-green">{title}</h3>
-  <p>{text}</p>
-  <a href={link} class="center">
+<a href={link} class="center">
+  <div class="container text-gray">
+    <Image alt={alt} src={img} width={500} height={300} />
+    <h3 class="text-green">{title}</h3>
+    <p>{text}</p>
     <button class="green-btn"> Lees meer </button>
-  </a>
-</div>
+  </div>
+</a>
 
 <style>
   .container {

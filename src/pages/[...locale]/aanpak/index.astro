@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import img from "@assets/imgs/image.png";
 import Layout from "@src/layouts/Layout.astro";
 import {
   getStaticPaths,
@@ -8,6 +7,11 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "@src/i18n/utils";
+import woodenPeopleImg from "@assets/imgs/wooden-mans.jpg";
+import painBreaksWhatImg from "@assets/imgs/Pain_breaks_what.jpg";
+import sandAngelImg from "@assets/imgs/sand-angel.jpg";
+import whiteFlower from "@assets/imgs/white-flower.jpg";
+import sunflower from "@assets/imgs/white-flower.jpg";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -42,126 +46,149 @@ const translatePath = useTranslatedPath(lang);
   <section class="no-padding">
     <div class="col2">
       <div class="img-wrapper">
-        <Image class="img" alt="" width={500} height={500} src={img} />
+        <Image class="img" alt="" width={500} height={500} src={sunflower} />
       </div>
-      <div class="bg-beige text-gray text">
-        <p>
-          <bold>1. Natuur & energie: </bold> Patronen komen overvloedig voor in de
-          natuur en resoneren diep met de menselijke geest.
-        </p>
-        <p>
-          Het spiraalpatroon, bijvoorbeeld, is gecodeerd in ons DNA, in planten,
-          dieren, kristallen en in onze Melkweg. Zonnebloemen rangschikken hun
-          zaden in spiralen om ruimte en licht maximaal te benutten, terwijl
-          tornado’s en draaikolken spiraaldynamiek gebruiken om energie
-          efficiënt te geleiden.
-        </p>
-        <p>
-          Veel tradities zien spiralen als het pad waarlangs <bold>
-            levenskracht
-          </bold>
-          stroomt: een beweging van binnen naar buiten, van essentie naar manifestatie.
-        </p>
-        <p>
-          Zonder structuur blijft energie puur potentieel maar zodra ze zich via
-          patronen, structuren en ritmes ordent, wordt ze voelbaar, waarneembaar
-          en scheppend.
-        </p>
+      <div class="text-wrapper bg-beige">
+        <div class="text-gray text">
+          <p>
+            <bold>1. Natuur & energie: </bold> Patronen komen overvloedig voor in
+            de natuur en resoneren diep met de menselijke geest.
+          </p>
+          <p>
+            Het spiraalpatroon, bijvoorbeeld, is gecodeerd in ons DNA, in
+            planten, dieren, kristallen en in onze Melkweg. Zonnebloemen
+            rangschikken hun zaden in spiralen om ruimte en licht maximaal te
+            benutten, terwijl tornado’s en draaikolken spiraaldynamiek gebruiken
+            om energie efficiënt te geleiden.
+          </p>
+          <p>
+            Veel tradities zien spiralen als het pad waarlangs <bold>
+              levenskracht
+            </bold>
+            stroomt: een beweging van binnen naar buiten, van essentie naar manifestatie.
+          </p>
+          <p>
+            Zonder structuur blijft energie puur potentieel maar zodra ze zich
+            via patronen, structuren en ritmes ordent, wordt ze voelbaar,
+            waarneembaar en scheppend.
+          </p>
+        </div>
       </div>
-      <div class="bg-green text-white text">
-        <p>
-          2. Overleven & identiteit: In onze kindertijd vormen
-          overlevingspatronen de basis van wie we denken te moeten zijn.
-        </p>
-        <p>
-          Als mens worden we geboren in een familie en gevormd door cultuur,
-          religie en educatie. In onze eerste zes levensjaren ontwikkelen we
-          patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We
-          leren de strategieën die ons helpen overeind te blijven en die onze
-          identiteit vormgeven. Die patronen vormen de basis waarop we later,
-          vaak onbewust, blijven terugvallen, vooral wanneer het leven moeilijk
-          wordt.
-        </p>
-        <p>
-          Tijdens deze periode kan vroegkinderlijk trauma ontstaan, waarvan de
-          impact zich nog decennia later kan laten voelen.
-        </p>
-      </div>
-      <div class="img-wrapper">
-        <Image class="img" alt="" width={500} height={500} src={img} />
-      </div>
-      <div class="img-wrapper">
-        <Image class="img" alt="" width={500} height={500} src={img} />
-      </div>
-      <div class="bg-beige text-gray text">
-        <p>
-          3. Doorbreken & bewustwording: Wanneer oude patronen beginnen te
-          knellen, ontstaat de kans om te zien wat ons werkelijk tegenhoudt.
-        </p>
-        <p>
-          In het verder opgroeien merken we dat jobs, relaties, keuzes, nieuwe
-          ervaringen en conflicten barstjes in dit construct brengen. Ze laten
-          ons verschillen zien en nodigen ons uit om met een ruimere, volwassen
-          blik te kijken.
-        </p>
-        <p>
-          Waar het kind in ons vaak wil vasthouden aan gelijk of zekerheid, kan
-          de volwassene deze momenten zien als kansen voor groei en verrijking.
-        </p>
-        <p>
-          Vragen zoals "Wie bent ik écht? Wie ben ik voorbij mijn rol? Waarom
-          loop ik vast?" komen dan voorbij
-        </p>
-        <p>
-          Dit vraagt om openheid, nieuwsgierigheid en de bereidheid om voorbij
-          het bekende te bewegen.
-        </p>
-      </div>
-      <div class="bg-green text-white text">
-        <p>
-          4. Belichaming & creatie: Door nieuwe patronen in het lichaam te
-          verankeren, ontstaat ruimte voor bewuste creatie vanuit onze kern.
-        </p>
-        <p>
-          Echte wijsheid ontstaat wanneer ons lichaam iets ten diepste heeft
-          ervaren. In ons hoofd hebben we het allemaal al overdacht en lopen we
-          in dezelfde cirkel. Werkelijke verandering begint dan ook niet in het
-          hoofd, maar in het lichaam. Wanneer we uit het denken stappen en in
-          ons lichaam zakken, ontstaat er ruimte voor nieuwe ervaringen,
-          verbinding en inzicht.
-        </p>
-        <p>
-          Potentie, energie dat tot nu toe onzichtbaar of verborgen bleef, mag
-          zich nu via het lichaam toont.
-        </p>
-        <p>Ervaar hoe energie kracht geeft en intentie richting.</p>
-        <p>
-          Wie blokkades wil opheffen en vrijer wil leven, ervaart hoe het is om
-          met beide te werken.
-        </p>
+      <div class="text-wrapper bg-green">
+        <div class="text-white text margin-left">
+          <p>
+            2. Overleven & identiteit: In onze kindertijd vormen
+            overlevingspatronen de basis van wie we denken te moeten zijn.
+          </p>
+          <p>
+            Als mens worden we geboren in een familie en gevormd door cultuur,
+            religie en educatie. In onze eerste zes levensjaren ontwikkelen we
+            patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We
+            leren de strategieën die ons helpen overeind te blijven en die onze
+            identiteit vormgeven. Die patronen vormen de basis waarop we later,
+            vaak onbewust, blijven terugvallen, vooral wanneer het leven
+            moeilijk wordt.
+          </p>
+          <p>
+            Tijdens deze periode kan vroegkinderlijk trauma ontstaan, waarvan de
+            impact zich nog decennia later kan laten voelen.
+          </p>
+        </div>
       </div>
       <div class="img-wrapper">
-        <Image class="img" alt="" width={500} height={500} src={img} />
+        <Image
+          class="img"
+          alt=""
+          width={500}
+          height={500}
+          src={woodenPeopleImg}
+        />
       </div>
       <div class="img-wrapper">
-        <Image class="img" alt="" width={500} height={500} src={img} />
+        <Image
+          class="img"
+          alt=""
+          width={500}
+          height={500}
+          src={painBreaksWhatImg}
+        />
       </div>
-      <div class="bg-beige text-gray text">
-        <p>
-          5. Heelheid & integratie: Wanneer kind en volwassen delen samengaan,
-          worden patronen levensdienend en ontstaat innerlijke heelheid.
-        </p>
-        <p>
-          Vanuit die doorleefde wijsheid en innerlijke ruimte kunnen we creëren.
-          Het wordt bewust creëren vanuit intuïtie en helderheid, vanuit onze
-          kern, uitgelijnd.
-        </p>
-        <p>
-          De volwassene en het kind in ons kunnen samenkomen in een gevoel van
-          heelheid, waarbij de kwaliteiten van het kind op een veilige manier
-          gedragen worden door onze volwassen delen en op bewuste manier tot
-          uiting komen in de wereld.
-        </p>
+      <div class="text-wrapper bg-beige">
+        <div class="text-gray text">
+          <p>
+            3. Doorbreken & bewustwording: Wanneer oude patronen beginnen te
+            knellen, ontstaat de kans om te zien wat ons werkelijk tegenhoudt.
+          </p>
+          <p>
+            In het verder opgroeien merken we dat jobs, relaties, keuzes, nieuwe
+            ervaringen en conflicten barstjes in dit construct brengen. Ze laten
+            ons verschillen zien en nodigen ons uit om met een ruimere,
+            volwassen blik te kijken.
+          </p>
+          <p>
+            Waar het kind in ons vaak wil vasthouden aan gelijk of zekerheid,
+            kan de volwassene deze momenten zien als kansen voor groei en
+            verrijking.
+          </p>
+          <p>
+            Vragen zoals "Wie bent ik écht? Wie ben ik voorbij mijn rol? Waarom
+            loop ik vast?" komen dan voorbij
+          </p>
+          <p>
+            Dit vraagt om openheid, nieuwsgierigheid en de bereidheid om voorbij
+            het bekende te bewegen.
+          </p>
+        </div>
+      </div>
+      <div class="text-wrapper bg-green">
+        <div class="text-white text margin-left">
+          <p>
+            4. Belichaming & creatie: Door nieuwe patronen in het lichaam te
+            verankeren, ontstaat ruimte voor bewuste creatie vanuit onze kern.
+          </p>
+          <p>
+            Echte wijsheid ontstaat wanneer ons lichaam iets ten diepste heeft
+            ervaren. In ons hoofd hebben we het allemaal al overdacht en lopen
+            we in dezelfde cirkel. Werkelijke verandering begint dan ook niet in
+            het hoofd, maar in het lichaam. Wanneer we uit het denken stappen en
+            in ons lichaam zakken, ontstaat er ruimte voor nieuwe ervaringen,
+            verbinding en inzicht.
+          </p>
+          <p>
+            Potentie, energie dat tot nu toe onzichtbaar of verborgen bleef, mag
+            zich nu via het lichaam toont.
+          </p>
+          <p>Ervaar hoe energie kracht geeft en intentie richting.</p>
+          <p>
+            Wie blokkades wil opheffen en vrijer wil leven, ervaart hoe het is
+            om met beide te werken.
+          </p>
+        </div>
+      </div>
+      <div class="img-wrapper">
+        <Image class="img" alt="" width={500} height={500} src={sandAngelImg} />
+      </div>
+      <div class="img-wrapper">
+        <Image class="img" alt="" width={500} height={500} src={whiteFlower} />
+      </div>
+      <div class="text-wrapper bg-beige">
+        <div class="bg-beige text-gray text">
+          <p>
+            5. Heelheid & integratie: Wanneer kind en volwassen delen samengaan,
+            worden patronen levensdienend en ontstaat innerlijke heelheid.
+          </p>
+          <p>
+            Vanuit die doorleefde wijsheid en innerlijke ruimte kunnen we
+            creëren. Het wordt bewust creëren vanuit intuïtie en helderheid,
+            vanuit onze kern, uitgelijnd.
+          </p>
+          <p>
+            De volwassene en het kind in ons kunnen samenkomen in een gevoel van
+            heelheid, waarbij de kwaliteiten van het kind op een veilige manier
+            gedragen worden door onze volwassen delen en op bewuste manier tot
+            uiting komen in de wereld.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -212,10 +239,19 @@ const translatePath = useTranslatedPath(lang);
     width: 100%;
     height: 100%;
   }
+  .col2 .text-wrapper {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
 
   .col2 .text {
     padding: 2rem;
-    height: 100%;
+    width: 70%;
+  }
+
+  .col2 .margin-left {
+    margin-left: auto;
   }
 
   .col2 .img {

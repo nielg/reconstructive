@@ -1,5 +1,7 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
+import { Image } from "astro:assets";
+import fotoGallary from "@assets/imgs/impressie-img-gallary.webp";
 import {
   getStaticPaths,
   getLangFromUrl,
@@ -21,8 +23,14 @@ const translatePath = useTranslatedPath(lang);
       enkele foto's.
     </p>
   </section>
-  <section class="bg-beige">
-    <p>fotos</p>
+  <section class="bg-beige center">
+    <Image
+      class="img"
+      src={fotoGallary}
+      alt="foto gallery van de reconstrucitve workshop"
+      width={1000}
+      height={500}
+    />
   </section>
   <section class="bg-green text-white">
     <div class="small-text-margin">
@@ -50,5 +58,10 @@ const translatePath = useTranslatedPath(lang);
 <style>
   .big-btn {
     margin: 1rem;
+  }
+
+  .img {
+    width: 70%;
+    height: auto;
   }
 </style>

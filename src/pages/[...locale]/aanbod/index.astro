@@ -6,6 +6,7 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "@src/i18n/utils";
+import Aanbod from "@components/Aanbod.astro";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -32,7 +33,9 @@ const translatePath = useTranslatedPath(lang);
       </p>
     </div>
   </section>
-  <section class="bg-beige text-gray"></section>
+  <section class="bg-beige text-gray">
+    <Aanbod />
+  </section>
   <section class="contact bg-green text-white center">
     <p class="p2">Misschien is het een eerste nieuwsgierigheid.</p>
     <p class="p2">Misschien een verlangen naar dieper contact met jezelf.</p>
