@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  text: string[];
+  li: string[];
+  wie: string;
+  waar: string;
+  wanneer: string;
+  prijs: string;
+  aantal_deelnemers: string;
+}
+
+const { title, text, li, wie, waar, wanneer, prijs, aantal_deelnemers } =
+  Astro.props;
+---
+
+<div>
+  <h3 class="text-green text-align-center">{title}</h3>
+  {text.map((t) => <p>{t}</p>)}
+</div>
+<div>
+  <h3 class="text-green text-align-center">Praktische informatie</h3>
+  <p class="bold">Wat levert het op:</p>
+  <ul>
+    {li.map((i) => <li>{i}</li>)}
+  </ul>
+  <p>
+    <strong>Voor wie: </strong>{wie}
+  </p>
+  <p><strong>Waar:</strong> {waar}</p>
+  <p><strong>Wanneer:</strong> {wanneer}</p>
+  <p>
+    <strong>Prijs:</strong>
+    {prijs}
+  </p>
+  <p>Max aantal deelnemers: {aantal_deelnemers}</p>
+</div>
