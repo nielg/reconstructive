@@ -11,6 +11,7 @@ import constructImg from "@assets/imgs/constructImg.jpg";
 import grassPathImg from "@assets/imgs/grass-path.jpg";
 import mountainPathImg from "@assets/imgs/mountain-path.jpg";
 import groupPhotoImg from "@assets/imgs/group-foto.jpg";
+import meerImg from "@assets/imgs/meer.jpg";
 import { Image } from "astro:assets";
 
 export { getStaticPaths };
@@ -20,7 +21,10 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout>
-  <section class="intro text-white">
+  <section
+    class="intro text-white"
+    style={`background-image: url(${meerImg.src});`}
+  >
     <h1 class="text-align-center">Reconstructive: beleef vanuit je kern</h1>
   </section>
   <section class="bg-green text-white center">
@@ -150,7 +154,6 @@ const translatePath = useTranslatedPath(lang);
     align-items: flex-end;
     justify-content: center;
 
-    background-image: url("/src/assets/imgs/meer.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
