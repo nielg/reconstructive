@@ -28,6 +28,13 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
   <section class="no-padding">
+    <div class="bg-yellow yellow-section text-align-center">
+      <p>
+        Reconstructive.be is een samenwerkingen tussen Elke Busschots en Bram
+        Geysen die elk hun eigen praktijk hebben en de opleidingen hebben
+        gevolgd bij de RHIIS. We werken nauw samen de international school.
+      </p>
+    </div>
     <div class="col2">
       <div class="img-wrapper">
         <Image
@@ -38,7 +45,7 @@ const translatePath = useTranslatedPath(lang);
           class="img elke-img"
         />
       </div>
-      <div class="text-wrapper">
+      <div class="text-wrapper bg-beige">
         <div class="text-gray text">
           <h2 class="text-align-center text-green">Elke</h2>
           <p>
@@ -59,13 +66,18 @@ const translatePath = useTranslatedPath(lang);
             zodat ze kunnen leven, werken en leiden vanuit wie ze werkelijk
             zijn.
           </p>
-          <a href="www.Cominz.be" class="center">
+          <a
+            href="https://www.Cominz.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="center"
+          >
             <button class="green-btn big-btn">www.Cominz.be</button>
           </a>
         </div>
       </div>
-      <div class="text-wrapper">
-        <div class="text text-beige margin-left">
+      <div class="text-wrapper bg-beige text-gray">
+        <div class="text margin-left">
           <h2 class="center text-green">Bram</h2>
           <p>
             Ik begeleid mensen vanuit de ervaring en het besef dat echte
@@ -85,7 +97,12 @@ const translatePath = useTranslatedPath(lang);
             aanwezig is.
           </p>
           <p>Mijn aanpak is zacht, eerlijk en praktisch.</p>
-          <a href="www.mooyo.be" class="center">
+          <a
+            href="https://www.mooyo.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="center"
+          >
             <button class="green-btn big-btn">www.mooyo.be</button>
           </a>
         </div>
@@ -143,5 +160,10 @@ const translatePath = useTranslatedPath(lang);
 
   .col2 .elke-img {
     object-position: center 80%;
+  }
+
+  .yellow-section p {
+    margin: 0;
+    padding: 3rem;
   }
 </style>

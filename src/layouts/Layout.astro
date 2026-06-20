@@ -11,6 +11,7 @@ import Footer from "@components/layout/Footer.astro";
 import Header from "@components/layout/Header.astro";
 import ScrollToTop from "@components/layout/ScrollToTop.astro";
 import LanguagePicker from "@components/layout/LanguagePicker.astro";
+import Nav from "@components/layout/Nav.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -31,7 +32,9 @@ const pathname = new URL(Astro.url).pathname;
   </head>
   <body>
     <LanguagePicker place="header" />
-    <Header pathname={pathname} />
+    <Header />
+    <Nav pathname={pathname} />
+
     <slot />
     <Footer />
     <ScrollToTop />

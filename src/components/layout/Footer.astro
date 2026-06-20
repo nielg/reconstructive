@@ -5,6 +5,7 @@ import {
   useTranslatedPath,
   useTranslations,
 } from "@src/i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
@@ -13,6 +14,7 @@ const t = useTranslations(lang);
 <footer class="bg-dark text-white">
   <div class="row">
     <h3>Reconstructive</h3>
+    <LanguagePicker place="footer" />
   </div>
   <div class="col3">
     <div>
@@ -30,10 +32,10 @@ const t = useTranslations(lang);
       </ul>
     </div>
     <div>
-      <h4>Bram Geysen</h4>
-      <p>+32 473 52 30 94</p>
-      <a href="mailto:bramgeysen@gmail.com"><p>bramgeysen@gmail.com</p></a>
-      <p>Rondestraat 38 <br /> 3000 Leuven, Belgium</p>
+      <h4>Reconstructive</h4>
+      <p>Bram Geysen: +32 473 52 30 94</p>
+      <p>Elke Busschots: +32 473 52 30 94</p>
+      <a href="mailto:reconstructive@info.be"><p>reconstructive@info.be</p></a>
     </div>
     <div class="credits">
       <h4>Credits</h4>

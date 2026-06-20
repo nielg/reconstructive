@@ -1,19 +1,13 @@
----
-import Nav from "./Nav.astro";
-
-interface Props {
-  pathname: string;
-}
-const { pathname } = Astro.props;
----
-
 <header class="bg-white">
   <h2 class="text-green center">Reconstructive.be</h2>
-  <Nav pathname={pathname} />
 </header>
 
 <style>
   header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding-top: 3rem;
   }
   h2 {
