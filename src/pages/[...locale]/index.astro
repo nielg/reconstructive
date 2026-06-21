@@ -6,6 +6,8 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "@src/i18n/utils";
+import { sanityClient } from "sanity:client";
+import type { SanityDocument } from "@sanity/client";
 import AanbodCard from "@components/AanbodCard.astro";
 import constructImg from "@assets/imgs/constructImg.jpg";
 import grassPathImg from "@assets/imgs/grass-path.jpg";
@@ -18,6 +20,20 @@ export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+
+const posts_query = `*[
+  _type == "post" 
+  && defined(slug.current)
+  && language == $lang
+] | order(publishedAt desc)[0...2] {
+  _id, 
+  title, 
+  slug, 
+  description,
+  language
+}`;
+
+const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
 ---
 
 <Layout>
@@ -150,30 +166,23 @@ const translatePath = useTranslatedPath(lang);
     <div class="small-text-margin center">
       <h3 class="text-green text-align-center">Blogs</h3>
       <div class="col2">
-        <div>
-          <a href="" class="center">
-            <h4 class="text-align-center text-green">Blog 1</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
-              velit sit sequi ad magni. Dolores unde saepe deserunt, accusantium
-              eum exercitationem totam, quis recusandae quo iure voluptates,
-              laboriosam minus reiciendis.
-            </p>
-            <button class="green-btn">Lees meer</button>
-          </a>
-        </div>
-        <div>
-          <a href="" class="center">
-            <h4 class="text-align-center text-green">Blog 2</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
-              velit sit sequi ad magni. Dolores unde saepe deserunt, accusantium
-              eum exercitationem totam, quis recusandae quo iure voluptates,
-              laboriosam minus reiciendis.
-            </p>
-            <button class="green-btn">Lees meer</button>
-          </a>
-        </div>
+        {
+          posts.map((post) => {
+            return (
+              <div class="post-card-wrapper">
+                <a
+                  href={`/posts/${post.slug.current}`}
+                  class="center post-card-link"
+                >
+                  <h4 class="text-align-center text-green">{post.title}</h4>
+                  <p>{post.description}</p>
+
+                  <button class="green-btn">Lees meer</button>
+                </a>
+              </div>
+            );
+          })
+        }
       </div>
     </div>
   </section>
