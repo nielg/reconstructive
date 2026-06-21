@@ -12,7 +12,7 @@ import woodenPeopleImg from "@assets/imgs/wooden-mans.jpg";
 import painBreaksWhatImg from "@assets/imgs/Pain_breaks_what.jpg";
 import sandAngelImg from "@assets/imgs/sand-angel.jpg";
 import whiteFlower from "@assets/imgs/white-flower.jpg";
-import sunflower from "@assets/imgs/white-flower.jpg";
+import sunflower from "@assets/imgs/zonnebloem.png";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -48,7 +48,7 @@ const translatePath = useTranslatedPath(lang);
     <SplitGrid>
       <!-- 1. Natuur & energie (Afbeelding) -->
       <div class="img-wrapper first">
-        <Image class="img" alt="" width={500} height={500} src={sunflower} />
+        <Image class="img" alt="" width={600} height={600} src={sunflower} />
       </div>
 
       <!-- 1. Natuur & energie (Tekst) -->
