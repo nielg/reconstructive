@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "@src/layouts/Layout.astro";
+import SplitGrid from "@components/SplitGrid.astro"; // <-- Geïmporteerd
 import {
   getStaticPaths,
   getLangFromUrl,
@@ -32,7 +33,7 @@ const translatePath = useTranslatedPath(lang);
         stellen. Zo wordt de vrijheid die daarachter schuilgaat zichtbaar.
       </p>
       <p>
-        Deze reis brengt je van overleven naar vol leven. Het is een proces van
+        Deze reis brings je van overleven naar vol leven. Het is een proces van
         volwassenwording en heling. Je innerlijke kracht spreekt jou aan en
         nodigt je uit om verantwoordelijkheid te nemen over je helingsproces.
       </p>
@@ -44,11 +45,14 @@ const translatePath = useTranslatedPath(lang);
   </section>
 
   <section class="no-padding">
-    <div class="col2">
-      <div class="img-wrapper">
+    <SplitGrid>
+      <!-- 1. Natuur & energie (Afbeelding) -->
+      <div class="img-wrapper first">
         <Image class="img" alt="" width={500} height={500} src={sunflower} />
       </div>
-      <div class="text-wrapper bg-beige">
+
+      <!-- 1. Natuur & energie (Tekst) -->
+      <div class="text-wrapper bg-beige second">
         <div class="text-gray text">
           <p>
             <strong>1. Natuur & energie: </strong> Patronen komen overvloedig voor
@@ -74,7 +78,9 @@ const translatePath = useTranslatedPath(lang);
           </p>
         </div>
       </div>
-      <div class="text-wrapper bg-green">
+
+      <!-- 2. Overleven & identiteit (Tekst) -->
+      <div class="text-wrapper bg-green fourth">
         <div class="text-white text margin-left">
           <p>
             <strong>2. Overleven & identiteit:</strong> In onze kindertijd vormen
@@ -86,7 +92,7 @@ const translatePath = useTranslatedPath(lang);
             patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We
             leren de strategieën die ons helpen overeind te blijven en die onze
             identiteit vormgeven. Die patronen vormen de basis waarop we later,
-            vaak onbewust, blijven terugvallen, vooral wanneer het leven
+            soft onbewust, blijven terugvallen, vooral wanneer het leven
             moeilijk wordt.
           </p>
           <p>
@@ -95,7 +101,9 @@ const translatePath = useTranslatedPath(lang);
           </p>
         </div>
       </div>
-      <div class="img-wrapper">
+
+      <!-- 2. Overleven & identiteit (Afbeelding) -->
+      <div class="img-wrapper third">
         <Image
           class="img"
           alt=""
@@ -104,7 +112,9 @@ const translatePath = useTranslatedPath(lang);
           src={woodenPeopleImg}
         />
       </div>
-      <div class="img-wrapper">
+
+      <!-- 3. Doorbreken & bewustwording (Afbeelding) -->
+      <div class="img-wrapper fifth">
         <Image
           class="img"
           alt=""
@@ -113,11 +123,13 @@ const translatePath = useTranslatedPath(lang);
           src={painBreaksWhatImg}
         />
       </div>
-      <div class="text-wrapper bg-beige">
+
+      <!-- 3. Doorbreken & bewustwording (Tekst) -->
+      <div class="text-wrapper bg-beige sixth">
         <div class="text-gray text">
           <p>
             <strong>3. Doorbreken & bewustwording:</strong> Wanneer oude patronen
-            beginnen te knellen, ontstaat de kans om te zien wat ons werkelijk tegenhoudt.
+            beginen te knellen, ontstaat de kans om te zien wat ons werkelijk tegenhoudt.
           </p>
           <p>
             In het verder opgroeien merken we dat jobs, relaties, keuzes, nieuwe
@@ -140,7 +152,9 @@ const translatePath = useTranslatedPath(lang);
           </p>
         </div>
       </div>
-      <div class="text-wrapper bg-green">
+
+      <!-- 4. Belichaming & creatie (Tekst) -->
+      <div class="text-wrapper bg-green eight">
         <div class="text-white text margin-left">
           <p>
             <strong>4. Belichaming & creatie:</strong> Door nieuwe patronen in het
@@ -166,13 +180,19 @@ const translatePath = useTranslatedPath(lang);
           </p>
         </div>
       </div>
-      <div class="img-wrapper">
+
+      <!-- 4. Belichaming & creatie (Afbeelding) -->
+      <div class="img-wrapper seventh">
         <Image class="img" alt="" width={500} height={500} src={sandAngelImg} />
       </div>
-      <div class="img-wrapper">
+
+      <!-- 5. Heelheid & integratie (Afbeelding) -->
+      <div class="img-wrapper neight">
         <Image class="img" alt="" width={500} height={500} src={whiteFlower} />
       </div>
-      <div class="text-wrapper bg-beige">
+
+      <!-- 5. Heelheid & integratie (Tekst) -->
+      <div class="text-wrapper bg-beige tenth">
         <div class="bg-beige text-gray text">
           <p>
             <strong>5. Heelheid & integratie:</strong> Wanneer kind en volwassen delen
@@ -191,8 +211,9 @@ const translatePath = useTranslatedPath(lang);
           </p>
         </div>
       </div>
-    </div>
+    </SplitGrid>
   </section>
+
   <section class="bg-green text-white center">
     <h2>"Your journey to freedom"</h2>
   </section>
@@ -223,45 +244,9 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
 </Layout>
+
 <style>
   .kern h2 {
     margin: 1rem;
-  }
-
-  .col2 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    overflow: hidden;
-  }
-  .col2 .img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .col2 .text-wrapper {
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-  }
-
-  .col2 .text {
-    padding: 2rem;
-    width: 70%;
-  }
-
-  .col2 .margin-left {
-    margin-left: auto;
-  }
-
-  .col2 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 </style>

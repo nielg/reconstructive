@@ -1,6 +1,7 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
 import { Image } from "astro:assets";
+import SplitGrid from "@components/SplitGrid.astro"; // <-- Importeer hier
 import elkeProfiel from "@assets/imgs/elke-profile.jpg";
 import bramProfiel from "@assets/imgs/bram-profile.png";
 import {
@@ -27,6 +28,7 @@ const translatePath = useTranslatedPath(lang);
       </p>
     </div>
   </section>
+
   <section class="no-padding">
     <div class="bg-yellow yellow-section text-align-center">
       <p>
@@ -35,7 +37,8 @@ const translatePath = useTranslatedPath(lang);
         gevolgd bij de RHIIS. We werken nauw samen met de international school.
       </p>
     </div>
-    <div class="col2">
+
+    <SplitGrid>
       <div class="img-wrapper">
         <Image
           src={elkeProfiel}
@@ -45,6 +48,7 @@ const translatePath = useTranslatedPath(lang);
           class="img elke-img"
         />
       </div>
+
       <div class="text-wrapper bg-beige">
         <div class="text-gray text">
           <h2 class="text-align-center text-green">Elke</h2>
@@ -63,7 +67,7 @@ const translatePath = useTranslatedPath(lang);
           </ul>
           <p>
             Mijn missie? Mensen en organisaties terugbrengen naar hun kern,
-            zodat ze kunnen leven, werken en leiden vanuit wie ze werkelijk
+            zodat ze kunnen leven, werken and leiden vanuit wie ze werkelijk
             zijn.
           </p>
           <a
@@ -76,7 +80,8 @@ const translatePath = useTranslatedPath(lang);
           </a>
         </div>
       </div>
-      <div class="text-wrapper bg-beige text-gray">
+
+      <div class="text-wrapper bg-beige text-gray fourth">
         <div class="text margin-left">
           <h2 class="center text-green">Bram</h2>
           <p>
@@ -107,7 +112,8 @@ const translatePath = useTranslatedPath(lang);
           </a>
         </div>
       </div>
-      <div class="img-wrapper">
+
+      <div class="img-wrapper third">
         <Image
           src={bramProfiel}
           alt="Profiel foto van bram geysen"
@@ -116,52 +122,12 @@ const translatePath = useTranslatedPath(lang);
           class="img"
         />
       </div>
-    </div>
+    </SplitGrid>
   </section>
 </Layout>
 
 <style>
-  .col2 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    overflow: hidden;
-  }
-  .col2 .img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .col2 .text-wrapper {
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-  }
-
-  .col2 .text {
-    padding: 2rem;
-    width: 70%;
-  }
-
-  .col2 .margin-left {
-    margin-left: auto;
-  }
-
-  .col2 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .col2 .elke-img {
-    object-position: center 80%;
-  }
-
+  /* Alleen pagina-specifieke stijlen blijven hier over */
   .yellow-section p {
     margin: 0;
     padding: 3rem;
