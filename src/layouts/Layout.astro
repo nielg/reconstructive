@@ -18,20 +18,20 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const pathname = new URL(Astro.url).pathname;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href={`${baseUrl}/favicon.png`} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <ClientRouter />
-    <title>Astro</title>
+    <title>Reconstructive</title>
   </head>
   <body>
-    <LanguagePicker place="header" />
     <Header />
     <Nav pathname={pathname} />
 

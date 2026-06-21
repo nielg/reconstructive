@@ -120,7 +120,7 @@ const translatePath = useTranslatedPath(lang);
           class="img"
         />
       </div>
-      <div>
+      <div class="text">
         <h3>Wie zijn wij?</h3>
         <p>
           Carola Castillo (midden) is grondlegster van het gedachtengoed en de
@@ -161,10 +161,8 @@ const translatePath = useTranslatedPath(lang);
     height: 500px;
   }
   .AanbodCardContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 3rem;
   }
@@ -187,5 +185,25 @@ const translatePath = useTranslatedPath(lang);
   .img {
     width: 100%;
     height: auto;
+  }
+
+  @media (max-width: 1000px) {
+    .AanbodCardContainer {
+      grid-template-columns: 1fr;
+      margin: 1.5rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .us {
+      grid-template-columns: 1fr;
+    }
+
+    .us .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 </style>

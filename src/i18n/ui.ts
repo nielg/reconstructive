@@ -9,10 +9,10 @@ export const defaultLang = "nl";
 
 export const ui = {
   nl: {
-    "nav.aanpak": "onze aanpak",
-    "nav.aanbod": "aanbod",
-    "nav.impressies": "impressies",
-    "nav.about": "over ons",
+    "nav.aanpak": "ONZE AANPAK",
+    "nav.aanbod": "AANBOD",
+    "nav.impressies": "IMPRESSIES",
+    "nav.about": "OVER ONS",
 
     "footer.website": "De Website is gemaakt met Astro door:",
   },
