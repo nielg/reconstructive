@@ -235,6 +235,7 @@ import AanbodDetails from "./AanbodDetails.astro";
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     display: none;
+    scroll-margin-top: 300px;
   }
 
   .details.show {
@@ -313,6 +314,10 @@ import AanbodDetails from "./AanbodDetails.astro";
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 8px;
+    }
+
+    .details {
+      scroll-margin-top: 0;
     }
   }
 </style>
