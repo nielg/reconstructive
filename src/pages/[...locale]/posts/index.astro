@@ -2,34 +2,111 @@
 import Layout from "@src/layouts/Layout.astro";
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
-import { getStaticPaths } from "@src/i18n/utils";
-
+import {
+  getStaticPaths,
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@src/i18n/utils";
 export { getStaticPaths };
+
+const lang = getLangFromUrl(Astro.url);
 
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+  && language == $lang
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, description, language}`;
 
-const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
+const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
 ---
 
 <Layout>
-  <section class="bg-beige text-gray">
-    <h1 class="text-align-center text-green">Posts</h1>
-    <div class="text-margin">
-      <ul class="flex flex-col gap-y-4">
-        {
-          posts.map((post) => (
-            <li class="hover:underline">
+  <section class="bg-beige">
+    <div class="container">
+      {
+        posts.map((post) => (
+          <article class="post-card bg-white">
+            <div class="post-content">
+              <div class="post-meta">
+                <time datetime={post.publishedAt}>
+                  {new Date(post.publishedAt).toLocaleDateString("nl-NL", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
+
+              <h2 class="post-title-link">{post.title}</h2>
+
+              <p class="post-excerpt">{post.description}</p>
+            </div>
+
+            <div class="post-footer">
               <a href={`/posts/${post.slug.current}`}>
-                <h2>{post.title}</h2>
-                <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
+                <button class="green-btn">Lees meer</button>
               </a>
-            </li>
-          ))
-        }
-      </ul>
+            </div>
+          </article>
+        ))
+      }
     </div>
   </section>
 </Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  /* --- POST CARD --- */
+  .post-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.05),
+      0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(28, 61, 39, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition:
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  }
+  .post-meta {
+    text-transform: uppercase;
+    color: var(--text-gray);
+  }
+
+  .post-title-link {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .post-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  /* --- BUTTON / FOOTER --- */
+  .post-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+</style>
