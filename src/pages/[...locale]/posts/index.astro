@@ -1,0 +1,35 @@
+---
+import Layout from "@src/layouts/Layout.astro";
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
+import { getStaticPaths } from "@src/i18n/utils";
+
+export { getStaticPaths };
+
+const POSTS_QUERY = `*[
+  _type == "post"
+  && defined(slug.current)
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+
+const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
+---
+
+<Layout>
+  <section class="bg-beige text-gray">
+    <h1 class="text-align-center text-green">Posts</h1>
+    <div class="text-margin">
+      <ul class="flex flex-col gap-y-4">
+        {
+          posts.map((post) => (
+            <li class="hover:underline">
+              <a href={`/posts/${post.slug.current}`}>
+                <h2>{post.title}</h2>
+                <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Layout>
