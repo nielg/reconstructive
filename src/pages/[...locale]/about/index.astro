@@ -1,9 +1,12 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
 import { Image } from "astro:assets";
-import SplitGrid from "@components/SplitGrid.astro"; // <-- Importeer hier
+import SplitGrid from "@components/SplitGrid.astro";
 import elkeProfiel from "@assets/imgs/elke-profile.jpg";
 import bramProfiel from "@assets/imgs/bram-profile.png";
+import groupPhotoImg from "@assets/imgs/group-foto.jpg";
+import rihsLogo from "@assets/imgs/RIIHS-logo.png";
+
 import {
   getStaticPaths,
   getLangFromUrl,
@@ -124,12 +127,93 @@ const translatePath = useTranslatedPath(lang);
       </div>
     </SplitGrid>
   </section>
+  <section class="bg-green text-white text-align-center">
+    <div class="small-text-margin">
+      <h2>Onze kernwaarden: Jij bent de expert van je eigen reis</h2>
+      <p>
+        Wij geloven dat iedereen een geschenk is voor deze wereld, een expert in
+        zijn of haar eigen leven, en dat alles wat je nodig hebt al in jezelf
+        aanwezig is. Jij zit aan het stuur van je eigen leerproces.
+      </p>
+      <p>
+        Bij Reconstructive helpen we je om je volledige potentieel te ontplooien
+        en authentiek te leven.
+      </p>
+    </div>
+  </section>
+  <section class="bg-beige text-gray text-align-center">
+    <div class="small-text-margin oorsprong">
+      <div class="img-wrapper">
+        <Image
+          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
+          width={500}
+          height={500}
+          src={groupPhotoImg}
+          class="img"
+        />
+      </div>
+      <div class="text">
+        <h2 class="text-align-center text-green text-align-center">
+          De oorsprong
+        </h2>
+        <p>
+          Carola Castillo is de grondlegster van de methodiek 'Reconstructive'.
+          Zij is oprichtster van Reconstructive International Integratie
+          Holistic School.
+        </p>
+        <Image
+          alt="Logo International Integration Holistic School"
+          width={400}
+          height={150}
+          src={rihsLogo}
+        />
+        <a href=""
+          ><div class="big-btn green-btn btn">
+            <p>Reconstructive International Integrative Holistic School</p>
+          </div></a
+        >
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  /* Alleen pagina-specifieke stijlen blijven hier over */
   .yellow-section p {
     margin: 0;
     padding: 3rem;
+  }
+
+  .oorsprong {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+  }
+
+  .oorsprong .img-wrapper {
+    overflow: hidden;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+    margin-right: 0;
+  }
+
+  .oorsprong .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .oorsprong p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .oorsprong .green-btn {
+    margin: 1rem 0;
+  }
+  .oorsprong .green-btn p {
+    margin: 0;
   }
 </style>
