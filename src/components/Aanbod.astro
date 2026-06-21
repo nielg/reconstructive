@@ -155,6 +155,10 @@ import AanbodDetails from "./AanbodDetails.astro";
             detail.classList.remove("show");
             if (detail.dataset.content === content) {
               detail.classList.add("show");
+              detail.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
             }
           });
         });
@@ -172,10 +176,8 @@ import AanbodDetails from "./AanbodDetails.astro";
   }
 
   .aanbodCardContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 3rem;
   }
@@ -215,7 +217,6 @@ import AanbodDetails from "./AanbodDetails.astro";
       transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
       opacity 0.4s ease;
   }
-
   .card-wrapper:hover {
     transform: translateY(-8px);
   }
@@ -263,22 +264,18 @@ import AanbodDetails from "./AanbodDetails.astro";
     }
   }
 
-  /* --- RESPONSIVE LAYOUT (MOBIEL < 800PX) --- */
   @media (max-width: 800px) {
-    /* 1. Maak van de wrapper (Astro's root/body niveau) één grote grid */
-    :global(main),  /* Of de container waarin deze component leeft */
-    .grid, 
+    :global(main),
+    .grid,
     :parent {
       display: grid;
       grid-template-columns: 1fr;
     }
 
-    /* 2. Breek de kaarten-container open zodat de kaarten individuele grid-items worden */
     .aanbodCardContainer {
-      display: contents; /* Dit negeert de container-div voor de lay-out! */
+      display: flex;
+      flex-direction: column;
     }
-
-    /* 3. Geef ELKE kaart en ELK detailblok een vaste basisvolgorde */
     .card-wrapper[data-content="construct"] {
       order: 1;
     }
@@ -311,7 +308,7 @@ import AanbodDetails from "./AanbodDetails.astro";
 
     /* 4. Details tonen in 1 kolom onder de actieve kaart */
     .details.show {
-      display: block; /* Of grid met 1fr */
+      display: block;
       grid-template-columns: 1fr;
       padding: 1.5rem;
       margin-bottom: 2rem;
