@@ -179,7 +179,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
               {posts.map((post) => (
                 <div class="post-card-wrapper">
                   <a
-                    href={`/posts/${post.slug.current}`}
+                    href={translatePath(`/posts/${post.slug.current}`)}
                     class="center post-card-link"
                   >
                     <h4 class="text-align-center text-green">{post.title}</h4>
