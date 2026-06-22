@@ -1,5 +1,13 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@src/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
@@ -31,7 +39,7 @@ const postImageUrl = post.image
 
 <Layout>
   <section class="bg-beige text-gray">
-    <a href="/posts">
+    <a href={translatePath("/posts")}>
       <button class="green-btn"> &larr; Back to posts </button>
     </a>
     {
