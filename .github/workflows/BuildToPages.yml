@@ -68,7 +68,10 @@ jobs:
         run: npm install --no-package-lock
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
-        shell: bash # 3. Added Bash shell support here to handle the multi-line backslash (\) formatting safely
+        shell: bash
+        # Dit vertelt Windows dat het de URL-paden niet mag vervormen naar C:/Program Files/...
+        env:
+          MSYS_NO_PATHCONV: 1
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
