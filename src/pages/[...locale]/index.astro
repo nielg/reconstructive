@@ -165,23 +165,31 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
   <section class="bg-beige text-gray">
     <div class="small-text-margin center">
       <h3 class="text-green text-align-center">Blog</h3>
+      {
+        posts && posts.length === 0 && (
+          <div class="no-posts-container">
+            <p>Er zijn momenteel geen berichten beschikbaar.</p>
+          </div>
+        )
+      }
       <div class="col2">
         {
-          posts.map((post) => {
-            return (
-              <div class="post-card-wrapper">
-                <a
-                  href={`/posts/${post.slug.current}`}
-                  class="center post-card-link"
-                >
-                  <h4 class="text-align-center text-green">{post.title}</h4>
-                  <p>{post.description}</p>
-
-                  <span class="green-btn btn">Lees meer</span>
-                </a>
-              </div>
-            );
-          })
+          posts && posts.length > 0 && (
+            <div class="col2">
+              {posts.map((post) => (
+                <div class="post-card-wrapper">
+                  <a
+                    href={`/posts/${post.slug.current}`}
+                    class="center post-card-link"
+                  >
+                    <h4 class="text-align-center text-green">{post.title}</h4>
+                    <p>{post.description}</p>
+                    <span class="green-btn btn">Lees meer</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )
         }
       </div>
     </div>

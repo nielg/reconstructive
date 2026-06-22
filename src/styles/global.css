@@ -1,7 +1,7 @@
 :root {
   --reconstructive-green: #87a96b;
   --reconstructive-beige: #f6eed2;
-  --text-white: #ffffff;
+  --text-white: #e2e8f0;
   --text-green: #517139;
   --text-black: black;
   --text-gray: #6f6b5e;
@@ -184,15 +184,32 @@ ul.infinity-list li::before {
   margin-left: -1.5em;
 }
 
+.white-btn {
+  background-color: #ffffff;
+  color: var(--color-green, #1b4332);
+}
+
+.white-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
 button,
 .btn {
+  display: inline-block;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 2rem;
   border-radius: 1rem;
   border: none;
   cursor: pointer;
   transform: translateY(4px);
-  transition: transform 0.2s ease;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .green-btn {
