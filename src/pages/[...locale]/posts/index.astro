@@ -9,8 +9,8 @@ import {
   useTranslatedPath,
 } from "@src/i18n/utils";
 export { getStaticPaths };
-
 const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -45,7 +45,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
             </div>
 
             <div class="post-footer">
-              <a href={`/posts/${post.slug.current}`}>
+              <a href={translatePath(`/posts/${post.slug.current}`)}>
                 <button class="green-btn">Lees meer</button>
               </a>
             </div>
