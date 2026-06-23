@@ -27,6 +27,10 @@ body {
   font-family: "Open Sans", "sans-serif";
 }
 
+.roman-font {
+  font-family: "times new roman";
+}
+
 section {
   padding: 2rem;
 }
@@ -231,4 +235,10 @@ button:hover {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   margin: 3rem 0 1rem 0;
+}
+
+.yellow-line {
+  border: 0;
+  border-bottom: 2px solid #dec15b;
+  width: 100%;
 }

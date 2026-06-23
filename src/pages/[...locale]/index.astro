@@ -43,7 +43,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
   >
     <h1 class="text-align-center">Reconstructive: beleef vanuit je kern</h1>
   </section>
-  <section class="bg-green text-white center">
+  <section class="bg-green text-white center roman-font">
     <p class="p1">
       <strong>Carl Jung:</strong> "The privilege of a lifetime is to become who you
       truly are"
@@ -60,7 +60,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
         > en <strong>helderheid</strong> meer kunnen stromen.
       </p>
       <ol>
-        <li class="bold">Loskomen van oude patronene en denken.</li>
+        <li class="bold">Loskomen van oude patronen en denken.</li>
         <p>
           Reconstructive helpt je bevrijden van onbewuste patronen, blokkades en
           vaste ideeën, en opent zo de weg naar nieuwe beweging en
@@ -82,10 +82,12 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     </div>
   </section>
   <section class="bg-green text-white center">
-    <h2>
-      Ben je bereid om vanuit je kern te leven en om vol ja tegen het leven te
-      kunnen zeggen?
-    </h2>
+    <div class="text-margin">
+      <h2>
+        Ben je bereid om vanuit je kern te leven en om vol ja tegen het leven te
+        kunnen zeggen?
+      </h2>
+    </div>
   </section>
   <section class="bg-beige text-gray center">
     <div class="container center text-margin">
@@ -100,6 +102,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
         werkelijk bent.
       </p>
       <p>Er is geen verplichte volgorde.</p>
+      <hr class="yellow-line" />
       <div class="AanbodCardContainer">
         <AanbodCard
           title="Voorbij je construct (1 dag)"
@@ -123,48 +126,22 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
           img={mountainPathImg}
         />
       </div>
+      <hr class="yellow-line" />
+      <a class="btn green-btn big-btn" href="mailto:info@reconstructive.be"
+        >Gratis kennismakingsgepsrek</a
+      >
     </div>
   </section>
-  <section class="bg-green text-white center">
-    <div class="small-text-margin us">
-      <div class="img-wrapper">
-        <Image
-          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
-          width={500}
-          height={500}
-          src={groupPhotoImg}
-          class="img"
-        />
-      </div>
-      <div class="text">
-        <h3>Wie zijn wij?</h3>
-        <p>
-          Carola Castillo (midden) is grondlegster van het gedachtengoed en de
-          methodiek Reconstructive en oprichtster van Reconstructive
-          International Integratie Holistic School:
-          https://reconstructiveschool.com/en/home/ <a
-            href="https://reconstructiveschool.com/en/home/"
-            target="_blank"
-            rel="noopener noreferrer"></a>
-        </p>
-        <p>
-          Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
-          Reconstructive begeleiders.
-        </p>
-        <h3>Contacteer ons voor een vrijblijvend gesprek:</h3>
-        <p>Elke Busschots: [+ 32 475 46 39]</p>
-        <p>Bram Geysen: [+ 32 473 52 34 ]</p>
-        <p>
-          mail: <a href="mailto:info@reconstructive.be"
-            >info@reconstructive.be</a
-          >
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="bg-beige text-gray">
+  <section class="bg-green text-white blog">
     <div class="small-text-margin center">
-      <h3 class="text-green text-align-center">Blog</h3>
+      <h2 class="text-align-center">Blog</h2>
+      <p class="text-align-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+        nihil. Explicabo doloribus voluptates dolores quae iusto sapiente vel
+        numquam. Corrupti animi autem fugiat nulla quibusdam voluptatem nesciunt
+        obcaecati maiores soluta.
+      </p>
+      <hr class="yellow-line" />
       {
         posts && posts.length === 0 && (
           <div class="no-posts-container">
@@ -177,20 +154,68 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
           posts && posts.length > 0 && (
             <div class="col2">
               {posts.map((post) => (
-                <div class="post-card-wrapper">
-                  <a
-                    href={translatePath(`/posts/${post.slug.current}`)}
-                    class="center post-card-link"
-                  >
-                    <h4 class="text-align-center text-green">{post.title}</h4>
-                    <p>{post.description}</p>
+                <a
+                  href={translatePath(`/posts/${post.slug.current}`)}
+                  class="center post-card-link"
+                >
+                  <div class="post-card-wrapper">
+                    <div>
+                      <h4 class="text-align-center">{post.title}</h4>
+                      <p class="text-align-center text-gray">
+                        {post.description}
+                      </p>
+                    </div>
                     <span class="green-btn btn">Lees meer</span>
-                  </a>
-                </div>
+                  </div>
+                </a>
               ))}
             </div>
           )
         }
+      </div>
+      <hr class="yellow-line" />
+    </div>
+  </section>
+  <section class="bg-beige text-gray center">
+    <div class="small-text-margin us">
+      <div class="img-wrapper">
+        <Image
+          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
+          width={500}
+          height={500}
+          src={groupPhotoImg}
+          class="img"
+        />
+      </div>
+      <div class="text">
+        <h3 class="text-green text-align-center">Wie zijn wij?</h3>
+        <p>
+          Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
+          Reconstructive begeleiders.
+        </p>
+        <p>
+          Carola Castillo (midden) is grondlegster van het gedachtengoed en de
+          methodiek Reconstructive en oprichtster van Reconstructive
+          International Integratie Holistic School:
+          https://reconstructiveschool.com/en/home/ <a
+            href="https://reconstructiveschool.com/en/home/"
+            target="_blank"
+            rel="noopener noreferrer"></a>
+        </p>
+        <h3 class="text-green text-align-center">
+          Contacteer ons voor een vrijblijvend gesprek:
+        </h3>
+        <div class="contact-container">
+          <div class="contact">
+            <p>Elke Busschots: [+ 32 475 46 39]</p>
+            <p>Bram Geysen: [+ 32 473 52 34 ]</p>
+            <p>
+              mail: <a href="mailto:info@reconstructive.be"
+                >info@reconstructive.be</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -208,11 +233,29 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
 
     height: 500px;
   }
+
+  .yellow-line {
+    border: 0;
+    border-bottom: 2px solid #dec15b;
+    width: 100%;
+  }
   .AanbodCardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 3rem;
+  }
+
+  .post-card-wrapper {
+    background-color: var(--bg-white);
+    color: var(--text-green);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .us {
@@ -240,6 +283,19 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
   .us p {
     overflow-wrap: break-word;
     word-break: break-word;
+  }
+
+  .contact-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .contact-card {
+    text-align: left;
+  }
+
+  .blog .col2 {
+    margin: 2rem 0;
   }
 
   @media (max-width: 1000px) {
