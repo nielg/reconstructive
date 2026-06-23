@@ -27,6 +27,10 @@ body {
   font-family: "Open Sans", "sans-serif";
 }
 
+.roman-font {
+  font-family: "times new roman";
+}
+
 section {
   padding: 2rem;
 }
@@ -44,12 +48,14 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: "Inter";
   font-weight: 400;
 }
 
 p,
 li,
-.normal-font-size {
+.normal-font-size,
+.button {
   font-size: 1.3rem;
 }
 
@@ -120,8 +126,12 @@ h4 {
 .p1 {
   font-size: 2rem;
 }
-.p2 {
+.font-size-1_75 {
   font-size: 1.75rem;
+}
+
+.font-size-1_3 {
+  font-size: 1.3rem;
 }
 .p3 {
   font-size: 1rem;
@@ -231,4 +241,10 @@ button:hover {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   margin: 3rem 0 1rem 0;
+}
+
+.yellow-line {
+  border: 0;
+  border-bottom: 2px solid #dec15b;
+  width: 100%;
 }

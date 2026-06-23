@@ -9,8 +9,8 @@ import {
   useTranslatedPath,
 } from "@src/i18n/utils";
 export { getStaticPaths };
-
 const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -23,7 +23,15 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
 
 <Layout>
   <section class="bg-beige">
-    <h1>Posts</h1>
+    <h1 class="text-align-center text-green">Posts</h1>
+    <div class="text-margin">
+      <p class="text-align-center text-gray">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat
+        tenetur fuga praesentium cupiditate minus distinctio molestias veritatis
+        qui. Aperiam sint magni sequi hic veritatis? Libero alias dicta hic
+        vitae.
+      </p>
+    </div>
     <div class="container">
       {
         posts.map((post) => (
@@ -45,7 +53,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
             </div>
 
             <div class="post-footer">
-              <a href={`/posts/${post.slug.current}`}>
+              <a href={translatePath(`/posts/${post.slug.current}`)}>
                 <button class="green-btn">Lees meer</button>
               </a>
             </div>
