@@ -5,6 +5,7 @@ import {
   useTranslatedPath,
   useTranslations,
 } from "@src/i18n/utils";
+import { supportedLanguages } from "@src/i18n/ui";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
@@ -20,11 +21,21 @@ import { PortableText } from "astro-portabletext";
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
 
-export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
+export async function getStaticPaths() {
   const SLUGS_QUERY = `*[_type == "post" && defined(slug.current)]{
-    "params": {"slug": slug.current}
+    "slug": slug.current
   }`;
-  return await sanityClient.fetch(SLUGS_QUERY);
+
+  const posts = await sanityClient.fetch<{ slug: string }[]>(SLUGS_QUERY);
+
+  return supportedLanguages.flatMap((l) => {
+    return posts.map((post) => ({
+      params: {
+        locale: l === "nl" ? undefined : l,
+        slug: post.slug,
+      },
+    }));
+  });
 }
 
 const { projectId, dataset } = sanityClient.config();
