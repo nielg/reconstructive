@@ -17,19 +17,16 @@ const translatePath = useTranslatedPath(lang);
 <Layout>
   <section class="bg-green text-white">
     <div class="text-margin">
-      <h1 class="text-align-center">Beleef vanuit je kern</h1>
+      <h1 class="text-align-center">{t("aanbod.hero.title")}</h1>
       <p>
-        Er zijn momenten in het leven waarop je voelt dat er meer mogelijk is.
-        Dat je lichaam iets weet wat je hoofd nog niet kan volgen. Dat er onder
-        de dagelijkse patronen een diepere laag wacht om gezien te worden.
-        Reconstructive is een uitnodiging om die laag te ontmoeten.
+        {t("aanbod.hero.body")}
       </p>
       <a href={translatePath("/aanpak")} class="center">
-        <button class="beige-btn big-btn p3">Lees meer over onze aanpak</button
+        <button class="beige-btn big-btn p3">{t("aanbod.hero.button")}</button
         ></a
       >
       <p class="text-align-center">
-        Ontdek, verdiep of transformeer en beweeg dichter naar je essentie
+        {t("aanbod.hero.outro")}
       </p>
     </div>
   </section>
@@ -37,21 +34,20 @@ const translatePath = useTranslatedPath(lang);
     <Aanbod />
   </section>
   <section class="contact bg-green text-white center">
-    <p class="font-size-1_75">Misschien is het een eerste nieuwsgierigheid.</p>
+    <p class="font-size-1_75">{t("aanbod.footer.text1")}</p>
     <p class="font-size-1_75">
-      Misschien een verlangen naar dieper contact met jezelf.
+      {t("aanbod.footer.text2")}
     </p>
     <p class="font-size-1_75">
-      Misschien voel je dat het tijd is om terug te keren naar je essentie.
+      {t("aanbod.footer.text3")}
     </p>
     <p class="p1">
-      Welke formule je ook kiest, elke stap brengt je dichter bij wie je
-      werkelijk bent.
+      {t("aanbod.footer.text4")}
     </p>
 
     <a href="mailto:info@reconstructive.be">
       <button class="white-btn big-btn p3"
-        >Contacteer ons voor een vrijblijvende kennismakinggesprek</button
+        >{t("aanbod.footer.button")}</button
       >
     </a>
   </section>

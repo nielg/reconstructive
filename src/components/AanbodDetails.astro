@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from "@src/i18n/utils";
+
 interface Props {
   title: string;
   text: string[];
@@ -12,6 +14,9 @@ interface Props {
 
 const { title, text, li, wie, waar, wanneer, prijs, aantal_deelnemers } =
   Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div>
@@ -19,19 +24,19 @@ const { title, text, li, wie, waar, wanneer, prijs, aantal_deelnemers } =
   {text.map((t) => <p>{t}</p>)}
 </div>
 <div>
-  <h3 class="text-green text-align-center">Praktische informatie</h3>
-  <p class="bold">Wat levert het op:</p>
+  <h3 class="text-green text-align-center">{t("aanbod.details.practical")}</h3>
+  <p class="bold">{t("aanbod.details.benefits")}</p>
   <ul>
     {li.map((i) => <li>{i}</li>)}
   </ul>
   <p>
-    <strong>Voor wie: </strong>{wie}
+    <strong>{t("aanbod.details.forWho")} </strong>{wie}
   </p>
-  <p><strong>Waar:</strong> {waar}</p>
-  <p><strong>Wanneer:</strong> {wanneer}</p>
+  <p><strong>{t("aanbod.details.where")}</strong> {waar}</p>
+  <p><strong>{t("aanbod.details.when")}</strong> {wanneer}</p>
   <p>
-    <strong>Prijs:</strong>
+    <strong>{t("aanbod.details.price")}</strong>
     {prijs}
   </p>
-  <p>Max aantal deelnemers: {aantal_deelnemers}</p>
+  <p>{t("aanbod.details.maxParticipants")} {aantal_deelnemers}</p>
 </div>

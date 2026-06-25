@@ -17,39 +17,35 @@ const translatePath = useTranslatedPath(lang);
 
 <Layout>
   <section class="bg-yellow text-gray center">
-    <h1 class="text-green">Impressies</h1>
+    <h1 class="text-green">{t("impressies.hero.title")}</h1>
     <p>
-      Om je een beeld te geven hoe Reconstructive er kan uitzien volgen hier
-      enkele foto's.
+      {t("impressies.hero.description")}
     </p>
   </section>
   <section class="bg-beige center">
     <Image
       class="img"
       src={fotoGallary}
-      alt="foto gallery van de reconstrucitve workshop"
+      alt={t("impressies.gallery.alt")}
       width={1000}
       height={500}
     />
   </section>
   <section class="bg-green text-white">
     <div class="small-text-margin">
-      <h2 class="text-align-center">Jij bent de expert van je eigen reis</h2>
+      <h2 class="text-align-center">{t("impressies.expert.title")}</h2>
       <p>
-        Wij geloven dat iedereen een geschenk is voor deze wereld, een expert in
-        zijn of haar eigen leven, en dat alles wat je nodig hebt al in jezelf
-        aanwezig is. Jij zit aan het stuur van je eigen leerproces.
+        {t("impressies.expert.body1")}
       </p>
       <p>
-        Bij Reconstructive helpen we je om je volledige potentieel te ontplooien
-        en authentiek te leven.
+        {t("impressies.expert.body2")}
       </p>
       <h2 class="text-align-center">
-        Ben je klaar om dichter bij je kern te komen?
+        {t("impressies.ready.title")}
       </h2>
       <a href="mailto:info@reconstructive.be" class="center">
         <button class="white-btn big-btn p3"
-          >Contacteer ons voor een vrijblijvende kennismakinggesprek</button
+          >{t("impressies.ready.button")}</button
         >
       </a>
     </div>

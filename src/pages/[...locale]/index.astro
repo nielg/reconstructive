@@ -41,111 +41,83 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     class="intro text-white"
     style={`background-image: url(${meerImg.src});`}
   >
-    <h1 class="text-align-center">Reconstructive: beleef vanuit je kern</h1>
+    <h1 class="text-align-center">{t("home.hero.title")}</h1>
   </section>
   <section class="bg-green text-white center roman-font">
     <p class="p1">
-      <strong>Carl Jung:</strong> "The privilege of a lifetime is to become who you
-      truly are"
+      <strong>{t("home.quote.author")}:</strong> {t("home.quote.text")}
     </p>
   </section>
   <section class="bg-beige text-gray center">
     <div class="container small-text-margin center">
       <h2 class="text-green">
-        Doorbreek je patronen en leef meer van je kern!
+        {t("home.intro.title")}
       </h2>
-      <p>
-        Reconstructive is een kractige lichaamsgerichte methode waardoor jouw <strong
-          >inuïtie, vrijheid</strong
-        > en <strong>helderheid</strong> meer kunnen stromen.
-      </p>
+      <p set:html={t("home.intro.body")} />
       <ol>
-        <li class="bold">Loskomen van oude patronen en denken.</li>
-        <p>
-          Reconstructive helpt je bevrijden van onbewuste patronen, blokkades en
-          vaste ideeën, en opent zo de weg naar nieuwe beweging en
-          mogelijkheden.
-        </p>
-        <li class="bold">Terugkeren naar lichaam en beleven.</li>
-        <p>
-          Het is een methode voorbij het hoofd, waardoor er meer ruimte is voor
-          het lichaam en wat het je te vertellen heeft.
-        </p>
-        <li class="bold">Ruimte voor intuïtie, vrijheid en helderheid.</li>
-        <p>
-          De groep vormt daarbij een spiegelend veld. Wat je bij anderen ziet,
-          raakt iets in jou. Wat jij laat zien, opent iets bij hen. Door ruimte
-          te creëeren komen via het lichaam doorleefde inzichten, die je dichter
-          brengen bij je innerlijke helderheid en je eigen essentie.
-        </p>
+        <li class="bold">{t("home.intro.point1.title")}</li>
+        <p>{t("home.intro.point1.body")}</p>
+        <li class="bold">{t("home.intro.point2.title")}</li>
+        <p>{t("home.intro.point2.body")}</p>
+        <li class="bold">{t("home.intro.point3.title")}</li>
+        <p>{t("home.intro.point3.body")}</p>
       </ol>
     </div>
   </section>
   <section class="bg-green text-white center">
     <div class="text-margin text-align-center">
       <h2>
-        Ben je bereid om vanuit je kern te leven en om vol ja tegen het leven te
-        kunnen zeggen?
+        {t("home.cta.title")}
       </h2>
     </div>
   </section>
   <section class="bg-beige text-gray center">
     <div class="container center text-margin">
-      <h2 class="text-green">Ons aanbod</h2>
-      <p>
-        Ons aanbod bestaat uit drie formules die elkaar verdiepen: een eerste
-        kennismakingsdag, een tweedaagse verdieping tot een innerlijke zesdaagse
-        tocht.
-      </p>
-      <p>
-        Welke formule je ook kiest, elke stap brengt je dichter bij wie je
-        werkelijk bent.
-      </p>
-      <p>Er is geen verplichte volgorde.</p>
+      <h2 class="text-green">{t("home.aanbod.title")}</h2>
+      <p>{t("home.aanbod.intro1")}</p>
+      <p>{t("home.aanbod.intro2")}</p>
+      <p>{t("home.aanbod.noOrder")}</p>
       <hr class="yellow-line" />
       <div class="AanbodCardContainer">
         <AanbodCard
-          title="Voorbij je construct (1 dag)"
-          text="Stap één dag buiten je vertrouwde patronen en ontdek hoeveel ruimte er ontstaat wanneer je je construct loslaat."
-          link="/aanbod#construct"
-          alt="Foto van een plein met een bloem in het midden"
+          title={t("home.aanbod.card1.title")}
+          text={t("home.aanbod.card1.text")}
+          link={translatePath("/aanbod#construct")}
+          alt={t("home.aanbod.card1.alt")}
           img={constructImg}
         />
         <AanbodCard
-          title="Reconstructive (2 dagen)"
-          text="Ervaar de transformerend kracht van Reconstructive en kom dichter bij je intuïtie, je vrijheid en je kern."
-          link="/aanbod#reconstructive"
-          alt="Foto van een houte pad door het hoge grass"
+          title={t("home.aanbod.card2.title")}
+          text={t("home.aanbod.card2.text")}
+          link={translatePath("/aanbod#reconstructive")}
+          alt={t("home.aanbod.card2.alt")}
           img={grassPathImg}
         />
         <AanbodCard
-          title="Find your gold (6 dagen)"
-          text="Ga op een diepgaande reis door natuur en lichaam, en keer terug naar de essentie van wie jij werkelijk bent"
-          link="/aanbod#gold"
-          alt="Foto van een houten pad door een dor veld met bergen in de achtergrond"
+          title={t("home.aanbod.card3.title")}
+          text={t("home.aanbod.card3.text")}
+          link={translatePath("/aanbod#gold")}
+          alt={t("home.aanbod.card3.alt")}
           img={mountainPathImg}
         />
       </div>
       <hr class="yellow-line" />
       <a class="btn green-btn big-btn" href="mailto:info@reconstructive.be"
-        >Gratis kennismakingsgepsrek</a
+        >{t("home.aanbod.button")}</a
       >
     </div>
   </section>
   <section class="bg-green text-white blog">
     <div class="small-text-margin center">
-      <h2 class="text-align-center">Blog</h2>
+      <h2 class="text-align-center">{t("home.blog.title")}</h2>
       <p class="text-align-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-        nihil. Explicabo doloribus voluptates dolores quae iusto sapiente vel
-        numquam. Corrupti animi autem fugiat nulla quibusdam voluptatem nesciunt
-        obcaecati maiores soluta.
+        {t("home.blog.intro")}
       </p>
       <hr class="yellow-line" />
       {
         posts && posts.length === 0 && (
           <div class="no-posts-container">
-            <p>Er zijn momenteel geen berichten beschikbaar.</p>
+            <p>{t("home.blog.noPosts")}</p>
           </div>
         )
       }
@@ -165,7 +137,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
                         {post.description}
                       </p>
                     </div>
-                    <span class="green-btn btn">Lees meer</span>
+                    <span class="green-btn btn">{t("common.readMore")}</span>
                   </div>
                 </a>
               ))}
@@ -180,7 +152,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     <div class="small-text-margin us">
       <div class="img-wrapper">
         <Image
-          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
+          alt={t("home.about.groupPhotoAlt")}
           width={500}
           height={500}
           src={groupPhotoImg}
@@ -188,29 +160,26 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
         />
       </div>
       <div class="text">
-        <h3 class="text-green text-align-center">Wie zijn wij?</h3>
+        <h3 class="text-green text-align-center">{t("home.about.title")}</h3>
+        <p>{t("home.about.bramElke")}</p>
         <p>
-          Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde
-          Reconstructive begeleiders.
-        </p>
-        <p>
-          Carola Castillo (midden) is grondlegster van het gedachtengoed en de
-          methodiek Reconstructive en oprichtster van Reconstructive
-          International Integratie Holistic School:
-          https://reconstructiveschool.com/en/home/ <a
+          {t("home.about.carola")}
+          <a
             href="https://reconstructiveschool.com/en/home/"
             target="_blank"
-            rel="noopener noreferrer"></a>
+            rel="noopener noreferrer"
+            >https://reconstructiveschool.com/en/home/</a
+          >
         </p>
         <h3 class="text-green text-align-center">
-          Contacteer ons voor een vrijblijvend gesprek:
+          {t("home.about.contactTitle")}
         </h3>
         <div class="contact-container">
           <div class="contact">
-            <p>Elke Busschots: [+ 32 475 46 39]</p>
-            <p>Bram Geysen: [+ 32 473 52 34 ]</p>
+            <p>{t("home.about.elkePhone")}</p>
+            <p>{t("home.about.bramPhone")}</p>
             <p>
-              mail: <a href="mailto:info@reconstructive.be"
+              {t("home.about.mail")}: <a href="mailto:info@reconstructive.be"
                 >info@reconstructive.be</a
               >
             </p>

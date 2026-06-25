@@ -23,30 +23,21 @@ const translatePath = useTranslatedPath(lang);
 <Layout>
   <section class="bg-green text-white text-align-center">
     <div class="small-text-margin">
-      <h1>Ontdek Reconstructive: Jouw reis naar authenticiteit</h1>
-      <p>
-        Bij Reconstructive begeleiden we je naar leven vanuit je kern —
-        authentiek, intuïtief en vrij. Ontdek een nieuwe manier van kijken en
-        groeien. Ben je klaar om je ware zelf te onthullen?
-      </p>
+      <h1>{t("about.hero.title")}</h1>
+      <p>{t("about.hero.description")}</p>
     </div>
   </section>
 
   <section class="no-padding">
     <div class="bg-yellow yellow-section text-align-center">
-      <p>
-        Reconstructive.be is een samenwerkingen tussen Elke Busschots en Bram
-        Geysen die elk hun eigen praktijk hebben. Ze hebben de vereiste
-        opleidingen gevolgd bij de RHIIS en werken nauw samen met de
-        international reconstructive school.
-      </p>
+      <p>{t("about.banner.text")}</p>
     </div>
 
     <SplitGrid>
       <div class="img-wrapper">
         <Image
           src={elkeProfiel}
-          alt="Profiel foto van Elke Busschots"
+          alt={t("about.elke.alt")}
           width={800}
           height={800}
           class="img elke-img"
@@ -55,25 +46,17 @@ const translatePath = useTranslatedPath(lang);
 
       <div class="text-wrapper bg-beige">
         <div class="text-gray text">
-          <h2 class="text-align-center text-green">Elke</h2>
-          <p>
-            Al meer dan vijftien jaar begeleid ik mensen die verlangen naar meer
-            helderheid, innerlijke stevigheid en een authentieke manier van
-            leven en werken.
-          </p>
-          <p>Mijn kracht ligt in:</p>
+          <h2 class="text-align-center text-green">{t("about.elke.title")}</h2>
+          <p>{t("about.elke.intro")}</p>
+          <p>{t("about.elke.strengthTitle")}</p>
           <ul>
-            <li>Snel tot de kern komen</li>
-            <li>Patronene zichtbaar maken die je zelf niet meer ziet</li>
-            <li>Veiligheid creëren waarin je écht kunt zakken</li>
-            <li>Helderheid brengen in complexe innerlijke processen</li>
-            <li>Je begeleiden naar keuzes die kloppen met jouw essentie</li>
+            <li>{t("about.elke.strength1")}</li>
+            <li>{t("about.elke.strength2")}</li>
+            <li>{t("about.elke.strength3")}</li>
+            <li>{t("about.elke.strength4")}</li>
+            <li>{t("about.elke.strength5")}</li>
           </ul>
-          <p>
-            Mijn missie? Mensen en organisaties terugbrengen naar hun kern,
-            zodat ze kunnen leven, werken and leiden vanuit wie ze werkelijk
-            zijn.
-          </p>
+          <p>{t("about.elke.mission")}</p>
           <div class="center">
             <a
               href="https://www.Cominz.be"
@@ -89,25 +72,11 @@ const translatePath = useTranslatedPath(lang);
 
       <div class="text-wrapper bg-beige text-gray fourth">
         <div class="text margin-left">
-          <h2 class="center text-green">Bram</h2>
-          <p>
-            Ik begeleid mensen vanuit de ervaring en het besef dat echte
-            transformatie pas begint wanneer het hart durft te smelten.
-          </p>
-          <p>
-            Pas wanneer het hart zich opent, wordt de moed wakker die nodig is
-            om te veranderen. Niet de moed van hard vechten of volhouden, maar
-            de stille, innerlijke moed die ontstaat wanneer je jezelf toestaat
-            om te voelen wat echt klopt.
-          </p>
-          <p>
-            In mijn werk nodig ik anderen uit om diezelfde beweging te maken:
-            van hoofd naar hart, van spanning naar ontspanning, van controle
-            naar loslaten. Mijn aanpak is geworteld in bewustzijn, adem,
-            lichaamswerk en de stille hartsintelligentie die in ons allemaal
-            aanwezig is.
-          </p>
-          <p>Mijn aanpak is zacht, eerlijk en praktisch.</p>
+          <h2 class="center text-green">{t("about.bram.title")}</h2>
+          <p>{t("about.bram.intro1")}</p>
+          <p>{t("about.bram.intro2")}</p>
+          <p>{t("about.bram.intro3")}</p>
+          <p>{t("about.bram.outro")}</p>
           <div class="center">
             <a
               href="https://www.mooyo.be"
@@ -124,7 +93,7 @@ const translatePath = useTranslatedPath(lang);
       <div class="img-wrapper third">
         <Image
           src={bramProfiel}
-          alt="Profiel foto van bram geysen"
+          alt={t("about.bram.alt")}
           width={500}
           height={500}
           class="img"
@@ -134,23 +103,16 @@ const translatePath = useTranslatedPath(lang);
   </section>
   <section class="bg-green text-white text-align-center">
     <div class="small-text-margin">
-      <h2>Onze kernwaarden: Jij bent de expert van je eigen reis</h2>
-      <p>
-        Wij geloven dat iedereen een geschenk is voor deze wereld, een expert in
-        zijn of haar eigen leven, en dat alles wat je nodig hebt al in jezelf
-        aanwezig is. Jij zit aan het stuur van je eigen leerproces.
-      </p>
-      <p>
-        Bij Reconstructive helpen we je om je volledige potentieel te ontplooien
-        en authentiek te leven.
-      </p>
+      <h2>{t("about.values.title")}</h2>
+      <p>{t("about.values.body1")}</p>
+      <p>{t("about.values.body2")}</p>
     </div>
   </section>
   <section class="bg-beige text-gray text-align-center">
     <div class="small-text-margin oorsprong">
       <div class="img-wrapper">
         <Image
-          alt="groeps foto met Bram Geysen Elke Busschots en Carola Castillo"
+          alt={t("about.origin.groupPhotoAlt")}
           width={500}
           height={500}
           src={groupPhotoImg}
@@ -159,22 +121,21 @@ const translatePath = useTranslatedPath(lang);
       </div>
       <div class="text">
         <h2 class="text-align-center text-green text-align-center">
-          De oorsprong
+          {t("about.origin.title")}
         </h2>
-        <p>
-          Carola Castillo is de grondlegster van de methodiek 'Reconstructive'.
-          Zij is oprichtster van Reconstructive International Integratie
-          Holistic School.
-        </p>
+        <p>{t("about.origin.body")}</p>
         <Image
-          alt="Logo International Integration Holistic School"
+          alt={t("about.origin.logoAlt")}
           width={400}
           height={150}
           src={rihsLogo}
         />
-        <a href=""
+        <a
+          href="https://reconstructiveschool.com/en/home/"
+          target="_blank"
+          rel="noopener noreferrer"
           ><div class="big-btn green-btn btn">
-            <p>Reconstructive International Integrative Holistic School</p>
+            <p>{t("about.origin.buttonText")}</p>
           </div></a
         >
       </div>

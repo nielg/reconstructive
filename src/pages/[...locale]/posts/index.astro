@@ -10,6 +10,7 @@ import {
 } from "@src/i18n/utils";
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 const POSTS_QUERY = `*[
@@ -23,13 +24,10 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
 
 <Layout>
   <section class="bg-beige">
-    <h1 class="text-align-center text-green">Posts</h1>
+    <h1 class="text-align-center text-green">{t("posts.title")}</h1>
     <div class="text-margin">
       <p class="text-align-center text-gray">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat
-        tenetur fuga praesentium cupiditate minus distinctio molestias veritatis
-        qui. Aperiam sint magni sequi hic veritatis? Libero alias dicta hic
-        vitae.
+        {t("posts.intro")}
       </p>
     </div>
     <div class="container">
@@ -39,7 +37,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
             <div class="post-content">
               <div class="post-meta">
                 <time datetime={post.publishedAt}>
-                  {new Date(post.publishedAt).toLocaleDateString("nl-NL", {
+                  {new Date(post.publishedAt).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -54,7 +52,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
 
             <div class="post-footer">
               <a href={translatePath(`/posts/${post.slug.current}`)}>
-                <button class="green-btn">Lees meer</button>
+                <button class="green-btn">{t("common.readMore")}</button>
               </a>
             </div>
           </article>
@@ -62,7 +60,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
       }
       {
         posts.length === 0 && (
-          <p class="text-gray">Er zijn momenteel geen berichten beschikbaar</p>
+          <p class="text-gray">{t("posts.noPosts")}</p>
         )
       }
     </div>
