@@ -3,6 +3,8 @@ export const languages = {
   en: "en",
 };
 
+export const supportedLanguages = Object.values(languages);
+
 export const showDefaultLang = false;
 
 export const defaultLang = "nl";
