@@ -1,7 +1,3 @@
----
-// src/components/SplitGrid.astro
----
-
 <div class="split-grid">
   <slot />
 </div>
@@ -14,8 +10,6 @@
     gap: 0;
     overflow: hidden;
   }
-
-  /* Target alle directe kinderen (zowel tekst-wrappers als img-wrappers) */
   .split-grid :global(> .img-wrapper) {
     position: relative;
     width: 100%;

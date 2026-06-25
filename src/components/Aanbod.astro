@@ -4,34 +4,38 @@ import constructImg from "@assets/imgs/constructImg.jpg";
 import grassPathImg from "@assets/imgs/grass-path.jpg";
 import mountainPathImg from "@assets/imgs/mountain-path.jpg";
 import AanbodDetails from "./AanbodDetails.astro";
+import { getLangFromUrl, useTranslations } from "@src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="grid">
   <div class="aanbodCardContainer">
     <div class="card-wrapper" data-content="construct" id="construct">
       <AanbodCard
-        title="Voorbij je construct (1 dag)"
-        text="Stap één dag buiten je vertrouwde patronen en ontdek hoeveel ruimte er ontstaat wanneer je je construct loslaat."
+        title={t("aanbod.cards.construct.title")}
+        text={t("aanbod.cards.construct.text")}
         link="#"
-        alt="Foto van een plein met een bloem in het midden"
+        alt={t("aanbod.cards.construct.alt")}
         img={constructImg}
       />
     </div>
     <div class="card-wrapper" data-content="reconstructive" id="reconstructive">
       <AanbodCard
-        title="Reconstructive (2 dagen)"
-        text="Ervaar de transformerend kracht van Reconstructive en kom dichter bij je intuïtie, je vrijheid en je kern."
+        title={t("aanbod.cards.reconstructive.title")}
+        text={t("aanbod.cards.reconstructive.text")}
         link="#"
-        alt="Foto van een houte pad door het hoge grass"
+        alt={t("aanbod.cards.reconstructive.alt")}
         img={grassPathImg}
       />
     </div>
     <div class="card-wrapper" data-content="gold" id="gold">
       <AanbodCard
-        title="Find your gold (6 dagen)"
-        text="Ga op een diepgaande reis door natuur en lichaam, en keer terug naar de essentie van wie jij werkelijk bent"
+        title={t("aanbod.cards.gold.title")}
+        text={t("aanbod.cards.gold.text")}
         link="#"
-        alt="Foto van een houten pad door een dor veld met bergen in de achtergrond"
+        alt={t("aanbod.cards.gold.alt")}
         img={mountainPathImg}
       />
     </div>
@@ -39,73 +43,73 @@ import AanbodDetails from "./AanbodDetails.astro";
 </div>
 <div class="details text-gray text-margin" data-content="construct">
   <AanbodDetails
-    title="Een ontmoeting"
+    title={t("aanbod.details.construct.title")}
     text={[
-      " Een eerste ontmoeting met je essentie en met de reconstructive methode.",
-      "Voor wie wilt proeven van wat er leeft voorbij je patronen",
-      "Merk jij ook dat sommigen vrijer leven dan jij? Dat als jij iets wil veranderen, er meteen een stem in jouw hoofd zegt, 'ja maar, dat kan niet want...' Die stemmetjes bepalen mee hoe groot jouw vrijheid aanvoelt.",
-      "Tijdens deze initiatiedag stap je uit je vertrouwde kaders. Via belevings-oefeningen en de wijsheid van de natuur word je uitgenodigd om buiten je construct te stappen. Het is alsof je een raam opent dat lang dicht zat. Er komt licht binnen. Ruimte. Nieuwsgierigheid.",
-      "De natuur vindt altijd een weg ook in complexe omstandigheden. En precies dat herinnert jou eraan dat ook jij kunt bewegen, verschuiven, openen.",
+      t("aanbod.details.construct.text1"),
+      t("aanbod.details.construct.text2"),
+      t("aanbod.details.construct.text3"),
+      t("aanbod.details.construct.text4"),
+      t("aanbod.details.construct.text5"),
     ]}
     li={[
-      "Ruimer perspectief op je eigen patronen",
-      "Een eerste ervaring van ruimte en vrijheid",
-      "Meer bewustzijn over wat jou stuurt",
-      "Nieuwsgierigheid als startpunt voor groei",
+      t("aanbod.details.construct.li1"),
+      t("aanbod.details.construct.li2"),
+      t("aanbod.details.construct.li3"),
+      t("aanbod.details.construct.li4"),
     ]}
-    wie="Voor nieuwsgierigen die willen proeven, hun blik willen verruimen en inzicht willen krijgen in hun patronen"
-    waar="Leuven/Heverlee"
-    wanneer="2026"
-    prijs="125 euro excl BTW (incl. koffie, thee, versnapperingen en lunch)"
-    aantal_deelnemers="12"
+    wie={t("aanbod.details.construct.wie")}
+    waar={t("aanbod.details.construct.waar")}
+    wanneer={t("aanbod.details.construct.wanneer")}
+    prijs={t("aanbod.details.construct.prijs")}
+    aantal_deelnemers={t("aanbod.details.construct.aantalDeelnemers")}
   />
 </div>
 <div class="details text-gray text-margin" data-content="reconstructive">
   <AanbodDetails
-    title="Een uitndoging"
+    title={t("aanbod.details.reconstructive.title")}
     text={[
-      "een uitnodiging om dichter bij jezelf te komen.",
-      "Soms voel je dat er nog iets in de weg zit. Iets wat niet via het hoofd loskomt, maar via het lichaam wil gezien worden.",
-      "Vaak zijn het diepgewortelde patronen, oude verhalen, ingehouden emoties en overlevingsstrategieën die ons onbewust ervan weerhouden om ons potentieel ten volle te leven. Door ermee te werken in het lichaam komt er beweging, helderheid en richting.",
-      "Via Reconstructive wordt het denken opzijgezet. Wat overblijft is het lichaam en wat het je te vertellen heeft.",
-      "We werken in kleine groepjes, zonder taal. We bouwen samen een energetisch veld waaruit beweging ontstaat. De groep is een spiegelend veld: wat je bij anderen ziet, raakt iets in jou. Wat jij laat zien, opent iets bij hen.",
-      "Reconstructive is geen therapie, maar een uitnodiging om je over te geven aan wat zich in jou wil tonen. Zonder verhaal. Zonder analyse. Alleen een directe ontmoeting met jezelf en je volle potentieel.",
+      t("aanbod.details.reconstructive.text1"),
+      t("aanbod.details.reconstructive.text2"),
+      t("aanbod.details.reconstructive.text3"),
+      t("aanbod.details.reconstructive.text4"),
+      t("aanbod.details.reconstructive.text5"),
+      t("aanbod.details.reconstructive.text6"),
     ]}
     li={[
-      "Ruimer perspectief op je eigen patronen",
-      "Meer vrijheid",
-      "Nieuwe inzichten",
-      "Doorbraak in patronen die tot nu toe bleven vastzitten",
-      "Een ervaring die een blijvende indruk nalaat",
+      t("aanbod.details.reconstructive.li1"),
+      t("aanbod.details.reconstructive.li2"),
+      t("aanbod.details.reconstructive.li3"),
+      t("aanbod.details.reconstructive.li4"),
+      t("aanbod.details.reconstructive.li5"),
     ]}
-    wie="Voor wie voelt dat er iets vastzit en klaar is om dieper te gaan"
-    waar="Leuven"
-    wanneer="25 - 26 juli 2026 (9-16u), De volgende 2-daagse gaat door op 17 - 18 oktober 2026 (9-16u)"
-    prijs="375 excl BTW (incl. Koffie, thee, versnapperingen en lunch)"
-    aantal_deelnemers="8"
+    wie={t("aanbod.details.reconstructive.wie")}
+    waar={t("aanbod.details.reconstructive.waar")}
+    wanneer={t("aanbod.details.reconstructive.wanneer")}
+    prijs={t("aanbod.details.reconstructive.prijs")}
+    aantal_deelnemers={t("aanbod.details.reconstructive.aantalDeelnemers")}
   />
 </div>
 <div class="details text-gray text-margin" data-content="gold">
   <AanbodDetails
-    title="Een thuiskomen"
+    title={t("aanbod.details.gold.title")}
     text={[
-      "Een thuiskomen bij jezelf.",
-      "Deze retreat is een innerlijke tocht waarbij we laag na laag dichterbij jouw blauwdruk komen, zodat zichtbaar wordt wie je altijd al was.",
-      "Elke dag trekken we de natuur in. Ze spiegelt je zonder oordeel: waar je nog vasthoudt, waar je mag verzachten, waar je mag openen. De natuur laat zien wat je lichaam al wist, maar wat je hoofd misschien nog niet durfde te erkennen.",
-      "Reconstructive maakt zichtbaar wat je onderweg tegenkomt: oude patronen, beschermingslagen, ingehouden emoties. Door ermee te werken in het lichaam komt er beweging, helderheid en richting. Je voelt hoe je dichter bij je blauwdruk komt dat stille, diepe weten van wie jij in essentie bent.",
-      "De groep wordt een bedding. Je hoeft het niet alleen te doen, maar je maakt wel je eigen innerlijke reis.",
+      t("aanbod.details.gold.text1"),
+      t("aanbod.details.gold.text2"),
+      t("aanbod.details.gold.text3"),
+      t("aanbod.details.gold.text4"),
+      t("aanbod.details.gold.text5"),
     ]}
     li={[
-      "Meer helderheid",
-      "belichaming",
-      "rust",
-      "stevig contact met je kern",
+      t("aanbod.details.gold.li1"),
+      t("aanbod.details.gold.li2"),
+      t("aanbod.details.gold.li3"),
+      t("aanbod.details.gold.li4"),
     ]}
-    wie="een reset wil, oude lagen wil loslaten en zijn/haar/hun blauwdruk wil herontdekken"
-    waar="Zuid - Noorwegen "
-    wanneer="5 - 12 september 2026"
-    prijs="1750 euro (excl BTW) (enkel vervoer heen en terug is niet inbegrepen: auto of vlucht naar Kristiansand)"
-    aantal_deelnemers="8"
+    wie={t("aanbod.details.gold.wie")}
+    waar={t("aanbod.details.gold.waar")}
+    wanneer={t("aanbod.details.gold.wanneer")}
+    prijs={t("aanbod.details.gold.prijs")}
+    aantal_deelnemers={t("aanbod.details.gold.aantalDeelnemers")}
   />
 </div>
 

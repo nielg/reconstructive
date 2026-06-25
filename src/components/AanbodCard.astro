@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "@src/i18n/utils";
 
 interface Props {
   title: string;
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const { title, text, img, alt, link } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <a href={link} class="center">
@@ -19,7 +22,7 @@ const { title, text, img, alt, link } = Astro.props;
     </div>
     <h3 class="text-green text-align-center">{title}</h3>
     <p>{text}</p>
-    <button class="green-btn"> Lees meer </button>
+    <button class="green-btn"> {t("common.readMore")} </button>
   </div>
 </a>
 

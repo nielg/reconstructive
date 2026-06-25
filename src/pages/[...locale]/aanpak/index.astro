@@ -19,63 +19,43 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
-
-<Layout>
+<Layout>
   <section class="bg-beige text-gray text-align-justify">
     <div class="container small-text-margin">
       <h1 class="text-green text-align-center">
-        Reconstructive: een reis terug naar jezelf.
+        {t("aanpak.hero.title")}
       </h1>
       <p>
-        Reconstructive biedt een unieke weg naar leven vanuit je kern, je
-        authenticiteit en je intuïtie. Het nodigt je uit om de constructies die
-        je, vaak onbewust, hebt opgebouwd vanuit vroege indrukken in vraag te
-        stellen. Zo wordt de vrijheid die daarachter schuilgaat zichtbaar.
+        {t("aanpak.hero.body1")}
       </p>
       <p>
-        Deze reis brings je van overleven naar vol leven. Het is een proces van
-        volwassenwording en heling. Je innerlijke kracht spreekt jou aan en
-        nodigt je uit om verantwoordelijkheid te nemen over je helingsproces.
+        {t("aanpak.hero.body2")}
       </p>
     </div>
   </section>
   <section class="kern bg-green text-white center">
-    <h2>De kern van deze methode:</h2>
-    <h2>"From surviving to thriving"</h2>
+    <h2>{t("aanpak.kern.title")}</h2>
+    <h2>{t("aanpak.kern.subtitle")}</h2>
   </section>
 
   <section class="no-padding">
     <SplitGrid>
       <!-- 1. Natuur & energie (Afbeelding) -->
       <div class="img-wrapper first">
-        <Image class="img" alt="" width={600} height={600} src={sunflower} />
+        <Image class="img" alt={t("aanpak.point1.imgAlt")} width={600} height={600} src={sunflower} />
       </div>
 
       <!-- 1. Natuur & energie (Tekst) -->
       <div class="text-wrapper bg-beige second">
         <div class="text-gray text">
           <p>
-            <strong>1. Natuur & energie: </strong> Patronen komen overvloedig voor
-            in de natuur en resoneren diep met de menselijke geest.
+            <strong>{t("aanpak.point1.title")}</strong>{t("aanpak.point1.text1")}
           </p>
           <p>
-            Het spiraalpatroon, bijvoorbeeld, is gecodeerd in ons DNA, in
-            planten, dieren, kristallen en in onze Melkweg. Zonnebloemen
-            rangschikken hun zaden in spiralen om ruimte en licht maximaal te
-            benutten, terwijl tornado’s en draaikolken spiraaldynamiek gebruiken
-            om energie efficiënt te geleiden.
+            {t("aanpak.point1.text2")}
           </p>
-          <p>
-            Veel tradities zien spiralen als het pad waarlangs <strong>
-              levenskracht
-            </strong>
-            stroomt: een beweging van binnen naar buiten, van essentie naar manifestatie.
-          </p>
-          <p>
-            Zonder structuur blijft energie puur potentieel maar zodra ze zich
-            via <strong>patronen, structuren</strong> en <strong>ritmes</strong> ordent,
-            wordt ze voelbaar, waarneembaar en scheppend.
-          </p>
+          <p set:html={t("aanpak.point1.text3")} />
+          <p set:html={t("aanpak.point1.text4")} />
         </div>
       </div>
 
@@ -83,21 +63,13 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-green fourth">
         <div class="text-white text margin-left">
           <p>
-            <strong>2. Overleven & identiteit:</strong> In onze kindertijd vormen
-            overlevingspatronen de basis van wie we denken te moeten zijn.
+            <strong>{t("aanpak.point2.title")}</strong>{t("aanpak.point2.text1")}
           </p>
           <p>
-            Als mens worden we geboren in een familie en gevormd door cultuur,
-            religie en educatie. In onze eerste zes levensjaren ontwikkelen we
-            patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We
-            leren de strategieën die ons helpen overeind te blijven en die onze
-            identiteit vormgeven. Die patronen vormen de basis waarop we later,
-            soft onbewust, blijven terugvallen, vooral wanneer het leven
-            moeilijk wordt.
+            {t("aanpak.point2.text2")}
           </p>
           <p>
-            Tijdens deze periode kan vroegkinderlijk trauma ontstaan, waarvan de
-            impact zich nog decennia later kan laten voelen.
+            {t("aanpak.point2.text3")}
           </p>
         </div>
       </div>
@@ -106,7 +78,7 @@ const translatePath = useTranslatedPath(lang);
       <div class="img-wrapper third">
         <Image
           class="img"
-          alt=""
+          alt={t("aanpak.point2.imgAlt")}
           width={500}
           height={500}
           src={woodenPeopleImg}
@@ -117,7 +89,7 @@ const translatePath = useTranslatedPath(lang);
       <div class="img-wrapper fifth">
         <Image
           class="img"
-          alt=""
+          alt={t("aanpak.point3.imgAlt")}
           width={500}
           height={500}
           src={painBreaksWhatImg}
@@ -128,27 +100,19 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-beige sixth">
         <div class="text-gray text">
           <p>
-            <strong>3. Doorbreken & bewustwording:</strong> Wanneer oude patronen
-            beginen te knellen, ontstaat de kans om te zien wat ons werkelijk tegenhoudt.
+            <strong>{t("aanpak.point3.title")}</strong>{t("aanpak.point3.text1")}
           </p>
           <p>
-            In het verder opgroeien merken we dat jobs, relaties, keuzes, nieuwe
-            ervaringen en conflicten barstjes in dit construct brengen. Ze laten
-            ons verschillen zien en nodigen ons uit om met een ruimere,
-            volwassen blik te kijken.
+            {t("aanpak.point3.text2")}
           </p>
           <p>
-            Waar het kind in ons vaak wil vasthouden aan gelijk of zekerheid,
-            kan de volwassene deze momenten zien als kansen voor groei en
-            verrijking.
+            {t("aanpak.point3.text3")}
           </p>
           <p>
-            Vragen zoals "Wie bent ik écht? Wie ben ik voorbij mijn rol? Waarom
-            loop ik vast?" komen dan voorbij
+            {t("aanpak.point3.text4")}
           </p>
           <p>
-            Dit vraagt om openheid, nieuwsgierigheid en de bereidheid om voorbij
-            het bekende te bewegen.
+            {t("aanpak.point3.text5")}
           </p>
         </div>
       </div>
@@ -157,57 +121,44 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-green eight">
         <div class="text-white text margin-left">
           <p>
-            <strong>4. Belichaming & creatie:</strong> Door nieuwe patronen in het
-            lichaam te verankeren, ontstaat ruimte voor bewuste creatie vanuit onze
-            kern.
+            <strong>{t("aanpak.point4.title")}</strong>{t("aanpak.point4.text1")}
           </p>
           <p>
-            Echte wijsheid ontstaat wanneer ons lichaam iets ten diepste heeft
-            ervaren. In ons hoofd hebben we het allemaal al overdacht en lopen
-            we in dezelfde cirkel. Werkelijke verandering begint dan ook niet in
-            het hoofd, maar in het lichaam. Wanneer we uit het denken stappen en
-            in ons lichaam zakken, ontstaat er ruimte voor nieuwe ervaringen,
-            verbinding en inzicht.
+            {t("aanpak.point4.text2")}
           </p>
           <p>
-            Potentie, energie dat tot nu toe onzichtbaar of verborgen bleef, mag
-            zich nu via het lichaam toont.
+            {t("aanpak.point4.text3")}
           </p>
-          <p>Ervaar hoe energie kracht geeft en intentie richting.</p>
           <p>
-            Wie blokkades wil opheffen en vrijer wil leven, ervaart hoe het is
-            om met beide te werken.
+            {t("aanpak.point4.text4")}
+          </p>
+          <p>
+            {t("aanpak.point4.text5")}
           </p>
         </div>
       </div>
 
       <!-- 4. Belichaming & creatie (Afbeelding) -->
       <div class="img-wrapper seventh">
-        <Image class="img" alt="" width={500} height={500} src={sandAngelImg} />
+        <Image class="img" alt={t("aanpak.point4.imgAlt")} width={500} height={500} src={sandAngelImg} />
       </div>
 
       <!-- 5. Heelheid & integratie (Afbeelding) -->
       <div class="img-wrapper neight">
-        <Image class="img" alt="" width={500} height={500} src={whiteFlower} />
+        <Image class="img" alt={t("aanpak.point5.imgAlt")} width={500} height={500} src={whiteFlower} />
       </div>
 
       <!-- 5. Heelheid & integratie (Tekst) -->
       <div class="text-wrapper bg-beige tenth">
         <div class="bg-beige text-gray text">
           <p>
-            <strong>5. Heelheid & integratie:</strong> Wanneer kind en volwassen delen
-            samengaan, worden patronen levensdienend en ontstaat innerlijke heelheid.
+            <strong>{t("aanpak.point5.title")}</strong>{t("aanpak.point5.text1")}
           </p>
           <p>
-            Vanuit die doorleefde wijsheid en innerlijke ruimte kunnen we
-            creëren. Het wordt bewust creëren vanuit intuïtie en helderheid,
-            vanuit onze kern, uitgelijnd.
+            {t("aanpak.point5.text2")}
           </p>
           <p>
-            De volwassene en het kind in ons kunnen samenkomen in een gevoel van
-            heelheid, waarbij de kwaliteiten van het kind op een veilige manier
-            gedragen worden door onze volwassen delen en op bewuste manier tot
-            uiting komen in de wereld.
+            {t("aanpak.point5.text3")}
           </p>
         </div>
       </div>
@@ -215,32 +166,22 @@ const translatePath = useTranslatedPath(lang);
   </section>
 
   <section class="bg-green text-white center">
-    <h2>"Your journey to freedom"</h2>
+    <h2>{t("aanpak.journey.title")}</h2>
   </section>
   <section class="bg-beige text-gray">
     <div class="small-text-margin">
       <h2 class="center text-green">
-        Ben je klaar om dichter bij je kern the komen?
+        {t("aanpak.ready.title")}
       </h2>
       <p>
-        We werken graag samen met mensen die nieuwsgierig zijn, het gevoel
-        hebben dat er iets in de weg zit maar graag vooruit willen, en bereid
-        zijn om vanuit vertrouwen en onzekerheid nieuwe ervaringen te omarmen.
-        Als je, als volwassen deel de regie in eigen handen wilt nemen, je
-        kindsdeel en volwassen deel zorgvuldig wilt verkennen, en heel wilt
-        worden door je ware kern te ontdekken, dan is Reconstructive iets voor
-        jou.
+        {t("aanpak.ready.body1")}
       </p>
       <p>
-        Wat onze manier van werken onderscheidt, is de diepgaande menselijke
-        ontmoeting. We bieden een kwaliteit van aanwezigheid, een heldere blik
-        en een zacht hart. We brengen zowel lichtheid als diepgang in elke
-        sessie, waardoor we je helpen nieuwe perspectieven en vrijheid te
-        ontdekken.
+        {t("aanpak.ready.body2")}
       </p>
       <a href={translatePath("/aanbod")} class="center">
         <button class="green-btn big-btn p3">
-          Lees meer over ons aanbod
+          {t("aanpak.ready.button")}
         </button>
       </a>
     </div>

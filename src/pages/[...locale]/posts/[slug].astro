@@ -51,7 +51,7 @@ const postImageUrl = post.image
 <Layout>
   <section class="bg-beige text-gray">
     <a href={translatePath("/posts")}>
-      <button class="green-btn"> &larr; Back to posts </button>
+      <button class="green-btn"> &larr; {t("post.back")} </button>
     </a>
     {
       postImageUrl && (
@@ -69,7 +69,11 @@ const postImageUrl = post.image
     <div class="container bg-white text-gray">
       {Array.isArray(post.body) && <PortableText value={post.body} />}
       <p class="date">
-        Published: {new Date(post.publishedAt).toLocaleDateString()}
+        {t("post.published")} {new Date(post.publishedAt).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
       </p>
     </div>
   </section>
