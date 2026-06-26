@@ -10,28 +10,28 @@
     gap: 0;
     overflow: hidden;
   }
-  .split-grid :global(> .img-wrapper) {
+  .split-grid > :global(.img-wrapper) {
     position: relative;
     width: 100%;
     height: 100%;
   }
 
-  .split-grid :global(> .text-wrapper) {
+  .split-grid > :global(.text-wrapper) {
     min-height: 600px;
     display: flex;
     align-items: center;
   }
 
-  .split-grid :global(> .text-wrapper .text) {
+  .split-grid > :global(.text-wrapper .text) {
     padding: 2rem;
     width: 80%;
   }
 
-  .split-grid :global(> .text-wrapper .margin-left) {
+  .split-grid > :global(.text-wrapper .margin-left) {
     margin-left: auto;
   }
 
-  .split-grid :global(> .img-wrapper .img) {
+  .split-grid > :global(.img-wrapper .img) {
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@
   }
 
   /* Specifieke correctie voor Elke's foto */
-  .split-grid :global(> .img-wrapper .elke-img) {
+  .split-grid > :global(.img-wrapper .elke-img) {
     object-position: center 80%;
   }
 
@@ -53,55 +53,51 @@
       flex-direction: column;
     }
 
-    .split-grid :global(> .text-wrapper .margin-left) {
+    .split-grid > :global(.text-wrapper .margin-left) {
       margin-left: 0;
     }
 
-    .split-grid :global(> .text-wrapper) {
+    .split-grid > :global(.text-wrapper) {
       min-height: auto;
       justify-content: center;
     }
 
-    .split-grid :global(> .text-wrapper .text) {
+    .split-grid > :global(.text-wrapper .text) {
       width: 100%;
       padding: 3rem 1.5rem;
     }
 
-    .split-grid :global(> .img-wrapper) {
+    .split-grid > :global(.img-wrapper) {
       min-height: 400px;
     }
-
-    /* Dwing de mobiele volgorde op basis van de HTML-volgorde:
-       Gegarandeerd: Kind 1 (Img) -> Kind 2 (Text) -> Kind 4 (Img) -> Kind 3 (Text)
-    */
-    .split-grid :global(> .first) {
+    .split-grid > :global(.first) {
       order: 1;
     }
-    .split-grid :global(> .second) {
+    .split-grid > :global(.second) {
       order: 2;
     }
-    .split-grid :global(> .third) {
+    .split-grid > :global(.third) {
       order: 3;
     }
-    .split-grid :global(> .fourth) {
+    .split-grid > :global(.fourth) {
       order: 4;
     }
-    .split-grid :global(> .fifth) {
+    .split-grid > :global(.fifth) {
       order: 5;
     }
-    .split-grid :global(> .sixth) {
+    .split-grid > :global(.sixth) {
       order: 6;
     }
-    .split-grid :global(> .seventh) {
+    .split-grid > :global(.seventh) {
       order: 7;
     }
-    .split-grid :global(> .eight) {
+    .split-grid > :global(.eight) {
       order: 8;
     }
-    .split-grid :global(> .neight) {
+    .split-grid > :global(.neight) {
       order: 9;
     }
-    .split-grid :global(> .tenth) {
+    .split-grid > :global(.tenth) {
       order: 10;
     }
   }
