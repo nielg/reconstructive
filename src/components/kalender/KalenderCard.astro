@@ -1,0 +1,42 @@
+---
+import type { Kalender } from "@src/types";
+
+type Props = {
+  kalenderData: Kalender;
+};
+
+const { kalenderData } = Astro.props;
+---
+
+<div class="container bg-beige text-gray">
+  <hr class="yellow-line" />
+  <h2 class="text-green">{kalenderData.datum}</h2>
+  <hr class="yellow-line" />
+  <div>
+    <h3 class="text-green">{kalenderData.title}</h3>
+    <p><strong>Voor:</strong> {kalenderData.voorWie}</p>
+    <p><strong>Prijs:</strong> {kalenderData.prijs}</p>
+    <p><strong>Locatie:</strong> {kalenderData.locatie}</p>
+    <p><strong>Taal:</strong> {kalenderData.taal}</p>
+    <p>
+      <strong>Max aantal deelnemers:</strong>
+      {kalenderData.aantalDeelnemers}
+    </p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #dec15b;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+  }
+
+  .container h2 {
+    margin: 0;
+  }
+</style>
