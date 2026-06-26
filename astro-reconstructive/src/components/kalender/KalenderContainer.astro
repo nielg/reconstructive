@@ -11,7 +11,6 @@ const POSTS_QUERY = `*[
 const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
 
 const kalenderItems: Kalender[] = posts as unknown as Kalender[];
-console.table(kalenderItems);
 ---
 
 <h2 class="text-align-center">Kalender</h2>
@@ -27,7 +26,7 @@ console.table(kalenderItems);
 <style>
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
     width: 100%;
