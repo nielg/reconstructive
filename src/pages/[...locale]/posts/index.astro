@@ -25,7 +25,6 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
 <Layout>
   <section class="bg-beige">
     <h1 class="text-align-center text-green">{t("posts.title")}</h1>
-    <div class="text-margin"></div>
     <div class="container">
       {
         posts.map((post) => (
@@ -57,7 +56,11 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
           </article>
         ))
       }
-      {posts.length === 0 && <p class="text-gray">{t("posts.noPosts")}</p>}
+      {
+        posts.length === 0 && (
+          <p class="text-gray">{t("posts.noPosts")}</p>
+        )
+      }
     </div>
   </section>
 </Layout>
