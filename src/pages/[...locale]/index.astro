@@ -15,6 +15,7 @@ import mountainPathImg from "@assets/imgs/mountain-path.jpg";
 import groupPhotoImg from "@assets/imgs/group-foto.jpg";
 import meerImg from "@assets/imgs/meer.jpg";
 import { Image } from "astro:assets";
+import AnimationQuotes from "@components/AnimationQuotes.astro";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -188,6 +189,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
       </div>
     </div>
   </section>
+  <AnimationQuotes />
 </Layout>
 
 <style>

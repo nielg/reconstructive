@@ -7,6 +7,7 @@ import {
   useTranslatedPath,
 } from "@src/i18n/utils";
 import Aanbod from "@components/Aanbod.astro";
+import KalenderContainer from "@components/kalender/KalenderContainer.astro";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -32,6 +33,9 @@ const translatePath = useTranslatedPath(lang);
   </section>
   <section class="bg-beige text-gray">
     <Aanbod />
+  </section>
+  <section class="bg-green text-white">
+    <KalenderContainer />
   </section>
   <section class="contact bg-green text-white center">
     <p class="font-size-1_75">{t("aanbod.footer.text1")}</p>

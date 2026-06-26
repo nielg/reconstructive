@@ -1,0 +1,71 @@
+---
+
+---
+
+<section class="bg-beige text-gray marquee-container">
+  <div class="marquee-content">
+    <div class="marquee-group">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sit
+        est. Dicta, quam sed laborum voluptatem tempora quasi molestiae in
+        reiciendis explicabo. Qui aspernatur inventore a amet quia temporibus.
+        Exercitationem?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus
+        porro, provident quam soluta eius magnam, rerum esse temporibus dicta
+        iusto eum neque minus? Aliquid numquam quos veniam recusandae quaerat.
+      </p>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sit
+        est. Dicta, quam sed laborum voluptatem tempora quasi molestiae in
+        reiciendis explicabo. Qui aspernatur inventore a amet quia temporibus.
+        Exercitationem?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus
+        porro, provident quam soluta eius magnam, rerum esse temporibus dicta
+        iusto eum neque minus? Aliquid numquam quos veniam recusandae quaerat.
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .marquee-content {
+    display: flex;
+    white-space: nowrap;
+    /* Pas de '40s' aan om de snelheid te bepalen */
+    animation: marquee-infinite 40s linear infinite;
+  }
+
+  .marquee-group {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .marquee-group p {
+    margin: 0;
+    /* Dit zorgt voor exact evenveel ruimte tussen ALLE quotes */
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  /* De magische naadloze animatie */
+  @keyframes marquee-infinite {
+    0% {
+      transform: translate3d(0%, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+</style>
