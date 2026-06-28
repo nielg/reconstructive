@@ -157,17 +157,17 @@ h4 {
   row-gap: 2rem;
 }
 
-@media (max-width: 992px) {
-  .col3 {
-    grid-template-columns: 1fr;
-  }
-}
-
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
   row-gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .col3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
