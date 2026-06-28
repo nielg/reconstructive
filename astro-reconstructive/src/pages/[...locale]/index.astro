@@ -46,30 +46,62 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
   </section>
   <section class="bg-green text-white center roman-font">
     <p class="p1">
-      <strong>{t("home.quote.author")}:</strong> {t("home.quote.text")}
+      <strong>{t("home.quote.author")}:</strong>
+      {t("home.quote.text")}
     </p>
   </section>
   <section class="bg-beige text-gray center">
-    <div class="container small-text-margin center">
-      <h2 class="text-green">
-        {t("home.intro.title")}
-      </h2>
-      <p set:html={t("home.intro.body")} />
-      <ol>
-        <li class="bold">{t("home.intro.point1.title")}</li>
-        <p>{t("home.intro.point1.body")}</p>
-        <li class="bold">{t("home.intro.point2.title")}</li>
-        <p>{t("home.intro.point2.body")}</p>
-        <li class="bold">{t("home.intro.point3.title")}</li>
-        <p>{t("home.intro.point3.body")}</p>
-      </ol>
+    <div class="text-margin us">
+      <div class="img-wrapper">
+        <Image
+          alt={t("home.about.groupPhotoAlt")}
+          width={500}
+          height={500}
+          src={groupPhotoImg}
+          class="img"
+        />
+      </div>
+      <div>
+        <h3>{t("home.about.title")}</h3>
+        <p>{t("home.about.reconstructive")}</p>
+        <p>{t("home.about.text2")}</p>
+        <h4>
+          {t("home.about.contactTitle")}
+        </h4>
+        <div>
+          <div>
+            <p>{t("home.about.elkePhone")}</p>
+            <p>{t("home.about.bramPhone")}</p>
+            <p>
+              {t("home.about.mail")}: <a href="mailto:info@reconstructive.be"
+                >info@reconstructive.be</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-green text-white text-align-center">
+    <h2>{t("home.what.title")}</h2>
+  </section>
+  <section class="bg-beige text-gray center">
+    <div class="container small-text-margin">
+      <p>{t("home.what.text1")}</p>
+      <h2 class="text-green">{t("home.what.title1")}</h2>
+      <p>{t("home.what.text2")}</p>
+      <h2 class="text-green">{t("home.what.title2")}</h2>
+      <p>{t("home.what.text3")}</p>
+      <h2 class="text-green">{t("home.what.title3")}</h2>
+      <p>{t("home.what.text4")}</p>
+      <p>{t("home.what.text5")}</p>
     </div>
   </section>
   <section class="bg-green text-white center">
     <div class="text-margin text-align-center">
-      <h2>
+      <p class="p1">
         {t("home.cta.title")}
-      </h2>
+      </p>
     </div>
   </section>
   <section class="bg-beige text-gray center">
@@ -107,13 +139,16 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
         >{t("home.aanbod.button")}</a
       >
     </div>
+    <AnimationQuotes />
+  </section>
+  <section class="bg-green text-align-center text-white">
+    <p class="p1 text-opacity-white">{t("home.ellen.quote1")}</p>
+    <p class="p1 text-opacity-white">{t("home.ellen.quote2")}</p>
+    <p>Ellen</p>
   </section>
   <section class="bg-green text-white blog">
     <div class="small-text-margin center">
       <h2 class="text-align-center">{t("home.blog.title")}</h2>
-      <p class="text-align-center">
-        {t("home.blog.intro")}
-      </p>
       <hr class="yellow-line" />
       {
         posts && posts.length === 0 && (
@@ -161,17 +196,6 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
         />
       </div>
       <div class="text">
-        <h3 class="text-green text-align-center">{t("home.about.title")}</h3>
-        <p>{t("home.about.bramElke")}</p>
-        <p>
-          {t("home.about.carola")}
-          <a
-            href="https://reconstructiveschool.com/en/home/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://reconstructiveschool.com/en/home/</a
-          >
-        </p>
         <h3 class="text-green text-align-center">
           {t("home.about.contactTitle")}
         </h3>
@@ -189,7 +213,6 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
       </div>
     </div>
   </section>
-  <AnimationQuotes />
 </Layout>
 
 <style>

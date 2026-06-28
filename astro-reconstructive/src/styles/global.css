@@ -79,6 +79,10 @@ li,
 .text-white {
   color: var(--text-white);
 }
+
+.text-opacity-white {
+  color: #ffffffa9;
+}
 .text-black {
   color: var(--text-black);
 }

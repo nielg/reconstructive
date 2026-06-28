@@ -1,34 +1,23 @@
 ---
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@src/i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="bg-beige text-gray marquee-container">
   <div class="marquee-content">
     <div class="marquee-group">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sit
-        est. Dicta, quam sed laborum voluptatem tempora quasi molestiae in
-        reiciendis explicabo. Qui aspernatur inventore a amet quia temporibus.
-        Exercitationem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus
-        porro, provident quam soluta eius magnam, rerum esse temporibus dicta
-        iusto eum neque minus? Aliquid numquam quos veniam recusandae quaerat.
-      </p>
+      <p>{t("quotes.1")}</p>
+      <p>{t("quotes.2")}</p>
     </div>
     <div class="marquee-group" aria-hidden="true">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sit
-        est. Dicta, quam sed laborum voluptatem tempora quasi molestiae in
-        reiciendis explicabo. Qui aspernatur inventore a amet quia temporibus.
-        Exercitationem?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic delectus
-        porro, provident quam soluta eius magnam, rerum esse temporibus dicta
-        iusto eum neque minus? Aliquid numquam quos veniam recusandae quaerat.
-      </p>
+      <p>{t("quotes.1")}</p>
+      <p>{t("quotes.2")}</p>
     </div>
   </div>
 </section>
