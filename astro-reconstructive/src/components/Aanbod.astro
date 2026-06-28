@@ -185,36 +185,6 @@ const t = useTranslations(lang);
     gap: 2rem;
     margin: 3rem;
   }
-
-  /* Desktop volgorde voor de kaarten */
-  .card-wrapper[data-content="construct"] {
-    order: 1;
-  }
-  .card-wrapper[data-content="reconstructive"] {
-    order: 2;
-  }
-  .card-wrapper[data-content="gold"] {
-    order: 3;
-  }
-
-  .aanbodCardContainer:has(.card-wrapper[data-content="construct"].active)
-    .card-wrapper[data-content="reconstructive"] {
-    order: 1;
-  }
-  .aanbodCardContainer:has(.card-wrapper[data-content="construct"].active)
-    .card-wrapper[data-content="construct"] {
-    order: 2;
-  }
-
-  .aanbodCardContainer:has(.card-wrapper[data-content="gold"].active)
-    .card-wrapper[data-content="gold"] {
-    order: 2;
-  }
-  .aanbodCardContainer:has(.card-wrapper[data-content="gold"].active)
-    .card-wrapper[data-content="reconstructive"] {
-    order: 3;
-  }
-
   .card-wrapper {
     cursor: pointer;
     transition:

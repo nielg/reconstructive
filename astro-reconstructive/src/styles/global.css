@@ -196,7 +196,7 @@ ul.infinity-list li::before {
 
 .white-btn {
   background-color: #ffffff;
-  color: var(--color-green, #1b4332);
+  color: var(--text-green);
 }
 
 .white-btn:hover {
