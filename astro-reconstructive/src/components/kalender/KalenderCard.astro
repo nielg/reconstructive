@@ -9,20 +9,35 @@ const { kalenderData } = Astro.props;
 ---
 
 <div class="container bg-beige text-gray">
-  <hr class="yellow-line" />
-  <h3 class="text-green text-align-center">{kalenderData.datum}</h3>
-  <hr class="yellow-line" />
+  <div class="header">
+    <hr class="yellow-line" />
+    <h3 class="text-green text-align-center">{kalenderData.title}</h3>
+    <hr class="yellow-line" />
+  </div>
   <div>
-    <h4 class="text-green text-align-center">{kalenderData.title}</h4>
-    <p><strong>Datum:</strong> {kalenderData.datum}</p>
-    <p><strong>Voor:</strong> {kalenderData.voorWie}</p>
+    <h4 class="text-green text-align-center">{kalenderData.type}</h4>
+    <p>
+      <strong>Datum: </strong>{
+        kalenderData.overnachting
+          ? `Met overnachting`
+          : `Zonder overnacthing telkens van 10uur - 17uur`
+      }
+    </p>
     <p><strong>Prijs:</strong> {kalenderData.prijs}</p>
+    <p><strong>Voor:</strong> {kalenderData.voorWie}</p>
     <p><strong>Locatie:</strong> {kalenderData.locatie}</p>
     <p><strong>Taal:</strong> {kalenderData.taal}</p>
-    <p>
-      <strong>Max aantal deelnemers:</strong>
-      {kalenderData.aantalDeelnemers}
-    </p>
+    {
+      kalenderData.aantalDeelnemers && (
+        <p>
+          <strong>Max aantal deelnemers:</strong>
+          {kalenderData.aantalDeelnemers}
+        </p>
+      )
+    }
+    <a href="/">
+      <button class="green-btn">lees meer</button>
+    </a>
   </div>
 </div>
 
@@ -31,11 +46,14 @@ const { kalenderData } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 2px solid #dec15b;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     font-size: xx-small;
+  }
+
+  .header {
+    width: 100%;
   }
 
   .container h3 {

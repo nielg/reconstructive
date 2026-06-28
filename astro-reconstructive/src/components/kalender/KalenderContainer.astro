@@ -6,7 +6,7 @@ import type { Kalender } from "@src/types";
 
 const POSTS_QUERY = `*[
   _type == "kalender"
-] | order(datum asc){_id, title, datum, locatie, prijs, taal, aantalDeelnemers, voorWie, overnachting}`;
+] | order(startDate asc){_id, title, type, datum, locatie, prijs, taal, aantalDeelnemers, voorWie, overnachting, startDate}`;
 
 const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY);
 

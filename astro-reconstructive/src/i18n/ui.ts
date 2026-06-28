@@ -142,7 +142,8 @@ export const ui = {
     "aanpak.hero.text3":
       "Deze reis brengt je van overleven naar vol leven. Het is een proces van emotionele volwassenwording en heling. Je innerlijke kracht spreekt jou aan en nodigt je uit om verantwoordelijkheid te nemen over je helingsproces.",
     "aanpak.kern.title": "De kern van deze methode:",
-    "aanpak.kern.subtitle": '"From surviving to thriving"',
+    "aanpak.kern.subtitle":
+      '"Een ontmoeting met je kern, je uitdaging en je potentieel"',
     "aanpak.point1.title": "1. Natuur & energie: ",
     "aanpak.point1.text1":
       "Patronen zijn overal in de natuur aanwezig — spiralen, ritmes, structuren.",
@@ -469,7 +470,8 @@ export const ui = {
     "aanpak.hero.body2":
       "This journey brings you from survival to a full life. It is a process of maturation and healing. Your inner strength appeals to you and invites you to take responsibility for your healing process.",
     "aanpak.kern.title": "The core of this method:",
-    "aanpak.kern.subtitle": '"From surviving to thriving"',
+    "aanpak.kern.subtitle":
+      '"Een ontmoeting met je kern, je uitdaging en je potentieel"',
     "aanpak.point1.title": "1. Nature & energy: ",
     "aanpak.point1.text1":
       "Patterns occur abundantly in nature and resonate deeply with the human spirit.",

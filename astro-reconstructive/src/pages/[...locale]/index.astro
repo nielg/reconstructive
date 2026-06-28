@@ -16,6 +16,7 @@ import groupPhotoImg from "@assets/imgs/group-foto.jpg";
 import meerImg from "@assets/imgs/meer.jpg";
 import { Image } from "astro:assets";
 import AnimationQuotes from "@components/AnimationQuotes.astro";
+import SanityImg from "@components/SanityImg.astro";
 
 export { getStaticPaths };
 const lang = getLangFromUrl(Astro.url);
@@ -31,7 +32,8 @@ const posts_query = `*[
   title, 
   slug, 
   description,
-  language
+  language,
+  image
 }`;
 
 const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
@@ -52,7 +54,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
   </section>
   <section class="bg-beige text-gray center">
     <div class="text-margin us">
-      <div class="img-wrapper">
+      <div class="big img-wrapper">
         <Image
           alt={t("home.about.groupPhotoAlt")}
           width={500}
@@ -111,7 +113,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     </div>
   </section>
   <section class="bg-beige text-gray center">
-    <div class="container center text-margin">
+    <div class="container center text-align-center text-margin">
       <h2 class="text-green">{t("home.aanbod.title")}</h2>
       <p>{t("home.aanbod.intro1")}</p>
       <p>{t("home.aanbod.intro2")}</p>
@@ -169,9 +171,22 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
                 <div class="post-card-wrapper">
                   <div>
                     <h4 class="text-align-center">{post.title}</h4>
-                    <p class="text-align-center text-gray">
-                      {post.description}
-                    </p>
+                    {post.description && (
+                      <p class="text-align-center text-gray">
+                        {post.description}
+                      </p>
+                    )}
+                    {post.image && (
+                      <div class="sanity-img-container">
+                        <SanityImg
+                          src={post.image}
+                          width={600}
+                          height={400}
+                          alt={post.title}
+                          class="card-img"
+                        />
+                      </div>
+                    )}
                   </div>
                   <span class="green-btn btn">{t("common.readMore")}</span>
                 </div>
@@ -248,13 +263,16 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     color: var(--text-green);
     padding: 1rem;
     border-radius: 0.5rem;
-    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .sanity-img-wrapper {
     max-width: 500px;
+    width: 100%;
   }
 
   .us {
@@ -272,6 +290,10 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     max-width: 200px;
     margin: auto;
     margin-right: 0;
+  }
+
+  .us .big.img-wrapper {
+    max-width: 300px;
   }
 
   .us .img {

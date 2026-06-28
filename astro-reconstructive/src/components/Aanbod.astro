@@ -182,12 +182,11 @@ import AanbodDetails from "./AanbodDetails.astro";
       transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
       opacity 0.4s ease;
   }
-  .card-wrapper:hover {
+  .card-wrapper:not(.active):hover {
     transform: translateY(-8px);
   }
 
   .card-wrapper.active {
-    transform: translateY(80px);
     opacity: 1 !important;
   }
 

@@ -6,14 +6,14 @@ export const kalenderType = defineType({
   type: 'document',
   fields: [
     defineField({
-      title: 'Datum',
-      name: 'datum',
+      title: 'Datum title',
+      name: 'title',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      title: 'Title',
-      name: 'title',
+      title: 'Type',
+      name: 'type',
       type: 'string',
       validation: (rule) => rule.required(),
       options: {
@@ -24,6 +24,11 @@ export const kalenderType = defineType({
         ],
         layout: 'radio',
       },
+    }),
+    defineField({
+      name: 'Datum',
+      title: 'Overnachting inbegrepen?',
+      type: 'boolean',
     }),
     defineField({
       title: 'Locatie',
@@ -53,9 +58,9 @@ export const kalenderType = defineType({
       type: 'string',
     }),
     defineField({
-      name: 'overnachting',
-      title: 'Overnachting inbegrepen?',
-      type: 'boolean',
+      title: 'Start datum voor het sorteren',
+      name: 'startDat',
+      type: 'date',
     }),
   ],
 })
