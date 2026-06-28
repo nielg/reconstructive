@@ -80,6 +80,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
   }
   /* --- POST CARD --- */
   .post-card {
+    box-sizing: border-box;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow:
@@ -102,8 +103,14 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
   }
 
   @media (max-width: 768px) {
+    .container {
+      gap: 1.2rem;
+    }
     .post-card {
-      padding: 1.5rem;
+      padding: 1.25rem;
+    }
+    .post-excerpt {
+      margin-bottom: 1rem;
     }
   }
   .post-meta {
