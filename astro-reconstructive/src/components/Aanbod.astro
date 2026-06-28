@@ -10,8 +10,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="grid">
-  <div class="aanbodCardContainer">
+<div class="aanbod-container">
+  <div class="aanbod-section">
     <div class="card-wrapper" data-content="construct" id="construct">
       <AanbodCard
         title={t("aanbod.cards.construct.title")}
@@ -21,6 +21,32 @@ const t = useTranslations(lang);
         img={constructImg}
       />
     </div>
+    <div class="details text-gray text-margin" data-content="construct">
+      <AanbodDetails
+        title={t("aanbod.details.construct.title")}
+        text={[
+          t("aanbod.details.construct.text1"),
+          t("aanbod.details.construct.text2"),
+          t("aanbod.details.construct.text3"),
+          t("aanbod.details.construct.text4"),
+          t("aanbod.details.construct.text5"),
+        ]}
+        li={[
+          t("aanbod.details.construct.li1"),
+          t("aanbod.details.construct.li2"),
+          t("aanbod.details.construct.li3"),
+          t("aanbod.details.construct.li4"),
+        ]}
+        wie={t("aanbod.details.construct.wie")}
+        waar={t("aanbod.details.construct.waar")}
+        wanneer={t("aanbod.details.construct.wanneer")}
+        prijs={t("aanbod.details.construct.prijs")}
+        aantal_deelnemers={t("aanbod.details.construct.aantalDeelnemers")}
+      />
+    </div>
+  </div>
+
+  <div class="aanbod-section">
     <div class="card-wrapper" data-content="reconstructive" id="reconstructive">
       <AanbodCard
         title={t("aanbod.cards.reconstructive.title")}
@@ -30,6 +56,34 @@ const t = useTranslations(lang);
         img={grassPathImg}
       />
     </div>
+    <div class="details text-gray text-margin" data-content="reconstructive">
+      <AanbodDetails
+        title={t("aanbod.details.reconstructive.title")}
+        text={[
+          t("aanbod.details.reconstructive.text1"),
+          t("aanbod.details.reconstructive.text2"),
+          t("aanbod.details.reconstructive.text3"),
+          t("aanbod.details.reconstructive.text4"),
+          t("aanbod.details.reconstructive.text5"),
+          t("aanbod.details.reconstructive.text6"),
+        ]}
+        li={[
+          t("aanbod.details.reconstructive.li1"),
+          t("aanbod.details.reconstructive.li2"),
+          t("aanbod.details.reconstructive.li3"),
+          t("aanbod.details.reconstructive.li4"),
+          t("aanbod.details.reconstructive.li5"),
+        ]}
+        wie={t("aanbod.details.reconstructive.wie")}
+        waar={t("aanbod.details.reconstructive.waar")}
+        wanneer={t("aanbod.details.reconstructive.wanneer")}
+        prijs={t("aanbod.details.reconstructive.prijs")}
+        aantal_deelnemers={t("aanbod.details.reconstructive.aantalDeelnemers")}
+      />
+    </div>
+  </div>
+
+  <div class="aanbod-section">
     <div class="card-wrapper" data-content="gold" id="gold">
       <AanbodCard
         title={t("aanbod.cards.gold.title")}
@@ -39,78 +93,30 @@ const t = useTranslations(lang);
         img={mountainPathImg}
       />
     </div>
+    <div class="details text-gray text-margin" data-content="gold">
+      <AanbodDetails
+        title={t("aanbod.details.gold.title")}
+        text={[
+          t("aanbod.details.gold.text1"),
+          t("aanbod.details.gold.text2"),
+          t("aanbod.details.gold.text3"),
+          t("aanbod.details.gold.text4"),
+          t("aanbod.details.gold.text5"),
+        ]}
+        li={[
+          t("aanbod.details.gold.li1"),
+          t("aanbod.details.gold.li2"),
+          t("aanbod.details.gold.li3"),
+          t("aanbod.details.gold.li4"),
+        ]}
+        wie={t("aanbod.details.gold.wie")}
+        waar={t("aanbod.details.gold.waar")}
+        wanneer={t("aanbod.details.gold.wanneer")}
+        prijs={t("aanbod.details.gold.prijs")}
+        aantal_deelnemers={t("aanbod.details.gold.aantalDeelnemers")}
+      />
+    </div>
   </div>
-</div>
-<div class="details text-gray text-margin" data-content="construct">
-  <AanbodDetails
-    title={t("aanbod.details.construct.title")}
-    text={[
-      t("aanbod.details.construct.text1"),
-      t("aanbod.details.construct.text2"),
-      t("aanbod.details.construct.text3"),
-      t("aanbod.details.construct.text4"),
-      t("aanbod.details.construct.text5"),
-    ]}
-    li={[
-      t("aanbod.details.construct.li1"),
-      t("aanbod.details.construct.li2"),
-      t("aanbod.details.construct.li3"),
-      t("aanbod.details.construct.li4"),
-    ]}
-    wie={t("aanbod.details.construct.wie")}
-    waar={t("aanbod.details.construct.waar")}
-    wanneer={t("aanbod.details.construct.wanneer")}
-    prijs={t("aanbod.details.construct.prijs")}
-    aantal_deelnemers={t("aanbod.details.construct.aantalDeelnemers")}
-  />
-</div>
-<div class="details text-gray text-margin" data-content="reconstructive">
-  <AanbodDetails
-    title={t("aanbod.details.reconstructive.title")}
-    text={[
-      t("aanbod.details.reconstructive.text1"),
-      t("aanbod.details.reconstructive.text2"),
-      t("aanbod.details.reconstructive.text3"),
-      t("aanbod.details.reconstructive.text4"),
-      t("aanbod.details.reconstructive.text5"),
-      t("aanbod.details.reconstructive.text6"),
-    ]}
-    li={[
-      t("aanbod.details.reconstructive.li1"),
-      t("aanbod.details.reconstructive.li2"),
-      t("aanbod.details.reconstructive.li3"),
-      t("aanbod.details.reconstructive.li4"),
-      t("aanbod.details.reconstructive.li5"),
-    ]}
-    wie={t("aanbod.details.reconstructive.wie")}
-    waar={t("aanbod.details.reconstructive.waar")}
-    wanneer={t("aanbod.details.reconstructive.wanneer")}
-    prijs={t("aanbod.details.reconstructive.prijs")}
-    aantal_deelnemers={t("aanbod.details.reconstructive.aantalDeelnemers")}
-  />
-</div>
-<div class="details text-gray text-margin" data-content="gold">
-  <AanbodDetails
-    title={t("aanbod.details.gold.title")}
-    text={[
-      t("aanbod.details.gold.text1"),
-      t("aanbod.details.gold.text2"),
-      t("aanbod.details.gold.text3"),
-      t("aanbod.details.gold.text4"),
-      t("aanbod.details.gold.text5"),
-    ]}
-    li={[
-      t("aanbod.details.gold.li1"),
-      t("aanbod.details.gold.li2"),
-      t("aanbod.details.gold.li3"),
-      t("aanbod.details.gold.li4"),
-    ]}
-    wie={t("aanbod.details.gold.wie")}
-    waar={t("aanbod.details.gold.waar")}
-    wanneer={t("aanbod.details.gold.wanneer")}
-    prijs={t("aanbod.details.gold.prijs")}
-    aantal_deelnemers={t("aanbod.details.gold.aantalDeelnemers")}
-  />
 </div>
 
 <script>
@@ -175,16 +181,17 @@ const t = useTranslations(lang);
 
 <style>
   /* --- DESKTOP LAYOUT --- */
-  .grid {
-    width: 100%;
-  }
-
-  .aanbodCardContainer {
+  .aanbod-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin: 3rem;
   }
+
+  .aanbod-section {
+    display: contents;
+  }
+
   .card-wrapper {
     cursor: pointer;
     transition:
@@ -200,7 +207,7 @@ const t = useTranslations(lang);
     opacity: 1 !important;
   }
 
-  .aanbodCardContainer:has(.card-wrapper.active) .card-wrapper:not(.active) {
+  .aanbod-container:has(.card-wrapper.active) .card-wrapper:not(.active) {
     opacity: 0.6;
   }
 
@@ -210,6 +217,7 @@ const t = useTranslations(lang);
     column-gap: 3rem;
     display: none;
     scroll-margin-top: 300px;
+    grid-column: 1 / span 3;
   }
 
   .details.show {
@@ -240,52 +248,30 @@ const t = useTranslations(lang);
   }
 
   @media (max-width: 800px) {
-    :global(main),
-    .grid,
-    :parent {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .aanbodCardContainer {
+    .aanbod-container {
       display: flex;
       flex-direction: column;
-    }
-    .card-wrapper[data-content="construct"] {
-      order: 1;
-    }
-    .details[data-content="construct"] {
-      order: 2;
+      margin: 1.5rem;
+      gap: 1.5rem;
     }
 
-    .card-wrapper[data-content="reconstructive"] {
-      order: 3;
-    }
-    .details[data-content="reconstructive"] {
-      order: 4;
+    .aanbod-section {
+      display: block;
     }
 
-    .card-wrapper[data-content="gold"] {
-      order: 5;
-    }
-    .details[data-content="gold"] {
-      order: 6;
-    }
-
-    /* Marges corrigeren voor mobiel aangezien 'contents' de wrapper-marges wist */
     .card-wrapper {
-      margin: 1rem 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .card-wrapper.active {
       transform: none; /* Geen opmerkelijke desktop-verschuivingen op mobiel */
     }
 
-    /* 4. Details tonen in 1 kolom onder de actieve kaart */
+    /* Details tonen in 1 kolom onder de actieve kaart */
     .details.show {
       display: block;
       grid-template-columns: 1fr;
-      padding: 1.5rem;
+      padding: 1.5rem 0;
       margin-bottom: 2rem;
       border-radius: 8px;
     }
