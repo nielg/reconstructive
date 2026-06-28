@@ -95,47 +95,47 @@ const translatePath = useTranslatedPath(lang);
       />
     </div>
   </SplitGrid>
+  <section class="bg-green text-white text-align-center">
+    <div class="small-text-margin">
+      <h2>{t("about.values.title")}</h2>
+      <p>{t("about.values.body1")}</p>
+      <p>{t("about.values.body2")}</p>
+    </div>
+  </section>
+  <section class="bg-beige text-gray text-align-center">
+    <div class="small-text-margin oorsprong">
+      <div class="img-wrapper">
+        <Image
+          alt={t("about.origin.groupPhotoAlt")}
+          width={500}
+          height={500}
+          src={groupPhotoImg}
+          class="img"
+        />
+      </div>
+      <div class="text">
+        <h2 class="text-align-center text-green text-align-center">
+          {t("about.origin.title")}
+        </h2>
+        <p>{t("about.origin.body")}</p>
+        <Image
+          alt={t("about.origin.logoAlt")}
+          width={400}
+          height={150}
+          src={rihsLogo}
+        />
+        <a
+          href="https://reconstructiveschool.com/en/home/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div class="big-btn green-btn btn">
+            <p>{t("about.origin.buttonText")}</p>
+          </div></a
+        >
+      </div>
+    </div>
+  </section>
 </Layout>
-<section class="bg-green text-white text-align-center">
-  <div class="small-text-margin">
-    <h2>{t("about.values.title")}</h2>
-    <p>{t("about.values.body1")}</p>
-    <p>{t("about.values.body2")}</p>
-  </div>
-</section>
-<section class="bg-beige text-gray text-align-center">
-  <div class="small-text-margin oorsprong">
-    <div class="img-wrapper">
-      <Image
-        alt={t("about.origin.groupPhotoAlt")}
-        width={500}
-        height={500}
-        src={groupPhotoImg}
-        class="img"
-      />
-    </div>
-    <div class="text">
-      <h2 class="text-align-center text-green text-align-center">
-        {t("about.origin.title")}
-      </h2>
-      <p>{t("about.origin.body")}</p>
-      <Image
-        alt={t("about.origin.logoAlt")}
-        width={400}
-        height={150}
-        src={rihsLogo}
-      />
-      <a
-        href="https://reconstructiveschool.com/en/home/"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><div class="big-btn green-btn btn">
-          <p>{t("about.origin.buttonText")}</p>
-        </div></a
-      >
-    </div>
-  </div>
-</section>
 
 <style>
   .yellow-section p {
