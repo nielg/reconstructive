@@ -96,12 +96,19 @@ const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { lang });
     transition:
       transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
       box-shadow 0.3s ease;
-    width: 80vw;
+    width: 100%;
+    max-width: 800px;
   }
 
   .post-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 768px) {
+    .post-card {
+      padding: 1.5rem;
+    }
   }
   .post-meta {
     text-transform: uppercase;
