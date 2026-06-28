@@ -23,6 +23,11 @@ body {
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .regular-font {
   font-family: "Open Sans", "sans-serif";
 }
@@ -147,14 +152,29 @@ h4 {
 
 .col3 {
   display: grid;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .col3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .col2 {
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
+  row-gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .col2 {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
 }
 
 .text-margin {
@@ -247,4 +267,31 @@ button:hover {
   border: 0;
   border-bottom: 2px solid #dec15b;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p,
+  li,
+  .normal-font-size,
+  .button {
+    font-size: 1.1rem;
+  }
+  .p1 {
+    font-size: 1.4rem;
+  }
+  section {
+    padding: 1.5rem 1rem;
+  }
 }

@@ -153,6 +153,7 @@ const translatePath = useTranslatedPath(lang);
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 3rem;
+    row-gap: 2rem;
   }
 
   .oorsprong .img-wrapper {
@@ -181,5 +182,22 @@ const translatePath = useTranslatedPath(lang);
   }
   .oorsprong .green-btn p {
     margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    .yellow-section p {
+      padding: 1.5rem 1rem;
+    }
+
+    .oorsprong {
+      grid-template-columns: 1fr;
+    }
+
+    .oorsprong .img-wrapper {
+      width: 50%;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 </style>
