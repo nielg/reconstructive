@@ -64,14 +64,20 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
       <div>
         <h3>{t("home.about.title")}</h3>
         <p>{t("home.about.reconstructive")}</p>
-        <p>{t("home.about.text2")}</p>
+        <p>
+          {t("home.about.text2")}
+          <a
+            href="https://reconstructiveschool.com/"
+            class="text-green a-under-line">https://reconstructiveschool.com</a
+          >
+        </p>
         <h4>
           {t("home.about.contactTitle")}
         </h4>
         <div>
           <div>
-            <p>{t("home.about.elkePhone")}</p>
-            <p>{t("home.about.bramPhone")}</p>
+            <p>{t("home.about.elkePhone")} {t("home.about.bramPhone")}</p>
+
             <p>
               {t("home.about.mail")}: <a href="mailto:info@reconstructive.be"
                 >info@reconstructive.be</a
@@ -141,11 +147,6 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     </div>
     <AnimationQuotes />
   </section>
-  <section class="bg-green text-align-center text-white">
-    <p class="p1 text-opacity-white">{t("home.ellen.quote1")}</p>
-    <p class="p1 text-opacity-white">{t("home.ellen.quote2")}</p>
-    <p>Ellen</p>
-  </section>
   <section class="bg-green text-white blog">
     <div class="small-text-margin center">
       <h2 class="text-align-center">{t("home.blog.title")}</h2>
@@ -187,21 +188,21 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
       <div class="img-wrapper">
         <Image
           alt={t("home.about.groupPhotoAlt")}
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           src={groupPhotoImg}
           class="img"
         />
       </div>
       <div class="text">
-        <h3 class="text-green text-align-center">
+        <h4 class="text-green">
           {t("home.about.contactTitle")}
-        </h3>
+        </h4>
         <div class="contact-container">
           <div class="contact">
-            <p>{t("home.about.elkePhone")}</p>
-            <p>{t("home.about.bramPhone")}</p>
-            <p>
+            <p class="p3">{t("home.about.elkePhone")}</p>
+            <p class="p3">{t("home.about.bramPhone")}</p>
+            <p class="p3">
               {t("home.about.mail")}: <a href="mailto:info@reconstructive.be"
                 >info@reconstructive.be</a
               >
@@ -224,6 +225,10 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     background-repeat: no-repeat;
 
     height: 500px;
+  }
+
+  .a-under-line {
+    text-decoration: underline;
   }
 
   .yellow-line {
@@ -264,7 +269,7 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     border-radius: 100%;
     aspect-ratio: 1/1;
     width: 100%;
-    max-width: 280px;
+    max-width: 200px;
     margin: auto;
     margin-right: 0;
   }
@@ -279,12 +284,6 @@ const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
     overflow-wrap: break-word;
     word-break: break-word;
   }
-
-  .contact-container {
-    display: grid;
-    justify-content: center;
-  }
-
   .contact-card {
     text-align: left;
   }

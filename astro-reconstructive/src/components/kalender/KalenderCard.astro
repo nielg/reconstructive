@@ -10,10 +10,11 @@ const { kalenderData } = Astro.props;
 
 <div class="container bg-beige text-gray">
   <hr class="yellow-line" />
-  <h3 class="text-green">{kalenderData.datum}</h3>
+  <h3 class="text-green text-align-center">{kalenderData.datum}</h3>
   <hr class="yellow-line" />
   <div>
-    <h4 class="text-green">{kalenderData.title}</h4>
+    <h4 class="text-green text-align-center">{kalenderData.title}</h4>
+    <p><strong>Datum:</strong> {kalenderData.datum}</p>
     <p><strong>Voor:</strong> {kalenderData.voorWie}</p>
     <p><strong>Prijs:</strong> {kalenderData.prijs}</p>
     <p><strong>Locatie:</strong> {kalenderData.locatie}</p>
@@ -38,6 +39,7 @@ const { kalenderData } = Astro.props;
   }
 
   .container h3 {
+    font-size: 1.7rem;
     margin: 10px 0;
   }
 </style>

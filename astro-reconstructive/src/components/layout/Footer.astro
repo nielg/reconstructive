@@ -14,36 +14,23 @@ const t = useTranslations(lang);
 <footer class="bg-dark text-white">
   <div class="row">
     <h3>Reconstructive.be</h3>
+    <p>Elke Busschots: + 32 475 46 39</p>
+    <p>Bram Geysen: +32 473 52 30 94</p>
     <LanguagePicker place="footer" />
   </div>
   <div class="col3">
-    <div>
+    <div class="navigation">
       <h4>Navigation</h4>
-      <ul class="none-list">
-        <li><a href={translatePath("/")}>home</a></li>
-        <li><a href={translatePath("/aanpak")}>{t("nav.aanpak")}</a></li>
-        <li>
-          <a href={translatePath("/aanbod")}>{t("nav.aanbod")}</a>
-        </li>
-        <li>
-          <a href={translatePath("/impressies")}>{t("nav.impressies")}</a>
-        </li>
-        <li><a href={translatePath("/about")}>{t("nav.about")}</a></li>
-        <li><a href={translatePath("/posts")}>blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Reconstructive.be</h4>
-      <p>Bram Geysen: +32 473 52 30 94</p>
-      <p>Elke Busschots: + 32 475 46 39</p>
-      <a href="mailto:info@reconstructive.be"><p>info@reconstructive.be</p></a>
-    </div>
-    <div class="credits">
-      <h4>Credits</h4>
+      <p><a href={translatePath("/")}>home</a></p>
+      <p><a href={translatePath("/aanpak")}>{t("nav.aanpak")}</a></p>
       <p>
-        {t("footer.website")}
-        <a href="mailto:nielgeysen@gmail.com">nielgeysen@gmail.com</a>
+        <a href={translatePath("/aanbod")}>{t("nav.aanbod")}</a>
       </p>
+      <p>
+        <a href={translatePath("/impressies")}>{t("nav.impressies")}</a>
+      </p>
+      <p><a href={translatePath("/about")}>{t("nav.about")}</a></p>
+      <p><a href={translatePath("/posts")}>blog</a></p>
     </div>
   </div>
   <p class="text-align-center">
@@ -70,12 +57,11 @@ const t = useTranslations(lang);
     column-gap: 1rem;
     margin: 1rem;
   }
-  .ul {
-    list-style-type: none;
-  }
-
-  p {
-    margin: 0.5rem;
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    column-gap: 2rem;
   }
 
   p,

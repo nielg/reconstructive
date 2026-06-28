@@ -4,119 +4,94 @@ import constructImg from "@assets/imgs/constructImg.jpg";
 import grassPathImg from "@assets/imgs/grass-path.jpg";
 import mountainPathImg from "@assets/imgs/mountain-path.jpg";
 import AanbodDetails from "./AanbodDetails.astro";
-import { getLangFromUrl, useTranslations } from "@src/i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
-<div class="aanbod-container">
-  <div class="aanbod-section">
+<div class="grid">
+  <div class="aanbodCardContainer">
     <div class="card-wrapper" data-content="construct" id="construct">
       <AanbodCard
-        title={t("aanbod.cards.construct.title")}
-        text={t("aanbod.cards.construct.text")}
+        title="Voorbij je construct (1 dag)"
+        text="Stap één dag buiten je vertrouwde patronen en ontdek hoeveel ruimte er ontstaat wanneer je je construct loslaat."
         link="#"
-        alt={t("aanbod.cards.construct.alt")}
+        alt="Foto van een plein met een bloem in het midden"
         img={constructImg}
       />
     </div>
-    <div class="details text-gray text-margin" data-content="construct">
-      <AanbodDetails
-        title={t("aanbod.details.construct.title")}
-        text={[
-          t("aanbod.details.construct.text1"),
-          t("aanbod.details.construct.text2"),
-          t("aanbod.details.construct.text3"),
-          t("aanbod.details.construct.text4"),
-          t("aanbod.details.construct.text5"),
-        ]}
-        li={[
-          t("aanbod.details.construct.li1"),
-          t("aanbod.details.construct.li2"),
-          t("aanbod.details.construct.li3"),
-          t("aanbod.details.construct.li4"),
-        ]}
-        wie={t("aanbod.details.construct.wie")}
-        waar={t("aanbod.details.construct.waar")}
-        wanneer={t("aanbod.details.construct.wanneer")}
-        prijs={t("aanbod.details.construct.prijs")}
-        aantal_deelnemers={t("aanbod.details.construct.aantalDeelnemers")}
-      />
-    </div>
-  </div>
-
-  <div class="aanbod-section">
     <div class="card-wrapper" data-content="reconstructive" id="reconstructive">
       <AanbodCard
-        title={t("aanbod.cards.reconstructive.title")}
-        text={t("aanbod.cards.reconstructive.text")}
+        title="Reconstructive (2 dagen)"
+        text="Ervaar de transformerend kracht van Reconstructive en kom dichter bij je intuïtie, je vrijheid en je kern."
         link="#"
-        alt={t("aanbod.cards.reconstructive.alt")}
+        alt="Foto van een houte pad door het hoge grass"
         img={grassPathImg}
       />
     </div>
-    <div class="details text-gray text-margin" data-content="reconstructive">
-      <AanbodDetails
-        title={t("aanbod.details.reconstructive.title")}
-        text={[
-          t("aanbod.details.reconstructive.text1"),
-          t("aanbod.details.reconstructive.text2"),
-          t("aanbod.details.reconstructive.text3"),
-          t("aanbod.details.reconstructive.text4"),
-          t("aanbod.details.reconstructive.text5"),
-          t("aanbod.details.reconstructive.text6"),
-        ]}
-        li={[
-          t("aanbod.details.reconstructive.li1"),
-          t("aanbod.details.reconstructive.li2"),
-          t("aanbod.details.reconstructive.li3"),
-          t("aanbod.details.reconstructive.li4"),
-          t("aanbod.details.reconstructive.li5"),
-        ]}
-        wie={t("aanbod.details.reconstructive.wie")}
-        waar={t("aanbod.details.reconstructive.waar")}
-        wanneer={t("aanbod.details.reconstructive.wanneer")}
-        prijs={t("aanbod.details.reconstructive.prijs")}
-        aantal_deelnemers={t("aanbod.details.reconstructive.aantalDeelnemers")}
-      />
-    </div>
-  </div>
-
-  <div class="aanbod-section">
     <div class="card-wrapper" data-content="gold" id="gold">
       <AanbodCard
-        title={t("aanbod.cards.gold.title")}
-        text={t("aanbod.cards.gold.text")}
+        title="Find your gold (6 dagen)"
+        text="Ga op een diepgaande reis door natuur en lichaam, en keer terug naar de essentie van wie jij werkelijk bent"
         link="#"
-        alt={t("aanbod.cards.gold.alt")}
+        alt="Foto van een houten pad door een dor veld met bergen in de achtergrond"
         img={mountainPathImg}
       />
     </div>
-    <div class="details text-gray text-margin" data-content="gold">
-      <AanbodDetails
-        title={t("aanbod.details.gold.title")}
-        text={[
-          t("aanbod.details.gold.text1"),
-          t("aanbod.details.gold.text2"),
-          t("aanbod.details.gold.text3"),
-          t("aanbod.details.gold.text4"),
-          t("aanbod.details.gold.text5"),
-        ]}
-        li={[
-          t("aanbod.details.gold.li1"),
-          t("aanbod.details.gold.li2"),
-          t("aanbod.details.gold.li3"),
-          t("aanbod.details.gold.li4"),
-        ]}
-        wie={t("aanbod.details.gold.wie")}
-        waar={t("aanbod.details.gold.waar")}
-        wanneer={t("aanbod.details.gold.wanneer")}
-        prijs={t("aanbod.details.gold.prijs")}
-        aantal_deelnemers={t("aanbod.details.gold.aantalDeelnemers")}
-      />
-    </div>
   </div>
+</div>
+<div class="details text-gray text-margin" data-content="construct">
+  <AanbodDetails
+    title="Een ontmoeting"
+    text={[
+      " Een eerste ontmoeting met je essentie en met de reconstructive methode.",
+      "Voor wie wilt proeven van wat er leeft voorbij je patronen",
+      "Merk jij ook dat sommigen vrijer leven dan jij? Dat als jij iets wil veranderen, er meteen een stem in jouw hoofd zegt, 'ja maar, dat kan niet want...' Die stemmetjes bepalen mee hoe groot jouw vrijheid aanvoelt.",
+      "Tijdens deze initiatiedag stap je uit je vertrouwde kaders. Via belevings-oefeningen en de wijsheid van de natuur word je uitgenodigd om buiten je construct te stappen. Het is alsof je een raam opent dat lang dicht zat. Er komt licht binnen. Ruimte. Nieuwsgierigheid.",
+      "De natuur vindt altijd een weg ook in complexe omstandigheden. En precies dat herinnert jou eraan dat ook jij kunt bewegen, verschuiven, openen.",
+    ]}
+    li={[
+      "Ruimer perspectief op je eigen patronen",
+      "Een eerste ervaring van ruimte en vrijheid",
+      "Meer bewustzijn over wat jou stuurt",
+      "Nieuwsgierigheid als startpunt voor groei",
+    ]}
+  />
+</div>
+<div class="details text-gray text-margin" data-content="reconstructive">
+  <AanbodDetails
+    title="Een uitnodiging"
+    text={[
+      "een uitnodiging om dichter bij jezelf te komen.",
+      "Soms voel je dat er nog iets in de weg zit. Iets wat niet via het hoofd loskomt, maar via het lichaam wil gezien worden.",
+      "Vaak zijn het diepgewortelde patronen, oude verhalen, ingehouden emoties en overlevingsstrategieën die ons onbewust ervan weerhouden om ons potentieel ten volle te leven. Door ermee te werken in het lichaam komt er beweging, helderheid en richting.",
+      "Via Reconstructive wordt het denken opzijgezet. Wat overblijft is het lichaam en wat het je te vertellen heeft.",
+      "We werken in kleine groepjes, zonder taal. We bouwen samen een energetisch veld waaruit beweging ontstaat. De groep is een spiegelend veld: wat je bij anderen ziet, raakt iets in jou. Wat jij laat zien, opent iets bij hen.",
+      "Reconstructive is geen therapie, maar een uitnodiging om je over te geven aan wat zich in jou wil tonen. Zonder verhaal. Zonder analyse. Alleen een directe ontmoeting met jezelf en je volle potentieel.",
+    ]}
+    li={[
+      "Ruimer perspectief op je eigen patronen",
+      "Meer vrijheid",
+      "Nieuwe inzichten",
+      "Doorbraak in patronen die tot nu toe bleven vastzitten",
+      "Een ervaring die een blijvende indruk nalaat",
+    ]}
+  />
+</div>
+<div class="details text-gray text-margin" data-content="gold">
+  <AanbodDetails
+    title="Een thuiskomen"
+    text={[
+      "Een thuiskomen bij jezelf.",
+      "Deze retreat is een innerlijke tocht waarbij we laag na laag dichterbij jouw blauwdruk komen, zodat zichtbaar wordt wie je altijd al was.",
+      "Elke dag trekken we de natuur in. Ze spiegelt je zonder oordeel: waar je nog vasthoudt, waar je mag verzachten, waar je mag openen. De natuur laat zien wat je lichaam al wist, maar wat je hoofd misschien nog niet durfde te erkennen.",
+      "Reconstructive maakt zichtbaar wat je onderweg tegenkomt: oude patronen, beschermingslagen, ingehouden emoties. Door ermee te werken in het lichaam komt er beweging, helderheid en richting. Je voelt hoe je dichter bij je blauwdruk komt dat stille, diepe weten van wie jij in essentie bent.",
+      "De groep wordt een bedding. Je hoeft het niet alleen te doen, maar je maakt wel je eigen innerlijke reis.",
+    ]}
+    li={[
+      "Meer helderheid",
+      "belichaming",
+      "rust",
+      "stevig contact met je kern",
+    ]}
+  />
 </div>
 
 <script>
@@ -181,17 +156,26 @@ const t = useTranslations(lang);
 
 <style>
   /* --- DESKTOP LAYOUT --- */
-  .aanbod-container {
+  .grid {
+    width: 100%;
+  }
+
+  .aanbodCardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    margin: 3rem;
   }
 
-  .aanbod-section {
-    display: contents;
+  /* Desktop volgorde voor de kaarten */
+  .card-wrapper[data-content="construct"] {
+    order: 1;
   }
-
+  .card-wrapper[data-content="reconstructive"] {
+    order: 2;
+  }
+  .card-wrapper[data-content="gold"] {
+    order: 3;
+  }
   .card-wrapper {
     cursor: pointer;
     transition:
@@ -207,8 +191,14 @@ const t = useTranslations(lang);
     opacity: 1 !important;
   }
 
-  .aanbod-container:has(.card-wrapper.active) .card-wrapper:not(.active) {
+  .aanbodCardContainer:has(.card-wrapper.active) .card-wrapper:not(.active) {
     opacity: 0.6;
+  }
+
+  .active,
+  .details {
+    background-color: white;
+    padding: 0 1rem;
   }
 
   /* Details op desktop */
@@ -217,7 +207,6 @@ const t = useTranslations(lang);
     column-gap: 3rem;
     display: none;
     scroll-margin-top: 300px;
-    grid-column: 1 / span 3;
   }
 
   .details.show {
@@ -248,30 +237,31 @@ const t = useTranslations(lang);
   }
 
   @media (max-width: 800px) {
-    .aanbod-container {
+    :global(main),
+    .grid,
+    :parent {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .aanbodCardContainer {
       display: flex;
       flex-direction: column;
-      margin: 1.5rem;
-      gap: 1.5rem;
     }
-
-    .aanbod-section {
-      display: block;
-    }
-
+    /* Marges corrigeren voor mobiel aangezien 'contents' de wrapper-marges wist */
     .card-wrapper {
-      margin-bottom: 1rem;
+      margin: 1rem 1.5rem;
     }
 
     .card-wrapper.active {
       transform: none; /* Geen opmerkelijke desktop-verschuivingen op mobiel */
     }
 
-    /* Details tonen in 1 kolom onder de actieve kaart */
+    /* 4. Details tonen in 1 kolom onder de actieve kaart */
     .details.show {
       display: block;
       grid-template-columns: 1fr;
-      padding: 1.5rem 0;
+      padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 8px;
     }

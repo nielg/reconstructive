@@ -28,120 +28,114 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
 
-  <section class="no-padding">
-    <div class="bg-yellow yellow-section text-align-center">
-      <p>{t("about.banner.text")}</p>
+  <SplitGrid>
+    <div class="img-wrapper">
+      <Image
+        src={elkeProfiel}
+        alt={t("about.elke.alt")}
+        width={800}
+        height={800}
+        class="img elke-img"
+      />
     </div>
 
-    <SplitGrid>
-      <div class="img-wrapper">
-        <Image
-          src={elkeProfiel}
-          alt={t("about.elke.alt")}
-          width={800}
-          height={800}
-          class="img elke-img"
-        />
-      </div>
-
-      <div class="text-wrapper bg-beige">
-        <div class="text-gray text">
-          <h2 class="text-align-center text-green">{t("about.elke.title")}</h2>
-          <p>{t("about.elke.intro")}</p>
-          <p>{t("about.elke.strengthTitle")}</p>
-          <ul>
-            <li>{t("about.elke.strength1")}</li>
-            <li>{t("about.elke.strength2")}</li>
-            <li>{t("about.elke.strength3")}</li>
-            <li>{t("about.elke.strength4")}</li>
-            <li>{t("about.elke.strength5")}</li>
-          </ul>
-          <p>{t("about.elke.mission")}</p>
-          <div class="center">
-            <a
-              href="https://www.Cominz.be"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="green-btn big-btn font-size-1_3"
-            >
-              www.Cominz.be
-            </a>
-          </div>
+    <div class="text-wrapper bg-beige">
+      <div class="text-gray text">
+        <h2 class="text-align-center text-green">{t("about.elke.title")}</h2>
+        <p>{t("about.elke.intro")}</p>
+        <p>{t("about.elke.strengthTitle")}</p>
+        <ul>
+          <li>{t("about.elke.strength1")}</li>
+          <li>{t("about.elke.strength2")}</li>
+          <li>{t("about.elke.strength3")}</li>
+          <li>{t("about.elke.strength4")}</li>
+          <li>{t("about.elke.strength5")}</li>
+        </ul>
+        <p>{t("about.elke.mission")}</p>
+        <div class="center">
+          <a
+            href="https://www.Cominz.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="green-btn big-btn font-size-1_3"
+          >
+            www.Cominz.be
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="text-wrapper bg-beige text-gray fourth">
-        <div class="text margin-left">
-          <h2 class="center text-green">{t("about.bram.title")}</h2>
-          <p>{t("about.bram.intro1")}</p>
-          <p>{t("about.bram.intro2")}</p>
-          <p>{t("about.bram.intro3")}</p>
-          <p>{t("about.bram.outro")}</p>
-          <div class="center">
-            <a
-              href="https://www.mooyo.be"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="green-btn big-btn font-size-1_3"
-            >
-              www.mooyo.be
-            </a>
-          </div>
+    <div class="text-wrapper bg-beige text-gray fourth">
+      <div class="text margin-left">
+        <h2 class="center text-green">{t("about.bram.title")}</h2>
+        <p>{t("about.bram.intro1")}</p>
+        <p>{t("about.bram.intro2")}</p>
+        <p>{t("about.bram.intro3")}</p>
+        <p>{t("about.bram.outro")}</p>
+        <div class="center">
+          <a
+            href="https://www.mooyo.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="green-btn big-btn font-size-1_3"
+          >
+            www.mooyo.be
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="img-wrapper third">
-        <Image
-          src={bramProfiel}
-          alt={t("about.bram.alt")}
-          width={500}
-          height={500}
-          class="img"
-        />
-      </div>
-    </SplitGrid>
-  </section>
-  <section class="bg-green text-white text-align-center">
-    <div class="small-text-margin">
-      <h2>{t("about.values.title")}</h2>
-      <p>{t("about.values.body1")}</p>
-      <p>{t("about.values.body2")}</p>
+    <div class="img-wrapper third">
+      <Image
+        src={bramProfiel}
+        alt={t("about.bram.alt")}
+        width={500}
+        height={500}
+        class="img"
+      />
     </div>
-  </section>
-  <section class="bg-beige text-gray text-align-center">
-    <div class="small-text-margin oorsprong">
-      <div class="img-wrapper">
-        <Image
-          alt={t("about.origin.groupPhotoAlt")}
-          width={500}
-          height={500}
-          src={groupPhotoImg}
-          class="img"
-        />
-      </div>
-      <div class="text">
-        <h2 class="text-align-center text-green text-align-center">
-          {t("about.origin.title")}
-        </h2>
-        <p>{t("about.origin.body")}</p>
-        <Image
-          alt={t("about.origin.logoAlt")}
-          width={400}
-          height={150}
-          src={rihsLogo}
-        />
-        <a
-          href="https://reconstructiveschool.com/en/home/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><div class="big-btn green-btn btn">
-            <p>{t("about.origin.buttonText")}</p>
-          </div></a
-        >
-      </div>
-    </div>
-  </section>
+  </SplitGrid>
 </Layout>
+<section class="bg-green text-white text-align-center">
+  <div class="small-text-margin">
+    <h2>{t("about.values.title")}</h2>
+    <p>{t("about.values.body1")}</p>
+    <p>{t("about.values.body2")}</p>
+  </div>
+</section>
+<section class="bg-beige text-gray text-align-center">
+  <div class="small-text-margin oorsprong">
+    <div class="img-wrapper">
+      <Image
+        alt={t("about.origin.groupPhotoAlt")}
+        width={500}
+        height={500}
+        src={groupPhotoImg}
+        class="img"
+      />
+    </div>
+    <div class="text">
+      <h2 class="text-align-center text-green text-align-center">
+        {t("about.origin.title")}
+      </h2>
+      <p>{t("about.origin.body")}</p>
+      <Image
+        alt={t("about.origin.logoAlt")}
+        width={400}
+        height={150}
+        src={rihsLogo}
+      />
+      <a
+        href="https://reconstructiveschool.com/en/home/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><div class="big-btn green-btn btn">
+          <p>{t("about.origin.buttonText")}</p>
+        </div></a
+      >
+    </div>
+  </div>
+</section>
 
 <style>
   .yellow-section p {

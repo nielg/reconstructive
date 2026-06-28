@@ -54,7 +54,7 @@ export const ui = {
       "groepsfoto met Bram Geysen Elke Busschots en Carola Castillo",
     "home.about.title": "Wie zijn wij?",
     "home.about.reconstructive":
-      "Reconstructive.be is een samenwerkingen tussen Elke Busschots en Bram Geysen die elk hun eigen praktijk hebben en de opleidingen hebben gevolgd bij de RIIHS. Ze werken nauw samen Carola Castillo(midden) de grondlegster van het gedachtengoed en de methodiek Reconstructive en oprichtster van Reconstructive International Integratie Holistic School: ",
+      "Reconstructive.be is een samenwerkingen tussen Elke Busschots en Bram Geysen die elk hun eigen praktijk hebben en de opleidingen hebben gevolgd bij de RIIHS. Ze werken nauw samen Carola Castillo(midden) de grondlegster van het gedachtengoed en de methodiek Reconstructive en oprichtster van Reconstructive International Integratie Holistic School:",
     "home.about.text2":
       "Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde Reconstructive begeleiders.",
     "home.about.contactTitle": "Contacteer ons voor een vrijblijvend gesprek:",
@@ -75,10 +75,7 @@ export const ui = {
       "Beweging waar je vastzat. Helderheid waar verwarring zat. Ruimte waar spanning zat.",
     "home.what.text5":
       "Je intuïtie wordt sterker, je vrijheid groter, je lichaam rustiger. Je laat oude verhalen los en maakt contact met je potentieel — voelbaar, doorleefd en blijvend aanwezig in je dagelijks leven.",
-    "home.ellen.quote1":
-      "“Waar ik vroeger zweeg, spreek ik nu authentiek. En precies daardoor word ik gehoord.”",
-    "home.ellen.quote2":
-      "“Anderen zagen het eerst: ik draag nu meer lichtheid en ruimte met me mee.”",
+
     // Impressies
     "impressies.hero.title": "Impressies",
     "impressies.hero.description":
@@ -97,8 +94,6 @@ export const ui = {
     "about.hero.title": "Ontdek Reconstructive: Jouw reis naar authenticiteit",
     "about.hero.description":
       "Bij Reconstructive begeleiden we je naar leven vanuit je kern — authentiek, intuïtief en vrij. Ontdek een nieuwe manier van kijken en groeien. Ben je klaar om je ware zelf te onthullen?",
-    "about.banner.text":
-      "Reconstructive.be is een samenwerking tussen Elke Busschots en Bram Geysen die elk hun eigen praktijk hebben. Ze hebben de vereiste opleidingen gevolgd bij de RIIHS en werken nauw samen met de International Reconstructive School.",
     "about.elke.title": "Elke",
     "about.elke.alt": "Profielfoto van Elke Busschots",
     "about.elke.intro":
@@ -139,30 +134,32 @@ export const ui = {
       "Reconstructive International Integrative Holistic School",
 
     // Aanpak
-    "aanpak.hero.title": "Reconstructive: een reis terug naar jezelf.",
-    "aanpak.hero.body1":
-      "Reconstructive biedt een unieke weg naar leven vanuit je kern, je authenticiteit en je intuïtie. Het nodigt je uit om de constructies die je, vaak onbewust, hebt opgebouwd vanuit vroege indrukken in vraag te stellen. Zo wordt de vrijheid die daarachter schuilgaat zichtbaar.",
-    "aanpak.hero.body2":
-      "Deze reis brengt je van overleven naar vol leven. Het is een proces van volwassenwording en heling. Je innerlijke kracht spreekt jou aan en nodigt je uit om verantwoordelijkheid te nemen over je helingsproces.",
+    "aanpak.hero.title": "Reconstructive: een reis terug naar jezelf",
+    "aanpak.hero.text1":
+      "Reconstructive vertrekt vanuit een eenvoudig maar diepgaand principe: alles in ons leven beweegt volgens patronen. Sommige dragen ons, andere beperken ons. In dit werk onderzoeken we hoe die patronen ontstaan, hoe ze zich vastzetten in het lichaam en hoe we ze opnieuw kunnen openen zodat energie, intuïtie en creatiekracht vrijer kunnen stromen. Op die manier kunnen de inzichten doorwerken in het dagelijkse leven en ontstaat duurzame verandering.",
+    "aanpak.hero.text2":
+      "Deze vijf pijlers vormen de basis van onze aanpak en tonen hoe Reconstructive je begeleidt van overleven naar belichaamde heelheid.",
+    "aanpak.hero.text3":
+      "Deze reis brengt je van overleven naar vol leven. Het is een proces van emotionele volwassenwording en heling. Je innerlijke kracht spreekt jou aan en nodigt je uit om verantwoordelijkheid te nemen over je helingsproces.",
     "aanpak.kern.title": "De kern van deze methode:",
     "aanpak.kern.subtitle": '"From surviving to thriving"',
     "aanpak.point1.title": "1. Natuur & energie: ",
     "aanpak.point1.text1":
-      "Patronen komen overvloedig voor in de natuur en resoneren diep met de menselijke geest.",
+      "Patronen zijn overal in de natuur aanwezig — spiralen, ritmes, structuren.",
     "aanpak.point1.text2":
-      "Het spiraalpatroon, bijvoorbeeld, is gecodeerd in ons DNA, in planten, dieren, kristallen en in onze Melkweg. Zonnebloemen rangschikken hun zaden in spiralen om ruimte en licht maximaal te benutten, terwijl tornado’s en draaikolken spiraaldynamiek gebruiken om energie efficiënt te geleiden.",
+      "Patronen weerspiegelen hoe levensenergie beweegt: van binnen naar buiten, van essentie naar vorm.",
     "aanpak.point1.text3":
-      "Veel tradities zien spiralen als het pad waarlangs <strong>levenskracht</strong> stroomt: een beweging van binnen naar buiten, van essentie naar manifestatie.",
+      "Zonder structuur blijft energie puur potentieel, maar zodra ze zich via patronen, structuren en ritmes ordent, wordt ze voelbaar, waarneembaar en scheppend.",
     "aanpak.point1.text4":
-      "Zonder structuur blijft energie puur potentieel, maar zodra ze zich via <strong>patronen, structuren</strong> en <strong>ritmes</strong> ordent, wordt ze voelbaar, waarneembaar en scheppend.",
+      "Wanneer we deze natuurlijke beweging herkennen in onszelf, wordt voelbaar waar onze levensstroom vrij stroomt en waar ze blokkeert.",
     "aanpak.point1.imgAlt": "Zonnebloem met spiraalpatroon",
     "aanpak.point2.title": "2. Overleven & identiteit: ",
     "aanpak.point2.text1":
-      "In onze kindertijd vormen overlevingspatronen de basis van wie we denken te moeten zijn.",
+      "In onze eerste levensjaren vormen we overlevingspatronen die ons houvast en veiligheid geven. Ze worden de basis van onze identiteit — wie we denken te moeten zijn.",
     "aanpak.point2.text2":
-      "Als mens worden we geboren in een familie en gevormd door cultuur, religie en educatie. In onze eerste zes levensjaren ontwikkelen we patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We leren de strategieën die ons helpen overeind te blijven en die onze identiteit vormgeven. Die patronen vormen de basis waarop we later, vaak onbewust, blijven terugvallen, vooral wanneer het leven moeilijk wordt.",
+      "Familie, cultuur en vroege ervaringen, inclusief trauma, vormen structuren die we later onbewust blijven herhalen. Vooral wanneer het leven uitdagend wordt, grijpen we terug naar deze oude strategieën.",
     "aanpak.point2.text3":
-      "Tijdens deze periode kan vroegkinderlijk trauma ontstaan, waarvan de impact zich nog decennia later kan laten voelen.",
+      "In onze eerste zes levensjaren ontwikkelen we patronen die ons houvast, voorspelbaarheid en veiligheid bieden. We leren de strategieën die ons helpen overeind te blijven en die onze identiteit vormgeven. Die patronen vormen de basis waarop we later, vaak onbewust, blijven terugvallen, vooral wanneer het leven moeilijk wordt.",
     "aanpak.point2.imgAlt":
       "Houten poppetjes die symbool staan voor familie en patronen",
     "aanpak.point3.title": "3. Doorbreken & bewustwording: ",
@@ -267,7 +264,7 @@ export const ui = {
     "aanbod.details.construct.prijs":
       "125 euro excl BTW (incl. koffie, thee, versnapperingen en lunch)",
     "aanbod.details.construct.aantalDeelnemers": "12",
-    "aanbod.details.reconstructive.title": "Een uitndoging",
+    "aanbod.details.reconstructive.title": "Een uitnodiging",
     "aanbod.details.reconstructive.text1":
       "een uitnodiging om dichter bij jezelf te komen.",
     "aanbod.details.reconstructive.text2":

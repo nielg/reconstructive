@@ -19,17 +19,21 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
-<Layout>
+
+<Layout>
   <section class="bg-beige text-gray text-align-justify">
     <div class="container small-text-margin">
       <h1 class="text-green text-align-center">
         {t("aanpak.hero.title")}
       </h1>
       <p>
-        {t("aanpak.hero.body1")}
+        {t("aanpak.hero.text1")}
       </p>
       <p>
-        {t("aanpak.hero.body2")}
+        {t("aanpak.hero.text2")}
+      </p>
+      <p>
+        {t("aanpak.hero.text3")}
       </p>
     </div>
   </section>
@@ -42,14 +46,22 @@ const translatePath = useTranslatedPath(lang);
     <SplitGrid>
       <!-- 1. Natuur & energie (Afbeelding) -->
       <div class="img-wrapper first">
-        <Image class="img" alt={t("aanpak.point1.imgAlt")} width={600} height={600} src={sunflower} />
+        <Image
+          class="img"
+          alt={t("aanpak.point1.imgAlt")}
+          width={600}
+          height={600}
+          src={sunflower}
+        />
       </div>
 
       <!-- 1. Natuur & energie (Tekst) -->
       <div class="text-wrapper bg-beige second">
         <div class="text-gray text">
           <p>
-            <strong>{t("aanpak.point1.title")}</strong>{t("aanpak.point1.text1")}
+            <strong>{t("aanpak.point1.title")}</strong>{
+              t("aanpak.point1.text1")
+            }
           </p>
           <p>
             {t("aanpak.point1.text2")}
@@ -63,7 +75,9 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-green fourth">
         <div class="text-white text margin-left">
           <p>
-            <strong>{t("aanpak.point2.title")}</strong>{t("aanpak.point2.text1")}
+            <strong>{t("aanpak.point2.title")}</strong>{
+              t("aanpak.point2.text1")
+            }
           </p>
           <p>
             {t("aanpak.point2.text2")}
@@ -100,7 +114,9 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-beige sixth">
         <div class="text-gray text">
           <p>
-            <strong>{t("aanpak.point3.title")}</strong>{t("aanpak.point3.text1")}
+            <strong>{t("aanpak.point3.title")}</strong>{
+              t("aanpak.point3.text1")
+            }
           </p>
           <p>
             {t("aanpak.point3.text2")}
@@ -121,7 +137,9 @@ const translatePath = useTranslatedPath(lang);
       <div class="text-wrapper bg-green eight">
         <div class="text-white text margin-left">
           <p>
-            <strong>{t("aanpak.point4.title")}</strong>{t("aanpak.point4.text1")}
+            <strong>{t("aanpak.point4.title")}</strong>{
+              t("aanpak.point4.text1")
+            }
           </p>
           <p>
             {t("aanpak.point4.text2")}
@@ -140,19 +158,33 @@ const translatePath = useTranslatedPath(lang);
 
       <!-- 4. Belichaming & creatie (Afbeelding) -->
       <div class="img-wrapper seventh">
-        <Image class="img" alt={t("aanpak.point4.imgAlt")} width={500} height={500} src={sandAngelImg} />
+        <Image
+          class="img"
+          alt={t("aanpak.point4.imgAlt")}
+          width={500}
+          height={500}
+          src={sandAngelImg}
+        />
       </div>
 
       <!-- 5. Heelheid & integratie (Afbeelding) -->
       <div class="img-wrapper neight">
-        <Image class="img" alt={t("aanpak.point5.imgAlt")} width={500} height={500} src={whiteFlower} />
+        <Image
+          class="img"
+          alt={t("aanpak.point5.imgAlt")}
+          width={500}
+          height={500}
+          src={whiteFlower}
+        />
       </div>
 
       <!-- 5. Heelheid & integratie (Tekst) -->
       <div class="text-wrapper bg-beige tenth">
         <div class="bg-beige text-gray text">
           <p>
-            <strong>{t("aanpak.point5.title")}</strong>{t("aanpak.point5.text1")}
+            <strong>{t("aanpak.point5.title")}</strong>{
+              t("aanpak.point5.text1")
+            }
           </p>
           <p>
             {t("aanpak.point5.text2")}

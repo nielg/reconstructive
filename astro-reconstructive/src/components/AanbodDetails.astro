@@ -5,15 +5,9 @@ interface Props {
   title: string;
   text: string[];
   li: string[];
-  wie: string;
-  waar: string;
-  wanneer: string;
-  prijs: string;
-  aantal_deelnemers: string;
 }
 
-const { title, text, li, wie, waar, wanneer, prijs, aantal_deelnemers } =
-  Astro.props;
+const { title, text, li } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -24,19 +18,8 @@ const t = useTranslations(lang);
   {text.map((t) => <p>{t}</p>)}
 </div>
 <div>
-  <h3 class="text-green text-align-center">{t("aanbod.details.practical")}</h3>
-  <p class="bold">{t("aanbod.details.benefits")}</p>
+  <h3 class="text-green text-align-center">{t("aanbod.details.benefits")}</h3>
   <ul>
     {li.map((i) => <li>{i}</li>)}
   </ul>
-  <p>
-    <strong>{t("aanbod.details.forWho")} </strong>{wie}
-  </p>
-  <p><strong>{t("aanbod.details.where")}</strong> {waar}</p>
-  <p><strong>{t("aanbod.details.when")}</strong> {wanneer}</p>
-  <p>
-    <strong>{t("aanbod.details.price")}</strong>
-    {prijs}
-  </p>
-  <p>{t("aanbod.details.maxParticipants")} {aantal_deelnemers}</p>
 </div>
