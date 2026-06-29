@@ -1,0 +1,42 @@
+name: Deploy Astro to Bunny.net
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "./astro-reconstructive/package-lock.json"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./astro-reconstructive
+
+      - name: Build Astro site
+        run: npm run build
+        working-directory: ./astro-reconstructive
+
+      - name: Deploy to Bunny.net
+        uses: R-J-dev/bunny-deploy@a702dd418dcae6cc1737a20a2322873bf7640ee0 # main
+        with:
+          access-key: ${{ secrets.BUNNY_API_KEY }}
+          # Points Bunny to the nested build output folder
+          directory-to-upload: "./astro-reconstructive/dist"
+          storage-zone-name: "reconstructive"
+          storage-zone-password: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          storage-endpoint: "https://storage.bunnycdn.com"
+          pull-zone-id: "5640984"
+          concurrency: 50
+          enable-purge-pull-zone: true
+          replication-timeout: 30000
+          enable-delete-action: true
