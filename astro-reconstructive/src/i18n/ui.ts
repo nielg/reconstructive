@@ -58,8 +58,8 @@ export const ui = {
     "home.about.text2":
       "Bram Geysen (links) en Elke Busschots (rechts) zijn gecertificeerde Reconstructive begeleiders.",
     "home.about.contactTitle": "Contacteer ons voor een vrijblijvend gesprek:",
-    "home.about.elkePhone": "Elke Busschots: [+ 32 475 46 39]",
-    "home.about.bramPhone": "Bram Geysen: [+ 32 473 52 34 ]",
+    "home.about.elkePhone": "Elke Busschots: [+ 32 475 46 74 39]",
+    "home.about.bramPhone": "Bram Geysen: [+ 32 473 52 30 94 ]",
     "home.about.mail": "mail",
     "home.what.title": "Wat is Reconstructive?",
     "home.what.text1":
@@ -379,8 +379,8 @@ export const ui = {
       "Carola Castillo (middle) is the founder of the school of thought and methodology of Reconstructive and founder of the Reconstructive International Integration Holistic School: ",
     "home.about.contactTitle":
       "Contact us for a free, no-obligation conversation:",
-    "home.about.elkePhone": "Elke Busschots: [+ 32 475 46 39]",
-    "home.about.bramPhone": "Bram Geysen: [+ 32 473 52 34 ]",
+    "home.about.elkePhone": "Elke Busschots: [+ 32 475 46 74 39]",
+    "home.about.bramPhone": "Bram Geysen: [+ 32 473 52 30 94 ]",
     "home.about.mail": "email",
 
     // Impressies
