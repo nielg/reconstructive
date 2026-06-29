@@ -6,8 +6,7 @@ import sanity from "@sanity/astro";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nielg.github.io",
-  base: "/reconstructive",
+  site: "https://reconstructive.be",
   i18n: {
     defaultLocale: "nl",
     locales: ["nl", "en"],
