@@ -53,29 +53,22 @@ const postImageUrl = post.image
     <a href={translatePath("/posts")}>
       <button class="green-btn"> &larr; {t("post.back")} </button>
     </a>
-    {
-      postImageUrl && (
-        <div class="img-wrapper">
-          <img
-            src={postImageUrl}
-            alt={post.title}
-            class="aspect-video rounded-xl"
-            width="550"
-            height="310"
-          />
-        </div>
-      )
-    }
     <h1 class="text-align-center text-green">{post.title}</h1>
 
     <div class="container bg-white text-gray">
       {Array.isArray(post.body) && <PortableText value={post.body} />}
       <p class="date">
-        {t("post.published")} {new Date(post.publishedAt).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
+        {t("post.published")}
+        {
+          new Date(post.publishedAt).toLocaleDateString(
+            lang === "nl" ? "nl-NL" : "en-US",
+            {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            },
+          )
+        }
       </p>
     </div>
   </section>
