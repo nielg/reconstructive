@@ -561,13 +561,6 @@ export const ui = {
     "aanbod.details.construct.li2": "A first experience of space and freedom",
     "aanbod.details.construct.li3": "More awareness about what drives you",
     "aanbod.details.construct.li4": "Curiosity as a starting point for growth",
-    "aanbod.details.construct.wie":
-      "For the curious who want to taste, broaden their gaze and gain insight into their patterns",
-    "aanbod.details.construct.waar": "Leuven/Heverlee",
-    "aanbod.details.construct.wanneer": "2026",
-    "aanbod.details.construct.prijs":
-      "125 euros excl. VAT (incl. coffee, tea, refreshments and lunch)",
-    "aanbod.details.construct.aantalDeelnemers": "12",
     "aanbod.details.reconstructive.title": "An invitation",
     "aanbod.details.reconstructive.text1":
       "an invitation to get closer to yourself.",
@@ -589,14 +582,6 @@ export const ui = {
       "Breakthrough in patterns that until now remained stuck",
     "aanbod.details.reconstructive.li5":
       "An experience that leaves a lasting impression",
-    "aanbod.details.reconstructive.wie":
-      "For those who feel that something is stuck and are ready to go deeper",
-    "aanbod.details.reconstructive.waar": "Leuven",
-    "aanbod.details.reconstructive.wanneer":
-      "July 25 - 26, 2026 (9am - 4pm), The next 2-day session will take place on October 17 - 18, 2026 (9am - 4pm)",
-    "aanbod.details.reconstructive.prijs":
-      "375 excl. VAT (incl. coffee, tea, refreshments and lunch)",
-    "aanbod.details.reconstructive.aantalDeelnemers": "8",
     "aanbod.details.gold.title": "A homecoming",
     "aanbod.details.gold.text1": "A homecoming to yourself.",
     "aanbod.details.gold.text2":
@@ -611,13 +596,7 @@ export const ui = {
     "aanbod.details.gold.li2": "embodiment",
     "aanbod.details.gold.li3": "peace",
     "aanbod.details.gold.li4": "firm contact with your core",
-    "aanbod.details.gold.wie":
-      "wants a reset, wants to let go of old layers and wants to rediscover his/her/their blueprint",
-    "aanbod.details.gold.waar": "South Norway ",
-    "aanbod.details.gold.wanneer": "September 5 - 12, 2026",
-    "aanbod.details.gold.prijs":
-      "1750 euros (excl. VAT) (only return transport is not included: car or flight to Kristiansand)",
-    "aanbod.details.gold.aantalDeelnemers": "8",
+    "aanbod.seeDatum": "See dates",
 
     // Posts
     "posts.title": "Posts",
