@@ -39,7 +39,7 @@ const posts_query = `*[
 const posts = await sanityClient.fetch<SanityDocument[]>(posts_query, { lang });
 ---
 
-<Layout>
+<Layout title="home">
   <section
     class="intro text-white"
     style={`background-image: url(${meerImg.src});`}
