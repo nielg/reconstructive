@@ -221,7 +221,7 @@
     },
     "footer": {
       "text1": "Misschien is het een eerste nieuwsgierigheid.",
-      "text2": "Misschien een verlangen naar dieper contact met jezelf.",
+      "text2": "Misschien een verlangen naar een dieper contact met jezelf.",
       "text3": "Misschien voel je dat het tijd is om terug te keren naar je essentie.",
       "text4": "Welke formule je ook kiest, elke stap brengt je dichter bij wie je werkelijk bent.",
       "button": "Contacteer ons voor een vrijblijvende kennismakinggesprek"
@@ -260,6 +260,8 @@
   },
   "kalender": {
     "title": "Kalender",
-    "noFound": "Geen datums gevonden"
+    "noFound": "Geen datums gevonden",
+    "stayOver": "Met overnachting",
+    "stayNotOver": "Zonder overnacthing telkens van 10uur - 17uur"
   }
 }

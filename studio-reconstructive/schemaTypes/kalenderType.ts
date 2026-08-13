@@ -6,19 +6,32 @@ export const kalenderType = defineType({
   type: 'document',
   fields: [
     defineField({
-      title: 'Datum title',
+      title: 'Taal van de kalender',
+      name: 'language',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Nederlands', value: 'nl'},
+          {title: 'English', value: 'en'},
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'Nederlands',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'title',
+      title: 'Datum title',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      title: 'Type',
       name: 'type',
+      title: 'Type',
       type: 'string',
       validation: (rule) => rule.required(),
       options: {
         list: [
-          {title: 'Voor bij je construct', value: 'Voorbij je construct'},
           {title: 'Reconstructive', value: 'Reconstructive'},
           {title: 'Find your gold', value: 'Find your gold'},
         ],
@@ -26,8 +39,8 @@ export const kalenderType = defineType({
       },
     }),
     defineField({
-      name: 'Datum',
       title: 'Overnachting inbegrepen?',
+      name: 'Datum',
       type: 'boolean',
     }),
     defineField({
@@ -43,33 +56,34 @@ export const kalenderType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'language',
-      title: 'Taal',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Nederlands', value: 'nl'},
-          {title: 'English', value: 'en'},
-        ],
-        layout: 'radio',
-      },
-      initialValue: 'Nederlands',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       title: 'Aantal deelnemers?',
       name: 'aantalDeelnemers',
       type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       title: 'Voor wie?',
       name: 'voorWie',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      title: 'Taal begeleiding',
+      name: 'taal_beg',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Nederlands', value: 'Nederlands'},
+          {title: 'English', value: 'English'},
+        ],
+        layout: 'radio',
+      },
     }),
     defineField({
       title: 'Start datum voor het sorteren',
-      name: 'startDat',
+      name: 'startDate',
       type: 'date',
+      validation: (rule) => rule.required(),
     }),
   ],
 })

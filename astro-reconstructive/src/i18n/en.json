@@ -299,6 +299,8 @@
   },
   "kalender": {
     "title": "Calendar",
-    "noFound": "No dates found"
+    "noFound": "No dates found",
+    "stayOver": "With overnight stay",
+    "stayNotOver": "Without overnight stay from 10.00 - 17.00"
   }
 }

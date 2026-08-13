@@ -4,7 +4,7 @@ export type Kalender = {
   title: string;
   locatie: string;
   prijs: string;
-  taal: string;
+  taal_beg: string;
   aantalDeelnemers: string;
   voorWie: string;
   overnachting: boolean;
