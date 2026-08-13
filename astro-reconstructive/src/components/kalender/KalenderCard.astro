@@ -1,11 +1,16 @@
 ---
-import { getLangFromUrl, useTranslatedPath } from "@src/i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@src/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import type { Kalender } from "@src/types";
 
 type Props = {
   kalenderData: Kalender;
 };
-const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 
 const { kalenderData } = Astro.props;
@@ -13,11 +18,11 @@ const { kalenderData } = Astro.props;
 let anchor = "";
 
 switch (kalenderData.type) {
-  case "Voorbij je construct":
-    anchor = "/aanbod#construct";
+  case "Reconstructive":
+    anchor = "/aanbod/#reconstructive";
     break;
   case "Find your gold":
-    anchor = "/aanbod#gold";
+    anchor = "/aanbod/#gold";
     break;
   default:
     anchor = "/aanbod";
@@ -37,14 +42,14 @@ const link = translatePath(anchor);
     <p>
       <strong>Datum: </strong>{
         kalenderData.overnachting
-          ? `Met overnachting`
-          : `Zonder overnacthing telkens van 10uur - 17uur`
+          ? t("kalender.stayOver")
+          : t("kalender.stayNotOver")
       }
     </p>
     <p><strong>Prijs:</strong> {kalenderData.prijs}</p>
     <p><strong>Voor:</strong> {kalenderData.voorWie}</p>
     <p><strong>Locatie:</strong> {kalenderData.locatie}</p>
-    <p><strong>Taal:</strong> {kalenderData.taal}</p>
+    <p><strong>Taal:</strong> {kalenderData.taal_beg}</p>
     {
       kalenderData.aantalDeelnemers && (
         <p>
@@ -68,6 +73,7 @@ const link = translatePath(anchor);
     font-size: xx-small;
     position: relative;
     padding: 2rem 1rem 3rem 1rem;
+    max-width: 500px;
   }
 
   .header {
