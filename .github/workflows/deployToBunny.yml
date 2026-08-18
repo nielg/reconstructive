@@ -48,3 +48,11 @@ jobs:
           enable-purge-pull-zone: true
           replication-timeout: 30000
           enable-delete-action: true
+
+      - name: Purge BunnyCDN Pull Zone Cache
+        run: |
+          curl --request POST \
+               --url "https://api.bunny.net/pullzone/5640984/purgeCache" \
+               --header "AccessKey: ${{ secrets.BUNNY_API_KEY }}" \
+               --header "Accept: application/json" \
+               --header "Content-Length: 0"
